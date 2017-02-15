@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			img{width: 100%;height: 100%;}
+			.banner_box{
+				width: 789px;
+				height: 342px;
+				margin:50px auto;
+				border: 1px solid #000000;
+				position: relative;
+				}
+			.banner{
+				width: 789px;
+				height: 342px;
+				overflow: hidden;
+				
+			}
+			.banner .img{
+				width: 789px;
+				height: 342px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+			}
+			.banner .img:first-child{
+				opacity: 1;
+			}
+			.left{
+				display: inline-block;
+				width: 29px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				background-color: black;
+				opacity: 0.5;
+				position: absolute;
+				left: 0;
+				top: 141.5px;
+				color: white;
+				cursor: pointer;
+				font-size: 20px;
+			}
+			.right{
+				display: inline-block;
+				width: 29px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				background-color: black;
+				opacity: 0.5;
+				position: absolute;
+				right: 0;
+				top: 141.5px;
+				color: white;
+				cursor: pointer;
+				font-size: 20px;
+			}
+			.yuan_box{
+				width:74px;
+				height: 10px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 10px;
+				margin: auto;
+			}
+			.yuan{
+				width: 10px;
+				height: 10px;
+				background-color: white;
+				border-radius: 50%;
+				float: left;
+				margin-right: 6px;
+			}
+			.yuan:last-child{
+				margin-right: 0;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var Lastpage=document.getElementById('left');
+				var Nextpage=document.getElementById('right');
+				var oImg=document.getElementsByClassName('img');
+				var oYuan=document.getElementsByClassName('yuan');  
+				  var page=0;
+				for (var i=0;i<oYuan.length;i++) {
+					oYuan[i].index=i;
+					oYuan[i].onmouseover=function(){
+						for (var j=0;j<oYuan.length;j++) {
+							oYuan[j].style.backgroundColor="#FFFFFF";
+						}
+						this.style.backgroundColor="#DC143C";
+						for (var i=0;i<oImg.length;i++) {
+							oImg[i].style.opacity="0";
+						}
+//						this.index=page;
+						oImg[this.index].style.opacity="1";
+					}
+				}
+				   
+				  
+				   Nextpage.onclick=function(){
+				  	page++;
+				 	if(page>=oImg.length){
+				 		page=0;
+				 	}
+				 	for (var i=0;i<oImg.length;i++) {
+				 		oImg[i].style.opacity="0";
+				 	}
+				 	oImg[page].style.opacity="1";
+				 	for (var j=0;j<oYuan.length;j++) {
+				 		oYuan[j].style.backgroundColor="#FFFFFF";
+				 	}
+				 	oYuan[page].style.backgroundColor="#DC143C";
+				 }
+				 Lastpage.onclick=function(){
+				 	page--;
+				 	if(page<0){
+				 		page=oImg.length-1;
+				 	}
+				 	for (var i=0;i<oImg.length;i++) {
+				 		oImg[i].style.opacity="0";
+				 	}
+				 	oImg[page].style.opacity="1";
+				 	for (var j=0;j<oYuan.length;j++) {
+				 		oYuan[j].style.backgroundColor="#FFFFFF";
+				 	}
+				 	oYuan[page].style.backgroundColor="#DC143C";
+				 }
+			}
+		</script>
+	</head>
+	<body>
+		<div class="banner_box">
+			<div class="banner">
+				<div class="img">
+					<img src="img/581c3934Na0d8a48d.jpg"/>
+				</div>
+				<div class="img">
+					<img src="img/581c3c11Ne81a1265 (1).jpg"/>
+				</div>
+				<div class="img">
+					<img src="img/58205188N46ded5be.jpg"/>
+				</div>
+				<div class="img">
+					<img src="img/58213aa8N9a01346a.jpg"/>
+				</div>
+				<div class="img">
+					<img src="img/5821999bN284ed5a3.jpg"/>
+				</div>
+			</div>
+				<span class="left" id="left">
+					<
+				</span>
+				<span class="right" id="right">
+					>
+				</span>
+				<div class="yuan_box">
+					<div class="yuan"></div>
+					<div class="yuan"></div>
+					<div class="yuan"></div>
+					<div class="yuan"></div>
+					<div class="yuan"></div>
+				</div>
+				
+			
+		</div>
+	</body>
+</html>

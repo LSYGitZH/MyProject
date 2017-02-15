@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			//题目：判断101-200之间有多少个素数，并输出所有素数。	
+
+            var arr=[];
+            for (var i=101;i<=200;i++) {
+            	var prime=true;
+            	for (var j=2;j<i;j++) {
+            		if (i%j==0) {
+            			prime=false;
+            			break;
+            		}
+            	}
+            	if (prime==true) {
+            		document.write(i+"&nbsp;");
+            		arr.push(i);
+            	}
+            		
+            }
+            document.write("<br />"+"共有"+arr.length+"个素数");
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

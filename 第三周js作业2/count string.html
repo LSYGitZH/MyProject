@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			var str="sasssssssssssfffgfhghhhhhhhgdssgsasaasfdf";
+			var json={};
+			for (var i=0;i<str.length;i++) {
+				var s=str.charAt(i);
+				if (json[s]) {
+					json[s]++;
+				}else{
+					json[s]=1;
+				}
+			}
+//			document.write(JSON.stringify(json));
+			for (var x in json){
+				document.write(x+":"+json[x]+"&nbsp;&nbsp;");
+			}
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

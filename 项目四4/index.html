@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 290px;
+				height: 340px;
+				border: 1px solid #000000;
+			}
+		</style>
+		<script type="text/javascript">
+//		拖    ondrag  ondragstart  ondragover   ondragend  ondragenter   ondragleave
+//		放    ondrop
+		
+//		图片能被拖放      draggable  true
+//      取消默认行为     1.return false  2.event.preventDefault();
+			function dragstart(event){
+				
+//				dataTransfer 事件过程中   传递数据
+//				设置图片id
+				event.dataTransfer.setData("imgId",event.target.id);
+			}
+			function drop(event){
+//				获取图片id
+				var id=event.dataTransfer.getData("imgId");
+				var oImg=document.getElementById(id);
+				event.target.appendChild(oImg);
+			}
+			function allowDrop(event){
+				event.preventDefault();
+			}
+//			function dragleave(event){
+//				var id=event.dataTransfer.getData("imgId");
+//		       var oImg=document.getElementById(id);
+//		       this.appendChild(oImg);
+//			}
+		</script>
+	</head>
+	<body>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragleave(event)">
+			
+		</div>
+		<img id="drag1" draggable="true" ondragstart="dragstart(event)" src="img/part.png" width="290" height="340"/>
+	</body>
+</html>

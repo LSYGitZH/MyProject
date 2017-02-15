@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+
+<style>
+input{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:200px;
+	line-height:48px;
+	border:none 0;
+	cursor:pointer;
+	margin:20px 20px 0 0;
+}
+#showDiv{
+	font-size:20px;
+	margin:30px 10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+</style>
+
+<script>
+window.onload = function(){
+	var oInput = document.getElementById('triggerBtn');
+	oInput.onclick = function(){
+		window.self.document.body.style.backgroundColor = "#d1abff"
+	}
+	
+};
+</script>
+</head>
+
+<body>
+子页面2
+<input type="button" value="操作顶级页面" id="triggerBtn">
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            margin: 10px 0 0 10px;
+            list-style: none;
+            width: 300px;
+            float:left ;
+        }
+        li{
+            width: 300px;
+            margin-top:30px;
+            margin-left:50px;
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+        p{
+            line-height: 40px;
+            text-align: center;
+        }
+        #p{
+            background-color: #a39cee;
+            color: #f0d1cb;
+        }
+        .contant{
+            overflow: hidden;
+        }
+    </style>
+    <script src="ajax.js"></script>
+    <script>
+        window.onload = function(){
+            loadimg();
+            var arrUl = document.getElementsByTagName("ul");
+            var oUp = document.getElementById("p");
+            var ajaxGoing = false;
+            var page = 0;
+            var x = 0;
+            //获取样式
+            function getStyle(obj,attr){
+                if(obj.currentStyle){
+                    return obj.currentStyle[attr];
+                }else{
+                    return getComputedStyle(obj)[attr];
+                }
+            }
+            function long(){
+                var json = {};
+                var arr = [];
+                json[0] = arrUl[0].offsetHeight;
+                arr[0] = arrUl[0].offsetHeight;
+                json[1] = arrUl[1].offsetHeight;
+                arr[1] = arrUl[1].offsetHeight;
+                json[2] = arrUl[2].offsetHeight;
+                arr[2] = arrUl[2].offsetHeight;
+                json[3] = arrUl[3].offsetHeight;
+                arr[3] = arrUl[3].offsetHeight;
+
+                var arr1 = arr.sort(function(x,y){return x-y});
+                for(var x = 0;x < 4;x++){
+                    if(json[x] == arr1[0]){
+                        return x;
+                    }
+                }
+            }
+            function loadimg(){
+                if(ajaxGoing == false){
+                    ajaxGoing = true;
+                    ajax("get","links/getImages.php","page="+page++ +"&i="+new Date().getTime(),
+                        function(str){
+                            var arr = eval("("+str+")");
+                            if(arr.length > 0){
+                                for(var i = 0; i < arr.length; i++){
+                                    //拿到一个json对象
+                                    var jsonNews = arr[i];
+                                    var strHtml = '<li><img src="'+jsonNews.src+'" alt="">'+'</li>';
+                                    var x = parseInt(long());
+
+                                    arrUl[x].innerHTML += strHtml;
+                                    ajaxGoing = false;
+                                }
+                            }else{
+                                oUp.innerHTML = arr.err;
+                            }
+                        });
+                }
+
+            }
+            loadimg();
+            window.onscroll = function(){
+                var sH = document.documentElement.scrollHeight;
+                var sT = document.documentElement.scrollTop || document.body.scrollTop;
+                var cH = document.documentElement.clientHeight;
+                var sB = sH - sT - cH;
+                if(sB <= 0){
+                    loadimg();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="contant">
+    <ul class="nav"></ul>
+    <ul class="nav"></ul>
+    <ul class="nav"></ul>
+    <ul class="nav"></ul>
+</div>
+<p id="p">下拉加载更多</p>
+</body>
+</html>

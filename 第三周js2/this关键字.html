@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			   // 全局變量  window 的屬性
+//      var length = 10;
+
+        //  全局函數   window方法
+//      function showLength(){
+//          document.write(this.length)
+//      }
+//        showLength()   10
+
+//      var arr = [1,2,3,4,5];
+//        arr.showLength =showLength;
+//        arr.showLength();   
+
+//        arr[5] = showLength;
+//        arr[5]();    6
+var per={
+         "name":"liming",
+          "age":18,
+          "show":function(o1,o2){
+             document.write(this.name+"想吃"+o1+"和"+o2);
+}
+}
+var per2={
+         "name":"lixiaoming",
+          "age":16
+}
+
+per.show.call(per2,"啤酒","炸鸡");
+//per.show.apply(per2,["啤酒","炸鸡"]);
+
+          
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

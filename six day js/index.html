@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+//			var num;
+//			var max;
+//			do{
+//				num=parseInt(prompt("请输入一个数字"));
+//				if(max==undefined){
+//					max=num;
+//				}else{
+//					if(num>max){
+//						max=num;
+//					}
+//				}
+//			}while(num!=0);
+//			
+//			alert(max);
+//
+//    var num;
+//    var sum=0;
+//    do{
+//    	num=parseInt(prompt("请输入一个数字"));
+//    	if(num!=0){
+//    	sum+=num;
+//    	}
+//    }while(num!=0);
+//    
+//    alert(sum);
+
+// for (var i=1;i<=100;i++) {
+// 	if(i%7==0){
+// 		continue;
+// 	}else if (i%10==7) {
+// 		continue;
+// 	}else if (parseInt(i/10)==7) {
+// 		continue;
+// 	}
+// 	
+// 	document.write(i+"<br />");
+// }
+
+//for (var a=2;a<100;a++) {
+//	var zs=true;                  //求质数
+//	for (var i=2;i<a;i++) {
+//		if (a%i==0) {
+//			zs=false;
+//			break;
+// 
+//		}
+//	}
+//	if (zs==true) {
+//		document.write(a+"&nbsp;");
+//	}
+//}
+
+       var num=parseInt(Math.random()*100);
+          var input;
+          var times=0;
+                do{
+                	times++;
+                	input=parseInt(prompt("请输入0~99之间的数字"));
+                	if (input>num) {
+                		alert("大了");
+                	}
+                	if (input<num) {
+                		alert("小了");
+                	}
+                }while(input!=num);
+                if(times<=5){
+                	 alert("恭喜您只经过了"+times+"次就猜对了");
+                }
+                if(times>5){
+                alert("恭喜您经过了"+times+"次终于猜对了");
+                }
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

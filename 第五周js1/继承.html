@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			function Person(name,age,sex){
+				this.name=name;
+				this.age=age;
+				this.sex=sex;
+			}
+			Person.prototype.showName=function(){
+				alert(this.name);
+			}
+			Person.prototype.showAge=function(){
+				alert(this.age);
+			}
+			Person.prototype.showSex=function(){
+				alert(this.sex);
+			}
+			//将Person中的属性继承
+			function Worker(name,age,sex,job){
+				Person.apply(this,arguments);
+				this.job=job;
+			}
+			//将Person中的方法继承
+			
+			//复制对象      //方法1
+//			for(var x in Person.prototype){
+//				Worker.prototype[x]=Person.prototype[x];
+//			}
+
+			//方法2
+			Worker.prototype=new Person();
+			Worker.prototype.showJob=function(){
+				alert(this.job);
+			}
+			
+			
+			
+			function Teacher(name,age,sex,job,className){
+				Worker.apply(this,arguments);
+				this.className=className;
+			}
+			for (var x in Worker.prototype) {
+				Teacher.prototype[x]=Worker.prototype[x];
+			}
+			//方法2
+//			Teacher.prototype=new Worker();
+			Teacher.prototype.showClassName=function(){
+				alert(this.className);
+			}
+			
+			var T1=new Teacher("liming","20","男","coder","Math");
+			T1.showName();
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

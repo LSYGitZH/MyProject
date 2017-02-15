@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			div{
+				float: left;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				color: black;
+				background-color: yellow;
+				border-radius:45px;
+				box-shadow: 1px 2px 2px black;
+				margin-left: 3px;
+			}
+			div:last-of-type{
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			  var arrballs=[];
+              var newBalls=[];
+              
+            for (var i=0;i<35;i++) {
+            	arrballs.push(i+1);
+            }
+            for (var i=0;i<7;i++) {
+            	//随机位置
+            	var ranIndex=Math.floor(Math.random()*arrballs.length);
+            	//从arrballs里删掉一个球
+            	var ball=arrballs.splice(ranIndex,1);
+            	//强从arrballs删掉的球放到新数组里
+            	newBalls.push(ball);
+            }
+//            document.write(newBalls.join("--"));
+			for(var j=0;j<newBalls.length;j++){
+				document.write("<div>"+newBalls[j]+"</div>");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

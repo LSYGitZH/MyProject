@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.show{
+				width: 300px;
+				height: 400px;
+				border: 1px solid #000000;
+				overflow: hidden;
+				float: left;
+				position: relative;
+			}
+			#slide{
+				width: 300px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			#parent{
+				width: 20px;
+				height: 400px;
+				background-color: #cccccc;
+				border-radius: 5px;
+				float: left;
+				position: relative;
+			}
+			#box{
+				width: 20px;
+				height: 40px;
+				background-color: darkgray;
+				border-radius: 5px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="show">
+			<div id="slide">
+				你好可能打开是v东方旭吧V字形的指向顺序性嘘嘘嘘授课计划福克斯看哈生产厂家都是明白哈比比，公司电话聚光科技是v释放了法律楼上的健康那个单身女孩。
+				你好可能打开是v东方旭吧V字形的指向顺序性嘘嘘嘘授课计划福克斯看哈生产厂家都是明白哈比比，公司电话聚光科技是v释放了法律楼上的健康那个单身女孩。
+				你好可能打开是v东方旭吧V字形的指向顺序性嘘嘘嘘授课计划福克斯看哈生产厂家都是明白哈比比，公司电话聚光科技是v释放了法律楼上的健康那个单身女孩。
+				你好可能打开是v东方旭吧V字形的指向顺序性嘘嘘嘘授课计划福克斯看哈生产厂家都是明白哈比比，公司电话聚光科技是v释放了法律楼上的健康那个单身女孩。
+				你好可能打开是v东方旭吧V字形的指向顺序性嘘嘘嘘授课计划福克斯看哈生产厂家都是明白哈比比，公司电话聚光科技是v释放了法律楼上的健康那个单身女孩。
+				你好可能打开是v东方旭吧V字形的指向顺序性嘘嘘嘘授课计划福克斯看哈生产厂家都是明白哈比比，公司电话聚光科技是v释放了法律楼上的健康那个单身女孩。
+			</div>
+		</div>
+		<div id="parent">
+			<div id="box"></div>
+		</div>
+		<div id="show"></div>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				var oParent=document.getElementById('parent');
+				var oBox=document.getElementById('box');
+				var oSlide=document.getElementById('slide');
+				if (oSlide.offsetHeight<=oParent.offsetHeight) {
+				        	oBox.style.display="none";
+				        }else{
+				        	oBox.style.display="block";
+				        }
+				oBox.onmousedown=function(ev){
+					var oEvent=window.event || ev;
+					var divSy=oEvent.clientY-oBox.offsetTop;
+				    document.onmousemove=function(ev){
+				    	var oEvent=window.event || ev;
+				        var oTop=oEvent.clientY-divSy;
+				        if (oTop<=0) {
+				        	oTop=0;
+				        }else if (oTop>=oParent.offsetHeight-oBox.offsetHeight) {
+				        	oTop=oParent.offsetHeight-oBox.offsetHeight;
+				        }
+				        oBox.style.top=oTop+"px";
+				        var oS=oSlide.offsetHeight-oParent.offsetHeight;
+				        var oA=oBox.offsetTop/(oParent.offsetHeight-oBox.offsetHeight);
+				        oSy=oS*oA;
+				        oSlide.style.top=-oSy+"px";
+				    }
+				    document.onmouseup=function(){
+				    	document.onmousedown=undefined;
+				    	document.onmousemove=undefined;
+				    }
+				    return false;
+				}
+			      
+			}
+		</script>
+	</body>
+</html>

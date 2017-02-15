@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{width: 300px;height: 300px;margin:50px auto;}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oIn1=document.getElementById('input1');
+				var oIn2=document.getElementById('input2');
+				var operation=document.getElementsByClassName('btn');
+				
+				for (var i=0;i<operation.length;i++) {
+					operation[i].index=i;
+					operation[i].onclick=function(){
+						var num1=oIn1.value;
+						var num2=oIn2.value;
+						var n1=Number(num1);
+						var n2=Number(num2);
+						
+					    if(this.index==0){
+							alert(n1+n2);
+						}else if(this.index==1){
+							alert(n1-n2);
+							
+						}else if(this.index==2){
+							alert(n1*n2);
+							
+						}else{
+							alert(n1/n2);
+						
+						}
+						
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<input type="text" name="" id="input1" value="" />
+		    <input type="text" name="" id="input2" value="" /><br /><br />
+		    <input type="button" name="" class="btn" value="+" />
+		    <input type="button" name="" class="btn" value="-" />
+		    <input type="button" name="" class="btn" value="*" />
+		    <input type="button" name="" class="btn"" value="/" />
+		</div>
+		
+	</body>
+</html>

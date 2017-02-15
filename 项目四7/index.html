@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<script type="text/javascript" src="js/wow.min.js" ></script>
+	</head>
+	<body>
+		<!--data-wow-iteration="10" 重复10次-->
+		<!--data-wow-duration="2s" 动画持续2秒-->
+		<!--data-wow-delay = "0.5s" 0.5秒之后执行动画-->
+		<div class="wow bounceInLeft animated" style="width: 200px;height: 200px;background-color: #b94a48;margin: auto;" data-wow-delay = "0.5s"></div>
+		<div class="wow bounceInLeft" style="width: 200px;height: 200px;background-color: #b94a48;margin: auto;" data-wow-delay = "0.6s"></div>
+		<div class="wow bounceInLeft" style="width: 200px;height: 200px;background-color: #b94a48;margin: auto;" data-wow-delay = "0.7s"></div>
+		<div class="wow bounceInLeft" style="width: 200px;height: 200px;background-color: #b94a48;margin: auto;" data-wow-delay = "0.8s"></div>
+		<div class="wow bounceInLeft" style="width: 200px;height: 200px;background-color: #b94a48;margin: auto;" data-wow-delay = "0.9s"></div>
+		
+		
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				if (!(navigator.userAgent.indexOf("MSIE 6.0") || navigator.userAgent.indexOf("MSIE 7.0") || navigator.userAgent.indexOf("MSIE 8.0") || navigator.userAgent.indexOf("MSIE 9.0"))) {
+				new WOW().init();
+			}
+			}
+			
+
+// 正则表达式
+// 1.      / /
+// 2.    new RegExp()
+// str   match   replace  search  split
+// reg   test  exec
+
+//     var reg=/MSIE [6789]/; 
+//         if (!(reg.test(navigator.userAgent))) {
+//             	new WOW().init();
+//         }
+     
+		</script>
+	</body>
+</html>

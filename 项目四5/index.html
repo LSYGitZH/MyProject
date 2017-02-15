@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oAudio=document.getElementsByTagName("audio");
+				//console.log(oAudio.duration);  //音频的全部时间
+				//console.log(oAudio.volume);    //音量
+				//console.log(oAudio.muted);     //是否静音
+				//console.log(oAudio.paused);    //是否暂停
+				//console.log(oAudio.ended);     //是否结束
+				//console.log(oAudio.Error);     //是否错误
+				//console.log(oAudio.currentSrc);//当前播放的资源路径
+				//console.log(oAudio.currentTime);//当前播放的时间
+				
+				var oVideo=document.getElementsByTagName("video");
+				var oBtn=document.getElementById("btn");
+				var arrSou=document.getElementsByTagName("source");
+				//oVideo.play();   //播放
+				//oVideo.pause();  //停止
+				//oVideo.load();   //加载新的文件时使用
+				
+				oBtn.onclick=function(){
+					arrSou[0].src="MP4/Intermission-Walk-in_512kb.mp4";
+					arrSou[1].src="MP4/Intermission-Walk-in.ogv";
+					oVideo.load();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!--controls   操作面板-->
+		<!--autoplay   自动播放-->
+		<!--muted   静音-->
+		<!--loop   自动循环-->
+		<audio loop="loop"  autoplay="autoplay" src="MP3/johann_sebastian_bach_air.mp3">当前浏览器不支持 audio直接播放，点击这里下载音频： <a href="">下载视频</a></audio>
+		<video width="800" height="" controls="controls">
+			<source src="MP4/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+			<source src="MP4/Intermission-Walk-in.ogv" type="video/ogv"></source>
+			<source src="myvideo.webm" type="video/webm"></source>
+			<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>
+		<input type="button" name="" id="btn" value="加载" />
+	</body>
+</html>

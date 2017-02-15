@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			完成foo()函数的内容，要求能够弹出对话框提示当前选中的是第几个单选框
+window.onload=function(){
+	function foo(){
+				var arrRadio=document.getElementsByClassName('radio');
+				
+				for (var i=0;i<arrRadio.length;i++) {
+					arrRadio[i].index=i;
+					arrRadio[i].onclick=function(){
+						
+						for (var i=0;i<arrRadio.length;i++) {
+						arrRadio[i].checked=false;
+					}
+					     this.checked=true;
+					      if (this.checked==true) {
+					      	alert(this.index+1);
+					      } 
+					}
+				}
+				
+			}
+			foo();
+}
+			
+		</script>
+	</head>
+	<body>
+		
+		<form action="" method="post">
+			<input type="radio" value="" class="radio"/><br  />
+			<input type="radio" value="" class="radio"/><br  />
+			<input type="radio" value="" class="radio"/><br  />
+			<input type="radio" value="" class="radio"/><br  />
+			<input type="radio" value="" class="radio"/><br  />
+			<input type="radio" value="" class="radio"/><br  />
+			<input type="radio" value="" class="radio"/><br  />
+			<input type="radio" value="" class="radio"/>
+		</form>
+	</body>
+</html>

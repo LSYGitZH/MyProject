@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			video{
+				width: 800px;
+				height: 666px;
+				position: absolute;
+				left: 50%;
+				top: 30px;
+				margin-left: -400px;
+			}
+			form{
+				width: 800px;
+				position: absolute;
+				left: 50%;
+				top: 696px;
+				margin-left: -400px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oVideo=document.getElementsByTagName("video")[0];
+				var oPlay=document.getElementById("play");
+				var oNow=document.getElementById("now");
+				var oDur=document.getElementById("dur");
+				var oMuted=document.getElementById("muted");
+				var oFull=document.getElementById("full");
+				var timer=null;
+				oPlay.onclick=function(){
+					if (oVideo.paused) {
+						oVideo.play();
+						this.value="暂停";
+						timer=setInterval(nowTime,200);
+					} else{
+						oVideo.pause();
+						this.value="播放";
+						clearInterval(timer);
+					}
+				}
+				oMuted.onclick=function(){
+					if (oVideo.oMuted) {
+						oVideo.oMuted=false;
+						this.value="静音";
+					}else{
+						oVideo.oMuted=true;
+						this.value="取消静音";
+					}
+				}
+				oFull.onclick=function(){
+					if (oVideo.requestFullscreen) {
+						oVideo.requestFullscreen();
+					}else if (oVideo.webkitRequestFullScreen) {
+						oVideo.webkitRequestFullScreen();
+					}else if (oVideo.mozRequestFullScreen) {
+						oVideo.mozRequestFullScreen();
+					}else if (oVideo.msRequestFullscreen) {
+						oVideo.msRequestFullscreen();
+					}else if (oVideo.oRequestFullscreen) {
+						oVideo.oRequestFullscreen();
+					}
+				}
+				function nowTime(){
+					oNow.value=timeFormat(oVideo.currentTime);
+				}
+				oDur.value=timeFormat(oVideo.duration);
+				function timeFormat(time){
+					var s=parseInt(time%60);
+					if (s<10) {
+						s="0"+s;
+					}
+					var m=parseInt(time/60)%60;
+					if (m<10) {
+						m="0"+m;
+					}
+					var h=parseInt(time/3600);
+					if (h<10) {
+						h="0"+h;
+					}
+					return h+":"+m+":"+s;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<video <!--width="800" height=""-->>
+			<source src="MP4/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+			<source src="MP4/Intermission-Walk-in.ogv" type="video/ogv"></source>
+			<source src="myvideo.webm" type="video/webm"></source>
+			<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>
+		<form action="" method="post">
+			<input type="button" name="" id="play" value="播放" />
+		    <input type="button" name="" id="now" value="00:00:00" />
+		    <input type="button" name="" id="dur" value="99:99:99" />
+		    <input type="button" name="" id="muted" value="静音" />
+		    <input type="button" name="" id="full" value="全屏" />
+		</form>	
+	</body>
+</html>

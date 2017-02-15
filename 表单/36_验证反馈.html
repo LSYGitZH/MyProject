@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<form>
+	<input type="text" required id="text"/>
+	<input type="submit" />
+</form>
+<script>
+var oText=document.getElementById("text");
+//invalid  当输入验证不通过时
+oText.addEventListener("invalid",fn,false);
+function fn(ev)
+{
+	alert(this.validity.valid);
+	ev.preventDefault();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.clock_box{
+				width: 500px;
+				height: 500px;
+				border: 1px solid black;
+				border-radius: 50%;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				background: -moz-radial-gradient(center,#372a0c,green);
+				background: -o-radial-gradient(center,#372a0c,green);
+				background: -ms-radial-gradient(center,#372a0c,green);
+				background: -webkit-radial-gradient(center,#372a0c,green);
+			}
+			.time{
+				width: 4px;
+				height: 20px;
+				background-color: black;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				transform: rotate(0deg) translateY(-200px);
+			}
+			.times{
+				width: 4px;
+				height: 10px;
+				background-color: black;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				transform: rotate(0deg) translateY(-200px);
+			}
+			.center{
+				width: 20px;
+				height: 20px;
+				background-color: black;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			.second{
+				width: 2px;
+				height: 200px;
+				background-color: black;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			.min{
+				width: 5px;
+				height: 190px;
+				background-color: black;
+				border-radius:50% 50% 10% 30%;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			.hour{
+				width: 5px;
+				height: 150px;
+				background-color: black;
+				border-radius:50% 50% 10% 30%;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				var arrTime=$(".time");
+				var arrTimes=$(".times");
+				arrTime.each(function(i){
+					var deg=i*30;
+					$(this).css("transform","rotate("+deg+"deg) translateY(-200px)");
+				});
+				
+				arrTimes.each(function(j){
+					
+					var deg=j*6;
+					if (j==0 || j%5==0) {
+					$(this).css("transform","rotate("+(deg+6)+"deg) translateY(-200px)");
+				}
+					$(this).css("transform","rotate("+deg+"deg) translateY(-200px)");
+				});
+				setInterval(function(){
+			       var oDate=new Date();
+			       var ms=oDate.getMilliseconds();
+				   var sec=oDate.getSeconds();
+				   var minu=oDate.getMinutes();
+				   var hours=oDate.getHours();
+				   var sdeg=(sec+ms/1000)/60*360;
+				   var mdeg=minu/60*360;
+				   var hdeg=360/12*(hours+minu/60);
+					$(".second").css("transform","rotate("+sdeg+"deg) translateY(-60px)");
+					$(".min").css("transform","rotate("+mdeg+"deg) translateY(-50px)");
+					$(".hour").css("transform","rotate("+hdeg+"deg) translateY(-45px)");
+				},100);
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div class="clock_box">
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="time"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="times"></div>
+			<div class="center"></div>
+			<div class="second"></div>
+			<div class="min"></div>
+			<div class="hour"></div>
+		</div>
+	</body>
+</html>

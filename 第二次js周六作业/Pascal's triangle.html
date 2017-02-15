@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			//打印出杨辉三角形（要求打印出10行如下图）
+			var arr=new Array();
+
+			var num2=10;
+			
+			for (var i=0;i<num2;i++) {
+				arr[i]=new Array();
+		
+			}
+			
+		for (var x = 0; x < num2; x++) {
+			for (y = 0; y <= x; y++) {
+				if (x == y || y == 0) {
+					arr[x][y] = 1;
+				} else {
+					arr[x][y] = arr[x - 1][y - 1] + arr[x - 1][y];
+				}
+			}
+		}
+
+		for (x = 0; x < num2; x++) {
+
+			for (y = 0; y <= x; y++) {
+
+				document.write(arr[x][y]+" ");
+
+			}
+                  document.write("<br />");
+		}
+
+
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

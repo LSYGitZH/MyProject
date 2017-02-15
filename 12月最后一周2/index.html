@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="input1" value="" />
+		<div id="div1">
+			
+		</div>
+		<!--1.jsonp    2.代理          3.XMLHttpRequest   level2-->
+		
+		<script type="text/javascript">
+//			function func(){
+//				alert(1);
+//			}
+
+              function jsonP(url){
+              	var oSrc=document.createElement("script");
+              	oSrc.src=url;
+              	document.head.appendChild(oSrc);
+              }
+              function func(data){
+              	var oDiv=document.getElementById("div1");
+              	oDiv.innerHTML=data;
+              	document.head.appendChild(document.head.lastElementChild);
+              }
+              window.onload=function(){
+              	var oDiv=document.getElementById("div1");
+              	var oInput=document.getElementById("input1");
+              	oInput.onclick=function(){
+              		jsonP("http://localhost/ajaxky/link.php?callback=func");
+              	}
+              }
+		</script>
+		<!--<script src="http://localhost/ajaxky/link.php?callback=func"></script>-->
+		
+	</body>
+</html>

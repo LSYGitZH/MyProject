@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function mouseWheel (ev) {
+				var oEvent=window.event || ev;
+				if (oEvent.detail) {
+					if (oEvent.detail>0) {
+						
+					}
+				}
+			}
+			function addEvent(ele,type,listener){
+				if (ele.addEventListener) {
+					ele.addEventListener(type,listener);
+				}else{
+					ele.attachEvent("on"+type,listener);
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

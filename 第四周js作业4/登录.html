@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#box{
+				width: 300px;
+				height: 350px;
+				background-color: #FFFFFF;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				}
+			.header{
+				width: 300px;
+				height: 70px;
+				margin-bottom: 30px;
+			}
+			.header_left{
+				width: 150px;
+				height: 70px;
+				text-align: center;
+				line-height: 70px;
+				float: left;
+				font-weight: bold;
+				color: #FFFFFF;
+				background-color: #E5383C;
+			}
+			.header_right{
+				width: 150px;
+				height: 70px;
+				text-align: center;
+				line-height: 70px;
+			    float: left;
+			    font-weight: bold;
+			    color: #e5383c;
+			}
+			.username_box{
+				width: 240px;
+				height: 36px;
+				border: 1px solid #E5383C;
+				margin: auto;
+			    margin-bottom: 20px;
+			}
+			.username_box span{
+				display: inline-block;
+				width: 40px;
+				height: 34px;
+				background-color: #ffebeb;
+				float: left;
+				text-align: center;
+				line-height: 34px;
+				font-size: 14px;
+				color: #db897f;
+			}
+			.password_box{
+				width: 240px;
+				height: 36px;
+				border: 1px solid #E5383C;
+				margin: auto;
+				margin-bottom: 5px;
+			}
+			.password_box span{
+				display: inline-block;
+				width: 40px;
+				height: 34px;
+				background-color: #ffebeb;
+				float: left;
+				text-align: center;
+				line-height: 34px;
+				font-size: 14px;
+				color: #db897f;
+			}
+			#username{
+				width: 198px;
+				height: 34px;
+				border: none;
+				float: left;
+				text-indent: 10px;
+				outline: none;
+			}
+			#password{
+				width: 198px;
+				height: 34px;
+				border: none;
+				float: left;
+				text-indent: 10px;
+				outline: none;
+			}
+			label{
+				margin-left: 30px;
+				font-size: 14px;
+			}
+			#remember{
+				vertical-align: middle;
+				margin-right: 5px;
+				margin-bottom: 2px;
+			}
+			#btn{
+				width: 240px;
+				height: 35px;
+				background-color: #E5383C;
+				color: #FFFFFF;
+				outline: none;
+				border: none;
+				margin: 20px 30px 0 30px;
+			}
+		</style>
+		<script type="text/javascript" src="js/cookie.js">
+			
+		</script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUserName=document.getElementById('username');
+				var oPassWord=document.getElementById('password');
+				var oRemember=document.getElementById('remember');
+				var oBtn=document.getElementById('btn');
+				//当密码和账户被设置成功时，获取cookie里的值
+				var userKey=getCookieByKey("User");
+				var passKey=getCookieByKey("Pass");
+				var checked=getCookieByKey("Rem");
+				   //绑定账户
+				   oUserName.value=userKey;
+				   //判定如果选中自动登录就保存密码，否则删除密码
+				   if (checked=="true") {
+				   	oPassWord.value=passKey;
+				   	oRemember.checked=true;
+				   }else{
+				   	oPassWord.value="";
+				   }
+				   
+				
+				oBtn.onclick=function(){
+					var user=oUserName.value;
+					var pass=oPassWord.value;
+					
+					if (user=="nihao" && pass=="zhimakaimen") {
+						window.open("显示页面.html","_blank");
+					//如果自动登录被选中就保存，否则就删除
+					if (oRemember.checked) {
+						setCookie("User",user,30);
+						setCookie("Pass",pass,30);
+						setCookie("Rem",oRemember.checked,30);
+					}else{
+						removeCookie("Pass");
+						setCookie("Rem",oRemember.checked,30);
+					}
+				}
+				}
+			}
+			
+		</script>
+	</head>
+	<body bgcolor="#6495ED">
+		<div id="box">
+			<div class="header">
+				<div class="header_left">扫码登录</div>
+			    <div class="header_right">账户登录</div>
+			</div>
+			<form action="" method="post">
+				<div class="username_box">
+					<span>账户</span><input type="text" value="" id="username"/>
+				</div>
+				<div class="password_box">
+					<span>密码</span><input type="password" value="" id="password"/>
+				</div>
+				<label><input type="checkbox" name="remember" id="remember" value="" />自动登录</label><br  />
+				<input type="button" value="登录" id="btn"/>
+			</form>
+			
+		</div>
+		
+	</body>
+</html>

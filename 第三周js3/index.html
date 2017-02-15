@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			
+			
+			window.onload=function(){
+				var oDiv=document.getElementById('block');
+				//目标时间
+				var targetDate=new Date(2016,10,23,11);
+				var timer=setInterval(function(){
+					//当前时间
+				var nowDate=new Date();
+				if(nowDate>targetDate){
+					clearInterval(timer);
+					oDiv.innerHTML="剩余时间     0天     00小时00分钟00秒   000";
+					alert("时间到了");
+					return;
+				}
+				var ms=targetDate.getTime()-nowDate.getTime();
+				//毫秒值还原成秒钟
+				var ss=Math.floor(ms/1000);
+				//毫秒
+				var mss=Math.floor(ms%1000/10);
+				//秒钟
+				var sec=ss%60;
+				//分钟
+				var min=Math.floor(ss/60)%60;
+				//小时
+				var hour=Math.floor(ss/3600)%24;
+				//天
+				var day=Math.floor(ss/3600/24);
+				oDiv.innerHTML="剩余时间： "+day+"天        "+hour+"小时"+min+"分"+sec+"秒      "+mss;
+				},100);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="block"></div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+            var area = [
+                ["朝阳","杀毒","是否","朝水电费阳"],
+                ["上课","刷卡缴费","数据","考试"],
+                ["水电费","杀毒","发","杀毒"]
+            ];
+            var oa = document.getElementById("aa");
+            var ob = document.getElementById("bb");
+            oa.onchange = function(){
+                ob.options.length = 1;
+                var arr = area[oa.value];
+                for(var i = 0; i< arr.length; i++){
+                    ob.add(new Option(arr[i]));
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<select id="aa">
+    <option>选择城市</option>
+    <option value="0">北京</option>
+    <option value="1">承德</option>
+    <option value="2">呼市</option>
+</select>
+<select id="bb">
+    <option >选择城区</option>
+</select>
+
+</body>
+</html>

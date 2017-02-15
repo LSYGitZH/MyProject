@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//有1、2、3、4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
+
+               var times=0;
+               for (var x=1;x<5;x++) {
+               	for (var y=1;y<5;y++) {
+               		for (var z=1;z<5;z++) {
+               			if (x!=y && x!=z && y!=z) {
+               			x=String(x);
+               			y=String(y);
+               			z=String(z);
+               			document.write(x+y+z+"&nbsp;");
+               			times++;
+               			}
+               			
+               		}
+               	}
+               }
+			document.write("<br />"+"能组成"+times+"个互不相同且无重复数字的三位数");
+			
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

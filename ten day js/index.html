@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;display: none;}
+			#div1{width: 100px;height: 100px;background-color: black;float: left;}
+			#div2{background-color: black;float: left;}
+			.box{
+				width: 500px;
+				height: 500px;
+				border: 1px dashed #000000;
+				margin: auto;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			function mouseover(){
+				var onmouse=document.getElementById('div2');
+				onmouse.style.width="400px";
+				onmouse.style.height="500px";
+				onmouse.style.backgroundColor="red";
+			}
+			function mouseout(){
+				var outmouse=document.getElementById('div2');
+				outmouse.style.width='0';
+				outmouse.style.height='0';
+			}
+			
+			function a(){
+				var xianshi=document.getElementById('ul1');
+				xianshi.style.display='block';
+			}
+			function b(){
+				var xiaoshi=document.getElementById('ul1');
+				xiaoshi.style.display='none';
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1" onmouseover="mouseover()"> <!--document.getElementById('div2').style.width='400px';
+			document.getElementById('div2').style.height='500px';
+			document.getElementById('div2').style.backgroundColor='red';-->
+		  
+			
+		</div>
+		<div id="div2" onmouseout="mouseout()"><!--document.getElementById('div2').style.width='0';
+		document.getElementById('div2').style.height='0';-->
+			
+		</div>
+		
+		<div class="box">
+			<h4 onmouseover="a()" onmouseout="b()">设置</h4>
+			<ul id="ul1">
+				<li>你见过撒</li>
+				<li>都是长春</li>
+				<li>重置uu</li>
+				<li>是vss</li>
+			</ul>
+		</div>
+	</body>
+</html>

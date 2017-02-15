@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>字符串操作</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        input {
+            border: 1px solid #a9a9a9;
+            height: 34px;
+            line-height: 34px;
+            width: 550px;
+            margin: 20px 20px 0 0;
+            padding-left: 5px;
+            float: left;
+        }
+
+        #myDiv {
+            background: #3498db;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            width: 100px;
+            line-height: 34px;
+            border: none 0;
+            cursor: pointer;
+            margin: 20px 20px 0 40px;
+            float: left;
+        }
+    </style>
+
+    <script>
+         window.onload=function(){
+         	var oJsonCon=document.getElementById('jsonContent');
+         	var oDiv=document.getElementById('myDiv');
+         	oDiv.onclick=function(){
+         		var jStr=oJsonCon.innerHTML;
+         		var json=eval("("+jStr+")");
+         		//或者  var json= JSON.parse(jStr);
+         		var arr=json.place;
+         		for (var i=0;i<arr.length;i++) {
+         			document.write(arr[i].imageSrc+"<br />");
+         		}
+         	}
+         }
+    </script>
+
+</head>
+
+<body>
+<div id="jsonContent">
+    {
+    "country":"china",
+    "place":[
+    {"name":"beijing","imageSrc":"beijing.jpg"},
+    {"name":"helan","imageSrc":"helan.jpg"},
+    {"name":"sicuan","imageSrc":"sicuan.png"},
+    {"name":"hebei","imageSrc":"hebei.gif"},
+    {"name":"chengdu","imageSrc":"chengdu.jpg"},
+    {"name":"xiamen","imageSrc":"beijing.jpg"},
+    {"name":"jilin","imageSrc":"jilin.png"},
+    {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+    {"name":"qinhai","imageSrc":"qinhai.jpg"},
+    {"name":"gansu","imageSrc":"gansu.png"},
+    {"name":"xian","imageSrc":"xian.jpg"},
+    {"name":"emei","imageSrc":"emei.png"},
+    {"name":"fujian","imageSrc":"fujian.gif"},
+    {"name":"lijiang","imageSrc":"lijiang.jpg"},
+    {"name":"dali","imageSrc":"dali.tif"},
+    {"name":"xiamen","imageSrc":"beijing.jpg"},
+    {"name":"jilin","imageSrc":"jilin.png"},
+    {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+    {"name":"qinhai","imageSrc":"qinhai.jpg"},
+    {"name":"gansu","imageSrc":"gansu.png"},
+    {"name":"xian","imageSrc":"xian.jpg"},
+    {"name":"emei","imageSrc":"emei.png"},
+    {"name":"fujian","imageSrc":"fujian.gif"},
+    {"name":"lijiang","imageSrc":"lijiang.jpg"},
+    {"name":"dali","imageSrc":"dali.tif"},
+    {"name":"helan","imageSrc":"helan.jpg"},
+    {"name":"sicuan","imageSrc":"sicuan.png"},
+    {"name":"hebei","imageSrc":"hebei.gif"},
+    {"name":"chengdu","imageSrc":"chengdu.jpg"},
+    {"name":"xiamen","imageSrc":"beijing.jpg"},
+    {"name":"jilin","imageSrc":"jilin.png"},
+    {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+    {"name":"qinhai","imageSrc":"qinhai.jpg"},
+    {"name":"gansu","imageSrc":"gansu.png"},
+    {"name":"xian","imageSrc":"xian.jpg"},
+    {"name":"emei","imageSrc":"emei.png"},
+    {"name":"fujian","imageSrc":"fujian.gif"},
+    {"name":"lijiang","imageSrc":"lijiang.jpg"},
+    {"name":"dali","imageSrc":"dali.tif"},
+    {"name":"xiamen","imageSrc":"beijing.jpg"},
+    {"name":"jilin","imageSrc":"jilin.png"},
+    {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+    {"name":"qinhai","imageSrc":"qinhai.jpg"},
+    {"name":"gansu","imageSrc":"gansu.png"},
+    {"name":"xian","imageSrc":"xian.jpg"},
+    {"name":"emei","imageSrc":"emei.png"},
+    {"name":"fujian","imageSrc":"fujian.gif"},
+    {"name":"lijiang","imageSrc":"lijiang.jpg"},
+    {"name":"dali","imageSrc":"dali.tif"},
+    {"name":"dali","imageSrc":"dali.tif"},
+    {"name":"dali","imageSrc":"dali.tif"}
+
+    ]
+    }
+</div>
+<div id="myDiv">统计一下</div>
+
+<div></div>
+</body>
+</html>

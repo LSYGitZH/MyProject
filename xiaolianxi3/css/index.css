@@ -1,0 +1,103 @@
+*{
+	background-color: black;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.inner span{
+	font-family: 'FontAwesome';
+}
+.box{
+	height: 1000px;
+	width: 914px;
+	margin: auto;
+	position: relative;
+}
+.box:before{
+	content:'';
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+.box:hover:before{
+	content:'';
+	opacity: 0.5;
+	
+}
+.inner{
+	height:825px;
+	background-image: url(../img/1439888965539.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50%;
+}
+.box .inner{
+	padding-top: 20px;
+	text-align: center;
+}
+.box h1{
+	color: white;
+	background-color: transparent;
+}
+.box .zi{
+	font-size: 0.7em;
+	background-color: transparent;
+}
+.box p{
+	color: white;
+	font-size: 1.1em;
+	font-family: "楷体";
+	background-color: transparent;
+}
+.box a{
+	width: 360px;
+	height: 58px;
+	display: block;
+	border: 2px solid dimgrey;
+	font-size: 35px;
+	line-break: 58px;
+	border-radius: 30px;
+	transition: all 0.5s;
+	text-indent: 20px;
+	overflow: hidden;
+	color: red;
+   position: absolute;
+   left: 0;
+   top: 200px;
+   right: 0;
+   margin: auto;
+   z-index: 2;
+}
+.box a:hover{
+	border-color:white;
+	text-indent:-40px;
+}
+.box a span{
+	text-indent: -10px;
+	transition: all 0.5s;
+}
+.box a:hover span{
+	color:red;
+	text-indent: 30px;
+}
+
+
+.heand{
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	left: 200px;
+	top: 200px;
+	color: white;
+}
+.heand2{
+	background-color: red;
+}

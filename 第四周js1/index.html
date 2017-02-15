@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.div{
+				width: 200px;
+				height: 200px;
+				background-color: black;
+				opacity: 0.5;
+				position: absolute;
+			}
+			.div1{
+				width: 400px;
+				height: 400px;
+				overflow: hidden;
+				position: relative;
+				float: left;
+			}
+			.div2{
+				width: 400px;
+				height: 400px;
+				overflow: hidden;
+				position: relative;
+				display: none;
+			}
+			#small_img{
+				width: 400px;
+				height: 400px;
+			}
+			#big_img{
+				width: 800px;
+				height: 800px;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var oDiv=document.getElementById('div');
+				var oDiv1=document.getElementById('div1');
+				var oDiv2=document.getElementById('div2');
+				var oBigImg=document.getElementById('big_img');
+				oDiv1.onmouseenter=function(){
+					oDiv2.style.display="block";
+					oDiv.style.display="block";
+				}
+				oDiv1.onmouseleave=function(){
+					oDiv2.style.display="none";
+					oDiv.style.display="none";
+				}
+				oDiv1.onmousemove=function(ev){
+					var oEvent=window.event || ev;
+					
+					var scrollLeft=document.documentElement.scrollLeft || document.body.scrollLeft;
+					var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+					
+					var top=oEvent.clientY+scrollTop-oDiv1.offsetTop;
+					var left=oEvent.clientX+scrollLeft-oDiv1.offsetLeft;
+					
+					top-=100;
+					left-=100;
+				
+					if (top<0) {
+						top=0;
+					}
+					if (top>200) {
+						top=200;
+					}
+					if (left<0) {
+						left=0;
+					}
+					if (left>200) {
+						left=200;
+					}
+					oDiv.style.left=left+"px";
+					oDiv.style.top=top+"px";
+					oBigImg.style.left=-left*2+"px";
+					oBigImg.style.top=-top*2+"px";
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="div1" id="div1">
+			<img id="small_img" src="img/TB2KvloaYeI.eBjSspkXXaXqVXa_!!84453948.jpg_400x400.jpg"/>
+		    <div class="div" id="div">
+			         
+		    </div>
+		</div>
+		<div class="div2" id="div2">
+			<img id="big_img" src="img/TB2KvloaYeI.eBjSspkXXaXqVXa_!!84453948.jpg_400x400.jpg"/>
+			
+			
+		</div>
+		
+	</body>
+</html>

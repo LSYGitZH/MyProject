@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#btn{
+				width: 88px;
+				height: 30px;
+				background-color: #3499db;
+				color: #FFFFFF;
+				margin: 20px 0 0 20px;
+				text-align: center;
+				line-height: 30px;
+				cursor: pointer;
+			}
+			#box{
+				width: 400px;
+				height: 250px;
+				border: 1px solid #7bbde8;
+				position: absolute;
+				/*left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;*/
+				display: none;
+			}
+			.top{
+				width: 400px;
+				height: 30px;
+				background-color: #3499db;
+			}
+			.top .head{
+				line-height: 30px;
+				margin-left: 10px;
+				font-size: 15px;
+				color: #FFFFFF;
+			}
+			.top #clear{
+				float: right;
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				cursor: pointer;
+			}
+			.bottom{
+				font-size: 15px;
+				margin-left: 10px;
+				margin-top: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn=document.getElementById('btn');
+				var oBox=document.getElementById('box');
+				var oClear=document.getElementById('clear');
+				var oTop=document.getElementById('stop');
+				oBtn.onclick=function(){
+					
+					oBox.style.left="0px";
+					oBox.style.right="0px";
+					oBox.style.top="0px";
+					oBox.style.bottom="0px";
+					oBox.style.margin="auto";
+					if (oBox.style.display=="block") {
+						oBox.style.display="none";
+					}else{
+						oBox.style.display="block";
+					}
+				}
+				oBox.onmousedown=function(ev){
+					var oEvent=window.event || ev;
+					var x=oEvent.clientX-oBox.offsetLeft;
+					var y=oEvent.clientY-oBox.offsetTop;
+					document.onmousemove=function(ev){
+						var oEvent=window.event || ev;
+						oBox.style.margin="0px";
+						oBox.style.left=oEvent.clientX-x+"px";
+						oBox.style.top=oEvent.clientY-y+"px";
+					};
+					document.onmouseup=function(){
+						document.onmousemove=undefined;
+						document.onmouseup=undefined;
+					};
+					return false;
+				}
+				oClear.onclick=function(){
+					oBox.style.display="none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="btn">弹窗</div>
+		<div id="box">
+			<div class="top" id="top">
+				<span class="head">弹窗</span>
+				<span id="clear">&times;</span>
+			</div>
+			<div class="bottom">
+				这是一个弹窗
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Math对象</title>
+    <script>
+        window.onload = function () {
+
+
+            //Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，其下面的方法均只是函数，并非Date对象的方法，所以直接使用，不使用new
+            //属性
+
+//            document.write(Math.E + '</br>');
+//            document.write(Math.LN2 + '</br>');
+//            document.write(Math.LN10 + '</br>');
+//            document.write(Math.LOG2E + '</br>');
+//
+//            document.write(Math.LOG10E + '</br>');
+//            document.write(Math.PI + '</br>');
+//            document.write(Math.SQRT1_2 + '</br>');
+//            document.write(Math.SQRT2 + '</br>');
+
+//            //方法
+            //abs(x)返回数的绝对值
+//            document.write(Math.abs("-1.5") + '</br>');
+//            //ceil(x)对数进行上取整
+            document.write(Math.ceil("-2.1") + '</br>');
+//            //floor(x)对数进行下取整
+            document.write(Math.floor("-3.7") + '</br>');
+//            //max(x,y)返回 x 和 y 中的最高值
+            document.write(Math.max("4", 5) + '</br>');
+////
+////            //min(x,y)返回 x 和 y 中的最低值
+            document.write(Math.min("4", "5") + '</br>');
+//
+//            //round(x)把数四舍五入为最接近的整数
+            document.write(round(-1.5) + '</br>');
+//
+            function round(num) {
+                if (num > 0)
+                    return Math.round(Math.abs(num));
+                else
+                    return -Math.round(Math.abs(num));
+            }
+
+
+//
+//            //pow(x,y)返回 x 的 y 次幂
+            document.write(Math.pow("2", "10") + '</br>');
+
+//            //random()返回 0 ~ 1 之间的随机数   0
+//            document.write(Math.random() + '</br>');
+//            //返回0~10之间的随机整数？
+//            document.write(Math.floor(Math.random()*11))
+//            parseInt()
+//            parseFloat()
+//            document.write(Math.floor(Math.random() * 10) + '</br>');
+//            //sqrt(x)返回数的平方根
+//            document.write(Math.sqrt("7") + '</br>');
+//
+//            //三角函数。这里只讲sin,cos示意即可。
+            // 弧度
+            document.write(Math.sin(Math.PI/3) + '</br>');
+
+//            160/180  *Math.PI
+
+
+//            //正三角函数中的X 都是指的“弧度”而非“角度”，弧度的计算公式为： 2*PI/360*角度
+//            var radian01 = 2 * Math.PI / 360 * 30;
+//            document.write(radian01 + '</br>');
+//
+//            //sin(x)返回数的正弦
+//            document.write(Math.sin(radian01) + '</br>');
+//            //cos(x)返回数的余弦
+//            document.write(Math.cos(radian01) + '</br>');
+//
+//            //exp(x)返回 e 的x次幂的值 ,e, 即自然对数的底数（约等于2.718）
+//            document.write(Math.exp("3") + '</br>');
+//
+//            //log(x)返回数的自然对数（底为e）
+//            document.write(Math.log("2") + '</br>');
+
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,91 @@
+*{
+	margin:0;
+	padding:0;
+}
+img{
+	border:none 0;
+}
+a{
+	text-decoration:none;
+	cursor:pointer;
+}
+ul li{
+	list-style:none;
+}
+body{
+	font-family:STKaiti, KaiTi_GB2312, "华文楷体", "宋体", Arial, Helvetica, sans-serif;
+	font-size:15px;
+	background:#f1f2f6;
+}
+.scrtop{
+	width: 50px;
+	height: 50px;
+	background: url(../img/scroll_top_bg.png) 0px 0px no-repeat;
+	position: fixed;
+	right: 63px;
+	bottom: 300px;
+	transition: all 0.3s;
+	z-index: 500;
+}
+.scrtop:hover{
+	background: url(../img/scroll_top_bg.png) 0px -50px no-repeat;
+}
+.contact_us_fixed{
+	width: 88px;
+	height: 88px;
+	background: url(../img/fixed_contactus.png)-147px 0px no-repeat;
+	position: fixed;
+	right: 45px;
+	bottom: 200px;
+	z-index: 500;
+}
+.contact_us_fixed:hover{
+	background: url(../img/fixed_contactus.png)0px 0px no-repeat;
+	animation: show4 1s;
+	-moz-animation: show4 1s;
+	-webkit-animation: show4 1s;
+	-ms-animation: show4 1s;
+	transition: all 1s;
+	width: 236px;
+}
+@keyframes show4{
+	0%{transform: scale(1,1);}
+	10%{transform: scale(1.2,0.8);}
+	20%{transform: scale(1.1,0.9);}
+	30%{transform: scale(1,1);}
+	50%{transform: scale(0.9,1.1);}
+	60%{transform: scale(0.8,1.2);}
+	70%{transform: scale(0.9,1.1);}
+	80%{transform: scale(1,1);}
+}
+@-moz-keyframes show4{
+	0%{transform: scale(1,1);}
+	10%{transform: scale(1.2,0.8);}
+	20%{transform: scale(1.1,0.9);}
+	30%{transform: scale(1,1);}
+	50%{transform: scale(0.9,1.1);}
+	60%{transform: scale(0.8,1.2);}
+	70%{transform: scale(0.9,1.1);}
+	80%{transform: scale(1,1);}
+}
+@-webkit-keyframes show4{
+	0%{transform: scale(1,1);}
+	10%{transform: scale(1.2,0.8);}
+	20%{transform: scale(1.1,0.9);}
+	30%{transform: scale(1,1);}
+	50%{transform: scale(0.9,1.1);}
+	60%{transform: scale(0.8,1.2);}
+	70%{transform: scale(0.9,1.1);}
+	80%{transform: scale(1,1);}
+}
+@-ms-keyframes show4{
+	0%{transform: scale(1,1);}
+	10%{transform: scale(1.2,0.8);}
+	20%{transform: scale(1.1,0.9);}
+	30%{transform: scale(1,1);}
+	50%{transform: scale(0.9,1.1);}
+	60%{transform: scale(0.8,1.2);}
+	70%{transform: scale(0.9,1.1);}
+	80%{transform: scale(1,1);}
+	
+}

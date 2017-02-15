@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			//依次输入10个学生成绩，判断学生（优秀、良好、中等、及格、不及格）并计算人数
+
+          
+          var num;
+          var score;
+          var arr=[];
+         do{
+         	num=parseInt(prompt("请输入一个数字"));
+         	if (num!=0) {
+         		if (num>=88 && num<=100) {
+         			score="优秀";
+//       			document.write("优秀");
+         		}else if (num>=77) {
+         			score="良";
+//       			document.write("良");
+         		}else if (num>=60) {
+         			score="及格";
+//       			document.write("及格");
+         		}else{
+         			score="不及格";
+//       			document.write("不及格");
+         		}
+         		arr.push(score);
+         	}
+         }while(num!=0);
+			
+		document.write(arr+"<br />");	
+		document.write("共有"+arr.length+"人");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--带有提示的输入框-->
+		<!--<input type="text" list="valList" name="" id="" value="" />
+		<datalist id="valList">
+			<option value="js">js</option>
+			<option value="css">css</option>
+			<option value="html">html</option>
+		</datalist>-->
+		<form action="http://www.baidu.com" method="post">
+			<!--启用自动完成功能的表单-->
+			<!--autocomplete   提示-->
+			<input type="text" placeholder="请输入4-16个字符" name="user" autocomplete="off" id="" value="" />
+			
+				
+			<!--<input type="email" value=""/>-->
+			<input type="submit" name="" id="" value="提交" />
+			<!--自动获取焦点-->
+			<!--autofocus   自动获取焦点-->
+			<input type="text" value="" autofocus="autofocus"/>
+			<!--输入不能为空-->
+			<!--required    输入不能为空-->
+			<input type="text" value="" required="required" id="text"/>
+			<!--替换form的网址-->
+			<input type="submit" formaction="http://www.qq.com" value="提交2"/>
+		</form>
+		<script type="text/javascript">
+			var oText=document.getElementById("text");
+//			数据验证失败时,会激发这个事件
+			oText.addEventListener("invalid",fn,false);
+			function fn(ev){
+				alert(this.validity.valid);
+				ev.preventDefault();
+			}
+		</script>
+	</body>
+</html>

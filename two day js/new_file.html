@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				
+					var olink=document.getElementById('link');
+				var obox=document.getElementsByTagName('input');
+					olink.onclick=function(){
+						for (var i=1;i<obox.length;i++){
+					       
+					       obox[i].checked=olink.checked;
+					}
+				}	
+				for (var j=1;j<obox.length;j++) {
+					obox[j].onclick=function(){
+					if(this.checked==false){
+						olink.checked=false;
+					}
+				}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="post">
+			
+			<input type="checkbox" id="link"/>全选<br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+			<input type="checkbox" name="" class="box" /><br />
+		</form>
+	</body>
+</html>

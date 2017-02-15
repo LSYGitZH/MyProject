@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			
+		window.onload=function(){
+			var oDiv=document.getElementById("div1");
+	         setInterval(function(){
+	         var oDate=new Date();
+             var year=oDate.getFullYear();
+             var month=oDate.getMonth();
+             var day=oDate.getDate();
+             var week=oDate.getDay();
+             var hour=oDate.getHours();
+             var min=oDate.getMinutes();
+             var second=oDate.getSeconds();
+	         oDiv.innerHTML=year+"年"+(month+1)+"月"+day+"日"+" "+"星期"+week+" "+hour+":"+min+":"+second;},100);
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="text-align: center;"></div>
+	</body>
+</html>

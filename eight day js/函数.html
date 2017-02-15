@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			function f1(){
+//
+//				var sum=0;
+//				for (var i=0;i<arguments.length;i++) {
+//					sum+=arguments[i];
+//				}
+//				
+//				return sum;
+//			}
+//			alert(f1(1,2,34,54,353,354,2,2));
+//			
+
+//          function math(num1,num2,num3){
+//          	if (arguments.length==2) {
+//          		return num1+num2;
+//          	}else if(arguments.length==3){
+//          		return (num1+num2+num3)/3;
+//          	}else{
+////          		illegal   参数数量错误
+//          	console.error("length of arguments is illegal");
+//          	}
+//          }
+//                alert(math(1,2,3));
+
+
+
+
+
+//          var arr=[];
+//          for (var i=0;i<2;i++) {
+//          	for (var j=1;j<=5;j++) {
+//          		arr.push(j);
+//          	}
+//          	
+//          }
+//          document.write(arr);
+
+     
+//   window.onload=function(){
+//   	 (function (){
+//         	var oBtn=document.getElementById('btn1');
+//         	oBtn.onclick=function(){
+//         		alert(1);
+//         	}
+//         })();
+//      (function (){ 
+//      	var oBtn=document.getElementById('btn2');
+//         	oBtn.onclick=function(){
+//         		alert(2);
+//         	}
+//         })();
+//   }
+
+//  function sum(num){
+//  	
+//  	if (num==1) {
+//  		return true;
+//  	}
+//  	
+//  	return num+sum(num-1);
+//  }
+//      document.write(sum(100)+"<br />");
+//    
+//    function factorial(num2){
+//    	if (num2==1) {
+//  		return true;
+//  	}
+//    	return num2 * factorial(num2-1);
+//    }
+//    document.write(factorial(10)+"<br />");
+      
+      var arr=[1,2,3,[1,2,3],[1,2,3,[1,[1,2,3],2,3],[1,3,2],4],4,5,6];
+      
+      function sum(arr){
+      	var s=0;
+      	for(var i=0;i<arr.length;i++){
+      		
+      		if (arr[i].constructor==Array)          //判断如果是数组
+      		{
+      			s+=sum(arr[i]);         //是数组      利用递归求和
+      		}
+      		else{
+      			s+=arr[i];   //不是数组      直接累加
+      		}	
+      	}
+      	return s;
+      }
+      document.write(sum(arr));
+     
+		</script>
+	</head>
+	<body>
+		<!--<form action="" method="post">
+			<input type="button" id="btn1" value="按钮1"  />
+		<input type="button" id="btn2" value="按钮2"  />
+			
+		</form>
+		-->
+		
+	</body>
+</html>

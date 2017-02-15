@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+			var oDiv=document.getElementById("div1");
+	         setInterval(function(){
+	         var oDate=new Date();
+             var year=oDate.getFullYear();
+             var month=oDate.getMonth();
+             var day=oDate.getDate();
+             var week=oDate.getDay();
+             var hour=oDate.getHours();
+             var min=oDate.getMinutes();
+             var second=oDate.getSeconds(); 
+             var hello="早上好";
+             if(hour>=6 && hour<12){
+             	hello="早上好";
+             }else if (hour<14) {
+             	hello="中午好";
+             }else if (hour<18) {
+             	hello="下午好";
+             }else if (hour<24){
+             	hello="晚上好";
+             }else{
+             	hello="凌晨";
+             }
+             
+	         oDiv.innerHTML=year+"年"+(month+1)+"月"+day+"日"+" "+"星期"+week+" "+hour+":"+min+":"+second;},100);
+             
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="text-align: center;"></div>
+	</body>
+</html>

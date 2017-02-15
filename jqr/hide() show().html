@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+			.div{
+				width: 100px;
+				height: 100px;
+				background-color: black;
+			}
+			.xianshi{
+				
+				margin-top: 30px;
+				margin-left: 300px;
+				
+			}
+			.xianshi>li{
+				float: left;
+				list-style: none;
+				margin-right: 20px;
+				width: 100px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				background-color: green;
+				position: relative;
+			}
+			.xianshi>li ul{
+				display: none;
+				list-style: none;
+				width: 100px;
+				height: 130px;
+				text-align: left;
+				background-color: cornflowerblue;
+				position: absolute;
+				left: 0;
+				top: 30px;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+//			$(function(){})  $(document).ready()  window.onload  的区别
+			$(function(){
+				$("input:first").click(function(){
+					$(".div").show("slow");
+					//show为显示
+//					slow为慢速   fast为快速
+				});
+				$("input:eq(1)").click(function(){
+					//hide为隐藏
+					$(".div").hide();
+				});
+				$("input:eq(2)").click(function(){
+					//toggle为没有就显示有就隐藏        意思是切换
+					$(".div").toggle();
+				});
+				$(".div").click(function(){
+					$(this).css({
+						"width":"200px",
+						"height":"300px"
+					});
+				});
+				
+//				$(".xianshi").mouseenter(function(){
+//					$("ul").css("display","block");
+//				})
+//				$(".xianshi").mouseleave(function(){
+//					$("ul").css("display","none");
+//				})
+
+                   $(".xianshi>li").hover(function(){
+                   	$(this).find("ul").toggle();
+                   })
+			})
+			//$(this).find
+			//find 在当前的标签里面去找元素
+		</script>
+	</head>
+	<body>
+		
+		<input type="button" name="" id="" value="显示" />
+		<input type="button" name="" id="" value="隐藏" />
+		<input type="button" name="" id="" value="显示隐藏" />
+		<div class="div">
+			
+		</div>
+		
+		
+			<ul class="xianshi">
+				<li>显示
+					<ul>
+				      <li>1</li>
+				      <li>2</li>
+				      <li>3</li>
+				      <li>4</li>
+			       </ul>
+				</li>
+				<li>显示
+					<ul>
+				      <li>1</li>
+				      <li>2</li>
+				      <li>3</li>
+				      <li>4</li>
+			       </ul>
+				</li>
+				<li>显示
+					<ul>
+				      <li>1</li>
+				      <li>2</li>
+				      <li>3</li>
+				      <li>4</li>
+			       </ul>
+				</li>
+				<li>显示
+					<ul>
+				      <li>1</li>
+				      <li>2</li>
+				      <li>3</li>
+				      <li>4</li>
+			       </ul>
+				</li>
+			</ul>
+			
+			
+		
+	</body>
+</html>

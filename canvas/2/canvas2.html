@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body{ background:black;}
+#c1{ background:white;}
+</style>
+<script>
+
+window.onload = function(){
+	var oC = document.getElementById('c1');
+	var oGC = oC.getContext('2d');
+	oGC.moveTo(100,100)
+	oGC.arcTo(200,200,100,200,10);
+	oGC.lineTo(100,200)
+
+
+
+
+	//arcTo() 方法在画布上创建介于两个切线之间的弧/曲线。
+	//context.fillRect(x1,y1,x2,y2,r);
+/*	x1	弧的起点的 x 坐标
+y1	弧的起点的 y 坐标
+x2	弧的终点的 x 坐标
+y2	弧的终点的 y 坐标
+r	弧的半径*/
+	oGC.stroke();
+	
+};
+
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="400" height="400"></canvas>
+</body>
+</html>

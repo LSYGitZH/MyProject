@@ -1,0 +1,580 @@
+*{margin: 0;padding: 0;font-family: "微软雅黑",Tahoma,"宋体";}
+ul{list-style: none;}
+a{text-decoration: none;}
+img{width: 100%;height: 100%;}
+/*网页头部开始  header_box*/
+.header_box{
+	width: 100%;
+	background-color: #eaeaea;
+}
+.header{
+	width: 962px;
+	height: 96px;
+	margin: 0 auto;
+}
+.header .text_box{
+	float: right;
+}
+.header_entry{
+	float: right;
+	line-height: 35px;
+}
+.header_entry a{
+	float: left;
+	font-size: 12px;
+	color: #8b8a96;
+}
+.header_entry a:last-of-type{
+	font-weight: bold;
+}
+.header_entry a:hover{
+	color: #ff7c00;
+}
+.header_entry span{
+	float: left;
+	margin: 0 15px;
+	font-size: 12px;
+	color: #cad3e0;
+}
+.header_present{
+	/*float: right;*/
+	line-height: 61px;
+}
+.header_present a{
+	float: left;
+}
+.header_present a:first-of-type{
+	display: inline-block;
+	margin-right: 21px;
+}
+.header_present a:first-of-type p{
+	width: 84px;
+	height: 15px;
+	background: url(../img/sprites.jpg) 1px 0px no-repeat;
+	float: left;
+	margin-top: 23px;
+	margin-right: 8px;
+}
+.header_present a:first-of-type:hover p{
+	background: url(../img/sprites.jpg) 1px -14px no-repeat;
+}
+.header_present a:first-of-type span{
+	display: inline-block;
+	width: 18px;
+	height: 19px;
+	background: url(../img/sprites.jpg) -342px -80px no-repeat;
+	float: right;
+	margin-top: 21px;
+	float: left;
+	
+}
+.header_present a:first-of-type:hover span{
+	background: url(../img/sprites.jpg) -342px -99px no-repeat;
+}
+.header_present a:last-of-type{
+	display: inline-block;
+	width: 57px;
+	height: 15px;
+	background: url(../img/sprites.jpg) -236px 0px no-repeat;
+	margin-top: 23px;
+}
+.header_present a:last-of-type:hover{
+	background: url(../img/sprites.jpg) -236px -14px no-repeat;
+}
+/*网页头部结束   header_box*/
+
+
+/*网页标语开始   banner_box*/
+.banner_box{
+	width: 100%;
+	background: url(../img/QQ图片20161206110111.jpg)center bottom no-repeat;
+	background-color: #eaeaea;
+	/*margin-bottom: 18px;*/
+}
+.banner{
+	width: 962px;
+	margin: auto;
+}
+.banner-content{
+	width: 962px;
+	height: 277px;
+	margin: auto;
+}
+.lunbo_box{
+	width: 718px;
+	height: 277px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.lunbo_box .img{
+    width: 718px;
+	height: 277px;	
+	display: none;
+}
+.lunbo_box .img:first-of-type{
+	display: block;
+}
+.dots{
+	width: 125px;
+	height: 15px;
+	position: absolute;
+	right: 22px;
+	bottom: 23px;
+}
+.dots .dot{
+	width: 15px;
+	height: 15px;
+	float: left;
+	margin-right: 7px;
+	background-color: #b1b1b1;
+	border-radius: 45px;
+}
+.dots .dot:first-of-type{
+	background-color: #efefef;
+}
+.dots .dot:last-of-type{
+	margin-right: 0;
+}
+.game_news{
+	width: 244px;
+	height: 269px;
+	float: left;
+	background-color: #FFFFFF;
+}
+.game_news dl{
+	width: 244px;
+	height: 269px;
+}
+.game_news dt{
+	width: 196px;
+	height: 44px;
+	border-bottom: 1px solid #ccd5f1;
+	margin: auto;
+	overflow: hidden;
+	margin-bottom: 9px;
+}
+.game_news dt p{
+	width: 43px;
+	height: 24px;
+	background: url(../img/sprites.jpg) -306px 0px no-repeat;
+	float: left;
+	margin-top: 12px;
+}
+.game_news dt span{
+	display: inline-block;
+	width: 60px;
+	height: 11px;
+	background: url(../img/sprites.jpg) -349px 0px no-repeat;
+	float: right;
+	margin-top: 24px;
+}
+.game_news dd{
+	width: 196px;
+	height: 27px;
+	line-height: 24px;
+	margin: auto;
+	border-bottom: 1px dashed #cccccc;
+	padding-left: 15px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.game_news dd:before{
+	content: "";
+	width: 4px;
+	height: 4px;
+	background-color: #666060;
+	position: absolute;
+	left: 0;
+	top: 11.5px;
+	border-radius:1px;
+}
+.game_news dd a{
+	font-size: 12px;
+	color: #646464;
+}
+.game_news dd a:hover{
+	color: #000000;
+}
+.game_news dd:nth-of-type(5){
+	border-bottom: none;
+}
+.game_news dd:last-of-type{
+	width: 194px;
+	height: 66px;
+	border-bottom: none;
+	background: url(../img/sprites.jpg) -213px -261px no-repeat;
+}
+.game_news dd:last-of-type:before{
+	display: none;
+}
+/*网页标语结束   banner_box*/
+
+
+/*网页主体开始   main_box*/
+.main_box{
+	width: 100%;
+	background-color: #eaeaea;
+	padding-top: 18px;
+}
+.main{
+	width: 100%;
+}
+.main_banner_box{
+	width: 960px;
+	height: 170px;
+	border: 1px solid #ccd5f1;
+	overflow: hidden;
+	margin: auto;
+}
+.main_banner_box ul{
+	width: 211px;
+	height: 170px;
+	position: relative;
+}
+.main_banner_box .ban_menu{
+	width: 211px;
+	height: 34px;
+	line-height: 34px;
+	background-color: #f4f4f4;
+	position: relative;
+	z-index: 2;
+}
+.main_banner_box .ban_menu  .menu_color{
+	display: inline-block;
+	width: 210px;
+	height: 34px;
+	position: absolute;
+	left: -207px;
+	top: 0;
+	z-index: 1;
+	transition: all 0.5s;
+}
+.main_banner_box .ban_menu .text{
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+	/*margin-left: 36px;*/
+	position: relative;
+	left: 36px;
+	z-index: 2;
+}
+.main_banner_box .ban_menu:first-of-type .text{
+	color: #f4f4f4;
+}
+.main_banner_box .ban_menu:first-of-type .menu_color{
+	left: 0;
+	
+}
+.main_banner_img{
+	width: 751px;
+	height: 170px;
+	position: absolute;
+    left: 210px;
+    top: 0;
+}
+.main_banner_img .main_img{
+	width: 751px;
+	height: 170px;
+	position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    transition: all 0.5s;
+}
+.main_banner_img .main_img:first-of-type{
+	display: block;
+}
+
+.list_box{
+	width: 100%;
+	background-color: #FFFFFF;
+	padding-top: 19px;
+}
+.list{
+	width: 962px;
+	margin: auto;
+	padding-bottom: 52px;
+	border-bottom: 1px solid #CDDAEE;
+	/*overflow: hidden;*/
+	position: relative;
+}
+.list:before{
+	content: "";
+	display: table;
+}
+.list:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.list_left{
+	/*margin-right: 20px;*/
+	/*float: left;*/
+}
+.new_test{
+	width: 216px;
+	height: 286px;
+	border: 1px solid #cddaee;
+	margin-bottom: 19px;
+}
+.new_test .new_test_head{
+	width: 216px;
+	height: 42px;
+	background-color: #f1f1f1;
+	overflow: hidden;
+	border-bottom: 1px solid #cddaee;
+}
+.new_test .new_test_head .head{
+	display: block;
+	width: 71px;
+	height: 15px;
+	background: url(../img/sprites.jpg) -223px -30px no-repeat;
+	margin-top: 13px;
+	margin-left: 15px;
+}
+.new_test ul li{
+	width: 216px;
+	height: 60px;
+	border-bottom: 1px solid #cddaee;
+}
+.new_test ul li:last-of-type{
+	border-bottom:none;
+}
+.new_test ul li a:hover .game_name{
+	color: #000000;
+}
+.new_test ul li div{
+	width: 38px;
+	height: 38px;
+	background: url(../img/qq游戏_03.png) no-repeat;
+	float: left;
+	margin: 11px 0 0 18px;
+}
+.new_test ul li p{
+	float: left;
+	margin-left: 14px;
+	margin-top: 6px;
+}
+.new_test ul li .game_name{
+	font-size: 11px;
+	color: #666666;
+}
+.new_test ul li .date{
+	color: #8aa92f;
+	font-size: 11px;
+}
+.game_menu1{
+	width: 216px;
+	height: 34px;
+	border: 1px solid #cddaee;
+	margin-bottom: 19px;
+}
+.game_menu1 a{
+	display: block;
+	width: 216px;
+	height: 34px;
+	background: url(../img/sprites.jpg) -125px -227px no-repeat;
+}
+.game_menu2{
+	width: 216px;
+	height: 34px;
+	border: 1px solid #cddaee;
+	margin-bottom: 19px;
+}
+.game_menu2 a{
+	display: block;
+	width: 216px;
+	height: 34px;
+	background: url(../img/sprites.jpg) -191px -327px no-repeat;
+}
+.game_menu3{
+	width: 216px;
+	height: 34px;
+	border: 1px solid #cddaee;
+	margin-bottom: 19px;
+}
+.game_menu3 a{
+	display: block;
+	width: 216px;
+	height: 34px;
+	background: url(../img/sprites.jpg) 0px -80px no-repeat;
+}
+.game_menu4{
+	width: 216px;
+	height: 57px;
+	border: 1px solid #cddaee;
+}
+.game_menu4 a{
+	display: block;
+	width: 216px;
+	height: 57px;
+	background: url(../img/sprites.jpg) 0px -114px no-repeat;
+}
+
+.list_right{
+	width: 722px;
+	height: 529px;
+	border: 1px solid #cddaee;
+	/*float: left;*/
+	position: absolute;
+	left: 237px;
+	top: 0;
+}
+.list_right_head{
+	width: 722px;
+	height: 42px;
+	border-bottom: 1px solid #cddaee;
+	background-color: #f0f0f0;
+	overflow: hidden;
+}
+.list_right_head .head{
+	display: block;
+	width: 57px;
+	height: 15px;
+	background: url(../img/sprites.jpg) 0px -30px no-repeat;
+	margin: 13px 0 0 21px;
+	float: left;
+}
+.list_right_head .gift_package{
+	display: inline-block;
+	width: 82px;
+	height: 22px;
+	background: url(../img/sprites.jpg) -57px -30px no-repeat;
+	float: right;
+	margin: 10px 20px 0 0;
+}
+.list_right_head .gift_package:hover{
+	background: url(../img/sprites.jpg) -140px -30px no-repeat;
+}
+.game_type{
+	width: 722px;
+	height: 43px;
+	border-bottom: 1px solid #cddaee;
+}
+.game_type li{
+	float: left;
+	width: 120px;
+	height: 43px;
+	line-height: 43px;
+	text-indent: 20px;
+	font-size: 12px;
+	color: #0e97dc;
+	font-weight: bold;
+}
+.game_select{
+	width: 722px;
+	height: 408px;
+	border-bottom: 1px solid #cddaee;
+}
+.game_select ul{
+	width: 120px;
+	height: 408px;
+	border-right: 1px solid #cddaee;
+	float: left;
+	padding-top: 9px;
+	box-sizing: border-box;
+}
+.game_select ul:last-of-type{
+	border-right: none;
+}
+.game_select ul li{
+	line-height: 30px;
+}
+.game_select ul li a{
+	font-size: 12px;
+	color: #666666;
+	margin-left: 20px;
+}
+.game_select ul li:hover a{
+	color: #000000;
+}
+.h{
+	display: inline-block;
+	width: 10px;
+	height: 11px;
+	background: url(../img/qq游戏_11.png) 0px 0px no-repeat;
+	float: right;
+	margin-top: 11px;
+	margin-right: 12px;
+}
+.n{
+	display: inline-block;
+	width: 10px;
+	height: 11px;
+	background: url(../img/qq游戏_07.png) 0px 0px no-repeat;
+	float: right;
+	margin-top: 11px;
+	margin-right: 12px;
+}
+.arrow{
+	margin-left: 9px;
+	color: #0E97DC;
+}
+
+.main_last_select{
+	float: right;
+}
+.main_last_select ul li{
+	float: left;
+	line-height: 33px;
+	margin-right: 20px;
+}
+.main_last_select ul li span{
+	display: inline-block;
+	width: 10px;
+	height: 11px;
+	margin-right: 9px;
+}
+.main_last_select ul li:first-of-type span{
+	background: url(../img/qq游戏_07.png) 0px 0px no-repeat;
+}
+.main_last_select ul li:nth-of-type(2) span{
+	background: url(../img/sprites.jpg) -397px -60px no-repeat;
+}
+.main_last_select ul li:last-of-type span{
+	background: url(../img/qq游戏_11.png) 0px 0px no-repeat;
+}
+.main_last_select ul li a{
+	font-size: 12px;
+	color: #666666;
+}
+/*网页主体结束   main_box*/
+
+
+/*网页尾部开始   footer_box*/
+.footer_box{
+	width: 100%;
+}
+.footer{
+	width: 962px;
+	height: 79px;
+	margin: auto;
+	text-align: center;
+}
+.footer_menu{
+	margin-top: 20px;
+}
+.footer_menu a{
+	font-size: 11px;
+	color: #a4a4a4;
+}
+.footer_menu a:hover{
+	color: #000000;
+}
+.footer_menu span{
+	font-size: 11px;
+	color: #c6b0b0;
+}
+.footer_last_text{
+	font-size: 11px;
+	color: #a4a4a4;
+}
+.footer_last_text a{
+	color: #a4a4a4;
+}
+.footer_last_text a:hover{
+	color: #000000;
+}
+/*网页尾部结束   footer_box*/

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;margin-left: 10px;}
+			input{
+				margin-left: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn1=document.getElementById('btn1');
+				var oBtn2=document.getElementById('btn2');
+				var oBtn3=document.getElementById('btn3');
+				var oUl=document.getElementById('ul');
+				
+				oBtn1.onclick=function(){
+					var text="烟花三月下扬州";
+					var oLi=document.createElement("li");
+					oUl.appendChild(oLi);
+					oLi.innerHTML=text;
+				}
+				oBtn2.onclick=function(){
+					var text2="故人西辞黄鹤楼";
+					var oLi=document.createElement("li");
+					oUl.replaceChild(oLi,oUl.children[0]);
+					oLi.innerHTML=text2;
+				}
+				oBtn3.onclick=function(){
+					oUl.removeChild(oUl.children[0]);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="btn1" value="创建节点" /><br />
+		<input type="button" name="" id="btn2" value="替换节点" /><br />
+		<input type="button" name="" id="btn3" value="删除节点" />
+		<ul id="ul">
+			
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			
+//			for (var x in navigator) {
+//				document.write(x+":"+navigator[x]+"<br />");
+//			}
+
+               if (navigator.userAgent.toLowerCase().indexOf("firefox")!=-1) {
+               	document.write("火狐浏览器");
+               	
+               }else if (navigator.userAgent.toLowerCase().indexOf("webkit")!=-1) {
+               		document.write("谷歌浏览器");
+               }else if (navigator.userAgent.toLowerCase().indexOf("msie")!=-1) {
+               		document.write("IE浏览器");
+               }else{
+               	document.write("默认 浏览器");
+               }
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

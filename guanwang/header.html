@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var oUl=$(".header_menu");
+				var oLi=$(".header_menu>li");
+				var arrSpan=$(".xiajiantou");
+				var oDot1=$(".dot1");
+				var oDot2=$(".dot2");
+				oLi.hover(function(){
+					var oLeft=$(this).offset().left-oUl.offset().left;
+					var oWidth=$(this).width();
+		         var oDotPosit=oWidth/2+oLeft;
+					oDot2.css({"left":oDotPosit+"px","display":"block"});
+				},function(){
+					oDot2.css({"display":"none"});
+				});
+				oLi.click(function(){
+					var oLeft=$(this).offset().left-oUl.offset().left;
+					var oWidth=$(this).width();
+		            var oDotPosit=oWidth/2+oLeft;
+					oDot1.css({"left":oDotPosit+"px"});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="header_content">
+				<a href="" class="header_logo"></a>
+				<ul class="header_menu">
+					<li><a href="index.html" class="menu">首页</a></li>
+					<li>
+						<a href="aboutxiaoniao.html" class="menu">小鸟掌学<span class="xiajiantou"></span></a>
+						<ul>
+							<li><a href="#">人才理念</a><span></span></li>
+							<li><a href="#">团队介绍</a><span></span></li>
+							<li><a href="#">招聘信息</a><span></span></li>
+						</ul>
+					</li>
+					<li><a href="#" class="menu" onclick="window.open('list.html','_blank');">小鸟动态</a></li>
+					<li>
+						<a href="#" class="menu">企业文化<span class="xiajiantou"></span></a>
+						<ul>
+							<li><a href="#" onclick="window.open('article.html?type=companyIdea');">公司理念</a><span></span></li>
+							<li><a href="#" onclick="window.open('article.html?type=companyCulture');">公司文化</a><span></span></li>
+							<li><a href="#" onclick="window.open('article.html?type=companyEnvironment');">公司氛围</a><span></span></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="menu">人力资源<span class="xiajiantou"></span></a>
+						<ul>
+							<li><a href="#" onclick="window.open('article.html?type=talents');">人才理念</a><span></span></li>
+							<li><a href="#" onclick="window.open('article.html?type=team');">团队介绍</a><span></span></li>
+							<li><a href="#" onclick="window.open('article.html?type=joinUs');">招聘信息</a><span></span></li>
+						</ul>
+					</li>
+					<li><a href="#" class="menu">联系我们</a></li>
+					<div class="dot1"></div>
+					<div class="dot2"></div>
+				</ul>
+			</div>
+		</header>
+	</body>
+</html>

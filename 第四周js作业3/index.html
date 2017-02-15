@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{list-style: none;}
+			a{text-decoration: none;}
+			#menu_box{
+				width: 600px;
+				height: 50px;
+				position: relative;
+				left: 50%;
+				margin-left: -300px;
+		        margin-top: 100px;
+			}
+			#menu_box>li{
+				width: 150px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size: 16px;
+				float: left;
+				background-color: #f1f1f1;
+				font-weight: bold;
+				position: relative;
+			}
+			#menu_box>li:hover{
+				background-color: #3499db;
+				color: #ffffff;
+			}
+			#menu_box>li:before{
+				content: "";
+				border-top:5px solid #000000;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				position: absolute;
+				right: 20px;
+				top: 22.5px;
+			}
+			#menu_box>li:hover:before{
+				border-top:5px solid #FFFFFF;
+			}
+			#list{
+				position: absolute;
+				top: 50px;
+				display: none;
+			}
+			#menu_box>li:hover #list{
+				display: block;
+			}
+			#list li{
+				width: 150px;
+				height: 50px;
+				background-color: #F1F1F1;	
+			}
+			#list li:hover{
+				background-color: #3499db;
+			}
+			#list li:hover a{
+				color: #ffffff;
+			}
+			#list li a{
+				display: block;
+				width: 150px;
+				height: 50px;
+				font-size: 16px;
+				font-weight: lighter;
+				color: #000000;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var arrA=document.getElementsByTagName('a');
+				for (var a=0;a<arrA.length;a++) {
+					arrA[a].onclick=function(){
+						window.open("index2.html#"+this.name,"_blank");
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<ul id="menu_box">
+			<li>美食
+			    <ul id="list">
+			    	<li><a href="JavaScript:" name="food">美食</a></li>
+			    	<li><a href="JavaScript:" name="iceCream">冰淇淋</a></li>
+			    	<li><a href="JavaScript:" name="fruit">水果</a></li>
+			    </ul>
+			</li>
+			<li>美景
+				<ul id="list">
+			    	<li><a href="JavaScript:" name="scenery">美景</a></li>
+			    	<li><a href="JavaScript:" name="mountains">山川</a></li>
+			    	<li><a href="JavaScript:" name="maerdaifu">马尔代夫</a></li>
+			    </ul>
+			</li>
+			<li>美食
+				<ul id="list">
+			    	<li><a href="JavaScript:" name="food">美食</a></li>
+			    	<li><a href="JavaScript:" name="iceCream">冰淇淋</a></li>
+			    	<li><a href="JavaScript:" name="fruit">水果</a></li>
+			    </ul>
+			</li>
+			<li>美景
+				<ul id="list">
+			    	<li><a href="JavaScript:" name="scenery">美景</a></li>
+			    	<li><a href="JavaScript:" name="mountains">山川</a></li>
+			    	<li><a href="JavaScript:" name="maerdaifu">马尔代夫</a></li>
+			    </ul>
+			</li>
+		</ul>
+	</body>
+</html>

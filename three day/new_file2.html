@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	    a{
+		    text-decoration: none;
+		 
+	}
+		fieldset{
+			width: 400px;
+			margin: auto;
+		}
+		div{
+			width: 270px;
+		    height: 50px;
+		    margin: auto;
+		}
+		.zcann{
+			width: 270px;
+		    height: 50px;
+			background-color:red;
+			color: white;
+			font-size: 19px;
+			font-weight: 600;
+			border-radius:5px;
+	     	outline:none;
+		}
+		
+		
+	</style>
+	<body>
+		<form>
+			<fieldset>
+				<legend>账户信息</legend>
+				<font color="red">*</font>用户名：<input type="text"/><br /><br />
+				<font color="red">*</font>密码：&nbsp;&nbsp;&nbsp;<input type="password"/><br /><br />
+				性别：<label><input type="radio" name="sex" checked="checked">男</label>
+				     <label><input type="radio" name="sex">女</label>
+			</fieldset>
+			<fieldset>
+				<legend>公司信息</legend>
+				公司名称：<input type="text" /><br /><br />
+				公司所在地址：  <select>
+					<optgroup label="中国">
+						<option selected="selected">北京</option>
+					<option>上海</option>
+					<option>天津</option>
+					<option>河北</option>
+					</optgroup>
+				</select>
+				<select>
+					<optgroup label="北京">
+					<option selected="selected">北京市</option>
+					<option>上海</option>
+					<option>天津</option>
+					<option>河北</option>
+					</optgroup>
+				</select>
+				<select>
+					<optgroup label="北京">
+					 <option>门头沟区</option>
+					<option selected="selected">昌平区</option>
+					<option>海淀区</option>
+					<option>石景山区</option>
+					</optgroup>
+				   </select><br /><br />
+				购买类型用途：<label><input type="checkbox">IT</label> 
+					<label><input type="checkbox">通讯设备</label> 
+					<label><input type="checkbox">大家电</label> 
+					<label><input type="checkbox">办公耗材</label> <br /><br />  
+				公司行业：	<select multiple="multiple">
+					<optgroup label="行业">
+					 <option>IT行业</option>
+					<option>计算机软件</option>
+					<option>市场推广</option>
+					<option>广告</option>
+					</optgroup>
+				   </select><br /><br />
+				公司介绍：
+				<textarea style="overflow:scroll; width: 100px; overflow-y:hidden;"></textarea>
+			     <br  /><br  />
+			    营业执照上传：<input type="file"><br  /><br  />
+			  <div><input type="button" value="立即注册" class="zcann"></div> <br  />
+			  <a href="new_file1.html" class="zcann2" style="margin: 0 0 0 170px;">返回登录</a>
+			</fieldset>
+		</form>
+	</body>
+</html>

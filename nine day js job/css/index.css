@@ -1,0 +1,511 @@
+
+.header,.main_top{margin: 0 auto;}
+/*网页头部开始  header_box*/
+.header_box{
+	width: 100%;
+}
+.header{
+	min-width: 0px;
+	max-width: 1177.6px;
+	padding-top: 22px;
+	zoom: 1;
+}
+.header:before{
+	content: "";
+	display: table;
+}
+.header:after{
+	content: "";
+	clear: both;
+	display: table;
+}
+#header_logo_le{
+	display: block;
+	width: 100px;
+	height: 26px;
+	background: url(../img/faw_logo_172_48.png)no-repeat;
+	background-size: auto 100%; 
+	float: left;
+}
+#header_logo_ri{
+	display: block;
+	width: 89px;
+	height: 31px;
+	background: url(../img/logo_rings.png)no-repeat;
+	background-size: auto 100%; 
+	float: right;
+}
+.header #header_menu{
+	clear: both;
+	position: relative;
+	padding-top: 2px;
+}
+.header li{
+	float: left;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 10px;
+}
+.header li:first-of-type{
+	padding-left: 0;
+}
+.header li a{
+	font-size: 12px;
+	color: #000000;
+}
+.header li:nth-of-type(6) a span{
+	display: inline-block;
+	width: 17px;
+	height: 11px;
+	background: url(../img/H6AAAAAElFTkSuQmCC.png)no-repeat;
+	padding-right: 2px;
+	
+}
+.header li:last-of-type a span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../img/sousuo.png)no-repeat;
+	padding-right: 5px;
+	vertical-align: middle;	
+}
+.header #header_menu li:hover ul{
+	display: block;
+}
+.header #header_menu ul{
+	width: 200px;
+	position: absolute;
+	top: 46px;
+	background-color: white;
+	overflow: hidden;
+	display: none;
+	border-top: 1px solid #ededed;
+	z-index: 20;
+}
+.header #header_menu ul li{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #D0D3D4;
+	text-align: left;
+	padding-left: 11px;
+	float: none;
+	box-sizing: border-box;
+}
+/*网页头部结束   header_box*/
+
+
+/*网页标语开始   banner_box*/
+.banner_box{
+	width: 100%;
+}
+.banner{
+	min-width: 0;
+	max-width: 1400px;
+	height: 418px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 10;
+}
+
+
+.banner img{
+	width: 100%;
+	float: left;
+	position: absolute;
+	top: 0;
+	z-index: 13;
+	/*transition: all 0.5s;*/
+}
+
+.yuan_box{
+	width: 226px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 10px;
+	margin: auto;
+    z-index: 14;
+}
+.yuan{
+	width: 8px;
+	height: 8px;
+	border: 1px solid #a1a3a5;
+	border-radius: 45px;
+	float: left;
+	margin-right: 13px;
+}
+.yuan:first-of-type{
+	background-color: #FFFFFF;
+	border-color: #FFFFFF;
+}
+.yuan:last-of-type{
+	margin-right: 0;
+}
+#lastpage{
+	width: 35px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 189px;
+	background: url(../img/sprite-main.png)-235px -315px no-repeat;
+	z-index: 15;
+}
+#nextpage{
+	width: 35px;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	top: 189px;
+	background: url(../img/sprite-main.png)-232px -275px no-repeat;
+	z-index: 15;
+}
+/*网页标语结束   banner_box*/
+
+
+/*网页主体开始   main_box*/
+.main_box{
+	width: 100%;
+}
+.main{
+	width:100%;
+}
+.main_top{
+	width: 770px;
+	margin-top: 40px;
+	margin-bottom: 80px;
+	text-align: left;
+	overflow: hidden;
+}
+.left{
+	width: 356px;
+	float: left;
+}
+.left .left_head{
+	height: 26px;
+	line-height: 26px;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.left .select{
+	width: 355px;
+	border: 1px solid #D0D3D4;
+	margin-bottom: 8px;
+	position: relative;
+	z-index: 2;
+}
+.left .select p{
+	font-size: 13px;
+	padding: 12px 18px 12px 14px;
+	box-sizing: border-box;
+}
+.left .select p span{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	float: right;
+	background:url(../img/sprite-main.png) 0px -143px no-repeat;
+}
+
+.left #select1 dl{
+display: none;
+}
+.left #select1 dl dt{
+	width: 355px;
+	padding: 12px 18px 12px 14px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #6d75a0;
+	border-bottom: 1px solid #D0D3D4;
+	box-sizing: border-box;
+	background-color: #e7e9ea;
+}
+.left #select1 dl dt:first-of-type{
+	border-top: 1px solid #D0D3D4;
+}
+.left #select1 dl dd{
+	width: 355px;
+	padding: 12px 18px 12px 28px;
+	font-size: 13px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #D0D3D4;
+}
+.left #select2 dl dt{
+	width: 355px;
+	padding: 12px 18px 12px 14px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	box-sizing: border-box;
+}
+.left #select2 dl{
+	overflow: hidden;
+	display: none;
+}
+.left #select2 dl dd{
+
+	float: left;
+}
+.left #select2 dl dd img{
+	margin-left: 10px;
+}
+.left .btn{
+	width: 99px;
+	height: 41px;
+	line-height: 41px;
+	background-color: #000000;
+	text-align: center;
+	font-size: 13px;
+	color: #FFFFFF;
+	font-weight: bold;
+	float: right;
+}
+.left .btn span{
+	font-size: 10px;
+	margin-left: 7px;
+}
+.right{
+	width: 300px;
+	height: 189px;
+	float: right;
+	background-color: black;
+}
+.main_center{
+	width: 1177.6px;
+	height: 565px;
+	margin: 0 auto;
+}
+.main_center .center_left{
+	width: 353px;
+	height: 565px;
+	margin-right: 59px;
+	float: left;
+}
+.main_center .center_left img{
+	height: 100%;
+}
+.main_center .center_right{
+	width: 765px;
+	height: 565px;
+	float: left;
+	overflow: hidden;
+}
+.product_box{
+	width: 765px;
+	height: 254px;
+	margin-bottom: 57px;
+	overflow: hidden;
+}
+.product_box:last-child{
+	margin-bottom: 0;
+}
+.product_box .product{
+	width: 353px;
+	height: 254px;
+	margin-right: 59px;
+	float: left;
+	overflow: hidden;
+	
+}
+
+.product img{
+	width: 100%;
+	height: 100%;
+}
+.product_box .product:last-of-type{
+	margin-right: 0;
+}
+.main_bottom_box{
+	width: 100%;
+	background-color: #e7e7ea;
+	margin-top: 140px;
+}
+.main_bottom{
+	width: 1177.6px;
+	height: 673px;
+	margin: 0 auto;
+}
+.text_box{
+	padding-top: 30px;
+	overflow: hidden;
+}
+
+.main_bottom dl{
+	width: 294px;
+	float: left;
+}
+.main_bottom dl dt{
+	margin-left: 31px;
+	height: 20px;
+	line-height: 20px;
+}
+.main_bottom dl dt a{
+	color: #000000;
+	font-size: 12px;
+}
+.main_bottom dl dd{
+	margin-left: 31px;
+	height: 34px;
+	line-height: 34px;
+}
+.main_bottom dl dd a{
+	color: #000000;
+	font-size: 14px;
+}
+.main_bottom dl dd a span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: url(../img/下载10.png)0px 0px no-repeat;
+}
+/*网页主体结束   main_box*/
+
+
+/*网页尾部开始   footer_box*/
+.footer_box{
+	width: 100%;
+	
+}
+.footer{
+	width: 100%;
+	
+}
+.footer_top_box{
+	width: 100%;
+	background-color: #E7E7EA;
+}
+.footer_top{
+	width: 1177.6px;
+	height: 187px;
+	/*padding-top: 35px;*/
+	margin: 0 auto;
+	overflow: hidden;
+}
+.footer_top_content{
+	margin-top: 40px;
+	/*box-sizing: border-box;*/
+	width: 1177.6px;
+	height: 147px;
+	border-top:1px solid #D0D3D4;
+
+}
+.footer_top_content li{
+	width: 146px;
+	float: left;
+	text-align: center;
+	margin-top: 30px;
+	position: relative;
+	
+}
+.footer_top_content li:before{
+	content: "";
+	height: 30px;
+	border-right: 1px solid #D0D3D4;
+	position:absolute ;
+	right: 0;
+	top: 20px;
+}
+.footer_top_content li:last-of-type:before{
+	border:none ;
+}
+.footer_top_content li a div{
+	margin:0 auto;
+	width: 50px;
+	height: 60px;
+}
+.footer_top_content li a p{
+	font-size: 12px;
+	color: #000000;
+}
+.footer_top_content li a:hover p{
+	color: #cc0033;
+}
+.footer_top_content li:first-of-type a div{
+	
+	background: url(../img/下载.png)no-repeat;
+}
+.footer_top_content li:nth-of-type(2) a div{
+	
+	background: url(../img/下载1.png)no-repeat;
+}
+.footer_top_content li:nth-of-type(3) a div{
+	
+	background: url(../img/下载2.png)no-repeat;
+}
+.footer_top_content li:nth-of-type(4) a div{
+	
+	background: url(../img/下载3.png)no-repeat;
+}
+.footer_top_content li:nth-of-type(5) a div{
+	
+	background: url(../img/下载4.png)no-repeat;
+}
+.footer_top_content li:nth-of-type(6) a div{
+	
+	background: url(../img/下载5.png)no-repeat;
+}
+.footer_top_content li:nth-of-type(7) a div{
+	
+	background: url(../img/下载6.png)no-repeat;
+}
+.footer_top_content li:last-of-type a div{
+	
+	background: url(../img/下载7.png)no-repeat;
+}
+.footer_bottom_box{
+	width: 100%;
+	background-color: #434c53;
+}
+.footer_bottom{
+	width: 1177.6px;
+	height: 181px;
+	margin: 0 auto;
+}
+.footer_bottom .top_text{
+	width: 1177.6px;
+	height: 112px;
+	line-height: 99px;
+	border-bottom: 1px solid #363d42;
+	
+}
+.footer_bottom .top_text ul{
+	float: left;
+}
+.footer_bottom .top_text li{
+	float: left;
+	margin-right: 30px;
+
+}
+
+.footer_bottom .top_text li a{
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.footer_bottom .top_text li a:hover{
+	color: #b0b6b8;
+}
+.top_text .right_png{
+	float: right;
+	margin-top: 36px;
+}
+.footer_img:first-of-type{
+	width: 40px;
+	height: 40px;
+	float: left;
+	background: #000000 url(../img/下载8.png)6px 4px no-repeat;
+	margin-right: 20px;
+}
+.footer_img:last-of-type{
+	width: 40px;
+	height: 40px;
+	float: left;
+	background: #000000 url(../img/下载9.png)6px 4px no-repeat;
+}
+.last_text p{
+	color: #b0b6b8;
+	font-size: 14px;
+	line-height: 68px;
+}
+/*网页尾部结束   footer_box*/

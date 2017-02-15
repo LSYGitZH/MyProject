@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{
+				list-style: none;
+			    float: right;
+				height: 350px;
+				margin-top: 50px;
+				}
+			
+			.box{
+				width: 200px;
+				height:400px ;
+				border: 1px solid #000000;
+				margin:30px auto;
+			}
+			.right{
+				width: 5px;
+				height: 400px;
+				background-color: #7a6e6e;
+				float: right;
+			}
+			
+			li{
+				/*width: 190px;*/
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				margin-bottom: 2px;
+				/*background-color: crimson;*/
+				color: white;
+				clear: both;
+				/*opacity: 0;*/
+				transition: all 0.6s;
+				transform-origin: right;
+				}
+			li .png,p{
+				float: right;
+	            height: 50px;
+			}
+			li .png{
+				display: block;
+			    width: 50px;
+				/*background-color: crimson;*/
+			}
+			li p{
+				background-color: crimson;
+				padding: 0 30px;
+				display: none;
+				
+				
+			}
+			li:first-child .png{
+				background: url(img/toolbars.png) -78px -199px no-repeat;
+			}
+			li:nth-child(2) .png{
+				background: url(img/toolbars.png) 13px 16px no-repeat;
+			}
+			li:nth-child(3) .png{
+				background: url(img/toolbars.png) 15px -31px no-repeat;
+			}
+			li:nth-child(4) .png{
+				background: url(img/toolbars.png) 15px -85px no-repeat;
+			}
+			li:nth-child(5) .png{
+				background: url(img/toolbars.png) 15px -137px no-repeat;
+			}
+			li:nth-child(6) .png{
+				background: url(img/toolbars.png) -135px -81px no-repeat;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl=document.getElementById('box');
+				var olist=oUl.getElementsByClassName('show');
+				var oP=oUl.getElementsByTagName('p');
+				
+				for (var i=0;i<olist.length;i++) {
+					olist[i].color=i;
+					olist[i].onmouseover=function(){
+						for (var i=0;i<olist.length;i++) {
+							olist[i].style.backgroundColor="#ffffff";
+						}
+						this.style.backgroundColor="crimson";
+						
+						for (var j=0;j<oP.length;j++) {
+							oP[j].style.display="none";
+						}
+                     
+                      	oP[this.color].style.display="block";
+					
+				}
+					olist[i].onmouseout=function(){
+						olist[this.color].style.backgroundColor="#FFFFFF";
+							oP[this.color].style.display="none";
+					
+				}	
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="right">
+				
+			</div>
+				<ul id="box">
+				    <li class="show"><span class="png"></span><p>京东会员</p></li>
+				    <li class="show"><span class="png"></span><p>京东会员</p></li>
+				    <li class="show"><span class="png"></span><p>京东会员</p></li>
+				    <li class="show"><span class="png"></span><p>京东会员</p></li>
+				    <li class="show"><span class="png"></span><p>京东会员</p></li>
+				    <li class="show"><span class="png"></span><p>京东会员</p></li>
+			  </ul>
+		</div>
+	</body>
+</html>

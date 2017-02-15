@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			nav{
+				width: 666px;
+				height: 555px;
+				margin: auto;
+				margin-top: 100px;
+				position: relative;
+				overflow: hidden;
+			}
+			ul{
+				list-style: none;
+				width: 3330px;
+				height: 555px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: all 1s;
+			}
+			li{
+				width: 666px;
+				height: 555px;
+				float: left;
+			}
+			.div1,.div2{
+				width: 333px;
+				height: 555px;
+				position: absolute;
+				top: 0;
+			}
+			.div1:hover,.div2:hover{
+				background-color: darkgray;
+				opacity: 0.5;
+			}
+			.div1{
+				left: 0;
+			}
+			.div2{
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li style="background-color: #fa23fd;"></li>
+				<li style="background-color: #ea66fb;"></li>
+				<li style="background-color: #fa22fa;"></li>
+				<li style="background-color: #fca3ad;"></li>
+				<li style="background-color: #edefad;"></li>
+			</ul>
+			<div class="div1"></div>
+			<div class="div2"></div>
+		</nav>
+		
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl=document.getElementsByTagName("ul")[0];
+				var arrLi=document.getElementsByTagName("li");
+				var oPrev=document.getElementsByClassName("div1")[0];
+				var oNext=document.getElementsByClassName("div2")[0];
+					var page=0;
+					oNext.onclick=function(){
+						page++;
+						if (page>arrLi.length-1) {
+							page=0;
+						}
+						oUl.style.left=-page*666+"px";
+					}
+					oPrev.onclick=function(){
+						page--;
+						if (page<0) {
+							page=arrLi.length-1;
+						}
+						oUl.style.left=-page*666+"px";
+					}
+			}
+		</script>
+	</body>
+</html>

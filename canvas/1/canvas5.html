@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body{ background:black;}
+#c1{ background:white;}
+span{ color:white;}
+</style>
+<script>
+
+window.onload = function(){
+	var oC = document.getElementById('c1');
+	
+	var oGC = oC.getContext('2d');  
+	
+	oGC.beginPath();
+
+	oGC.moveTo(100,100)
+
+	oGC.lineTo(200,200)
+	oGC.lineTo(230,70)
+
+	oGC.closePath();
+
+	oGC.stroke();
+
+
+
+
+};
+
+//beginPath() 方法在一个画布中开始子路径的一个新的集合。
+//beginPath() 丢弃任何当前定义的路径并且开始一条新的路径。它把当前的点设置为 (0,0)
+//closePath() 方法关闭一条打开的子路径。
+//moveTo() 方法可把窗口的左上角移动到一个指定的坐标。
+//x	窗口新位置的 x 坐标
+//y	窗口新位置的 y 坐标
+
+//lineTo() 方法添加一个新点，然后创建从该点到画布中最后指定点的线条（该方法并不会创建线条）。
+
+
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="400" height="400">
+	<span>不支持canvas浏览器</span>
+</canvas> <!--默认：宽300 高150-->
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+		form{
+			width: 66px;
+			height: 30px;
+			position: fixed;
+			left: 0;
+			bottom: 50px;
+			z-index: 2;
+		}
+		input{
+			width: 66px;
+			height: 50px;
+			position: fixed;
+			left: 0;
+			bottom: 50px;
+			z-index: 3;
+			border: none;
+			background-color: #999999;
+			font-size: 33px;
+		}
+			.box{
+				width: 66px;
+				height: 100%;
+			    background-color: #999999;
+			    position: fixed;left: -66px;
+			}
+		</style>
+		<script type="text/javascript">
+		function mouseover(){
+			var tset=document.getElementById('set');
+			tset.style.backgroundColor="#f4f4f4";
+		}
+		function mouseout(){
+			var tset=document.getElementById('set');
+			tset.style.backgroundColor="#999999";
+		}
+			window.onload=function(){
+				var oset=document.getElementById('set');
+				var ob=document.getElementById('box');
+				oset.onclick=function(){
+					if(ob.style.left=="0px" || oset.value=="<"){
+						ob.style.left="-66px";
+						oset.value=">";
+					}else{
+						ob.style.left="0";
+						oset.value="<";
+					}
+				}
+				
+				oset.onmouseover=function(){
+					mouseover();
+				}
+				oset.onmouseout=function(){
+					mouseout();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="post">
+			
+			<input type="button" value=">" id="set"/>
+		
+		</form>
+		<div class="box" id="box">
+				
+		</div>
+	</body>
+</html>

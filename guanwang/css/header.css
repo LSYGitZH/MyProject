@@ -1,0 +1,111 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+body{
+	font-family:STKaiti, KaiTi_GB2312, "华文楷体", "宋体", Arial, Helvetica, sans-serif;
+	font-size:15px;
+	background:#f1f2f6;
+}
+
+header{
+	width: 100%;
+	background: url(../img/header_bg.jpg) -246px 0px no-repeat;
+}
+.header_content{
+	width: 1100px;
+	height: 120px;
+	margin: auto;
+}
+.header_logo{
+	display: block;
+	width: 385px;
+	height: 120px;
+	float: left;
+	background: url(../img/logo.png)no-repeat;
+}
+.header_menu{
+	float: right;
+	margin-top: 48px;
+	position: relative;
+}
+.header_menu li{
+	float: left;
+	margin-right: 30px;
+}
+.header_menu li:last-of-type{
+	margin-right: 0;
+}
+.header_menu li .menu{
+	height: 30px;
+	display: inline-block;
+	font-size: 15px;
+	color: #fffcff;
+	font-weight: bold;
+}
+.header_menu li a .xiajiantou{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background: url(../img/nav_xiajiantou.png)no-repeat;
+	background-size: 23px 23px;
+	vertical-align: middle;
+	margin-top: -5px;
+	margin-left: 9px;
+}
+.header_menu li ul{
+	width: 180px;
+	position: absolute;
+	margin-left: -27px;
+	display: none;
+	z-index: 30;
+}
+.header_menu li:hover ul{
+	display: block;
+}
+.header_menu li ul li{
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #36264a;
+	position: relative;
+}
+.header_menu li ul li a{
+	margin-left: 32px;
+	font-size: 14px;
+	color: #ffffff;
+}
+.header_menu li ul li:hover{
+	background-color: #3499db;
+}
+.header_menu li ul li:hover a{
+	margin-left: 40px;
+}
+.header_menu li ul li:hover span{
+	display: inline-block;
+	width: 10px;
+	height: 15px;
+	background: url(../img/nav_li_bg.png)no-repeat;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -3px;
+}
+.dot1{
+	width: 4px;
+	height: 4px;
+	background-color: #f4e8f6;
+	border-radius: 1px;
+	position: absolute;
+	top: 30px;
+	left: 15px;
+}
+.dot2{
+	width: 4px;
+	height: 4px;
+	background-color: #f4e8f6;
+	border-radius: 1px;
+	position: absolute;
+	top: 30px;
+	display: none;
+	z-index: 1;
+}

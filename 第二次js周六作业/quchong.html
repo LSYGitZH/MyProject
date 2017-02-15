@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+//			编写一个方法 去掉一个数组的重复元素
+			var arr=[1,1,12,23,2,2,2,3,4,4];
+			var arrResult=[];
+			
+			for (var i=0;i<arr.length;i++) {
+				var num=true;
+				for (var j=0;j<arrResult.length;j++) {
+					if (arr[i]==arrResult[j]) {
+						num=false;
+					}
+				}
+				if (num==true) {
+						arrResult.push(arr[i]);
+					}
+			}
+			document.write(arrResult);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: #CCCCCC;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementsByTagName('div')[0];
+//				当鼠标按下时 oDiv开始跟随鼠标移动
+                 oDiv.onmousedown=function(ev){
+                 	var oEvent=window.event || ev;
+                 	var x=oEvent.clientX-oDiv.offsetLeft;
+                 	var y=oEvent.clientY-oDiv.offsetTop;
+//				当鼠标移动时oDiv跟随鼠标
+                 	 document.onmousemove=function(ev){
+                 	var oEvent=window.event || ev;
+                 	oDiv.style.left=oEvent.clientX-x+"px";
+                 	oDiv.style.top=oEvent.clientY-y+"px";
+                    };
+//				当鼠标抬起时oDiv停止运动
+                  document.onmouseup=function(){
+                 	document.onmousemove=undefined;
+                 	document.onmouseup=undefined;
+                    };
+                 }
+
+                 
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

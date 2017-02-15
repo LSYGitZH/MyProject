@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		.anniu{
+			width: 270px;
+		    height: 50px;
+			background-color: deepskyblue;
+			outline:none;
+			color: white;
+			font-size: 16px;
+			border-radius:5px;
+		}
+	</style>
+	<body>
+		<form>
+			<fieldset>
+				<legend>信息注册</legend>
+				用户名：<input type="text" /><br /><br />
+				密码：&nbsp;&nbsp;&nbsp;<input type="password"/><br /><br />
+				籍贯：  <select>
+					<option>上海</option>
+					<option>天津</option>
+					<option selected="selected">北京</option>
+					<option>河北</option>
+				</select>
+				<select>
+					<option>大同</option>
+					<option selected="selected">张家口</option>
+					<option>石家庄</option>
+				</select>
+				<select>
+				    <option>门头沟区</option>
+					<option selected="selected">昌平区</option>
+					<option>海淀区</option>
+				</select><br /><br />
+				性别：<label><input type="radio" name="sex" checked="checked">男</label>
+				     <label><input type="radio" name="sex">女</label><br /><br />
+				爱好： <label><input type="checkbox">打篮球</label> 
+					<label><input type="checkbox">打游戏</label> 
+					<label><input type="checkbox">逛街</label> 
+					<label><input type="checkbox">喝酒</label> 
+					<label><input type="checkbox">睡觉</label> <br /><br />
+	        请上传帅气的头像：<input type="file" value="选择文件"><br /><br />
+	        介绍自己：<textarea></textarea><br /><br />
+	        <input type="submit" value="提交表单">
+	        <input type="reset" value="重新填写"><br /><br />
+	        <input type="button" value="免费注册 开启寻爱之旅" class="anniu">
+			</fieldset>
+		</form>
+	</body>
+</html>

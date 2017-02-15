@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;}
+			a{text-decoration: none;}
+			.header_box{
+				width: 100%;
+				height: 71px;
+				background-color:#f7f8f8;
+			}
+			.header{
+				width: 1180px;
+				height: 71px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.header a{
+				display: block;
+				width: 190px;
+				height: 53px;
+				background: url(img/logo.png)no-repeat;
+				margin-top: 9px;
+			}
+			.search_box{
+				width: 100%;
+				height: 86px;
+				box-shadow: 0 3px 3px #e4e5e5;
+				position: absolute;
+				
+			}
+			.search_content{
+				width: 1180px;
+				margin: 0 auto;
+			}
+			.search_left{
+				width: 140px;
+				height: 40px;
+				background: url(img/logo_wide.png) 6px -48px no-repeat;
+				margin-left: 135px;
+				margin-right: 20px;
+				margin-top: 22px;
+				float: left;
+				position: relative;
+				
+			}
+			.search_left ul{
+				width: 140px;
+				height: 80px;
+				position: absolute;
+				top: 40px;
+				display: none;
+			}
+			.search_left ul li:first-of-type{
+				width: 140px;
+				height: 40px;
+				background: url(img/logo_wide.png) 6px -48px no-repeat;
+			}
+			.search_left ul li:last-of-type{
+				width: 140px;
+				height: 40px;
+				background: url(img/logo_wide.png) 6px 0px no-repeat;
+			}
+			.search_center{
+				width: 530px;
+				height: 42px;
+				border: 1px solid #3d72ae;
+				float: left;
+				margin-top: 21px;
+				position: relative;
+				background-color: #FFFFFF;
+			}
+			.search_center ul{
+				width: 60px;
+				height: 40px;
+				/*margin-left: 20px;*/
+				position: relative;
+				float: left;
+			}
+			.search_center ul #search_link{
+				width: 60px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				color: #999999;
+				cursor: pointer;
+			}
+			#search_link .list{
+				width: 58px;
+				height: 252px;
+				position: absolute;
+				top: 42px;
+				left: -1px;
+				border: 1px solid #3d72ae;
+				border-top: none;
+				background-color: white;
+				display: none;
+				
+			}
+			#search_link .list li{
+				width: 58px;
+				height: 28px;
+				line-height: 28px;
+				color: #999999;
+				cursor: pointer;
+			}
+			#search{
+				width: 460px;
+				height: 26px;
+				margin-top:8px;
+				outline: none;
+				border: none;
+			}
+			.btn{
+				width: 120px;
+				height: 42px;
+				float: left;
+				text-align: center;
+				line-height: 40px;
+				background-color: #298eff;
+				color: #FFFFFF;
+				margin-top: 21px;
+				border: 1px solid #3D72AE;
+				border-left: none;
+				cursor: pointer;
+			}
+			#search_list{
+				width: 531px;
+				height: 244px;
+				position: absolute;
+				top: 43px;
+				left: -1px;
+				border: 1px solid #d9d9d9;
+				background-color: #FFFFFF;
+				display: none;
+			}
+			#search_list li{
+				width: 531px;
+				height: 24px;
+				line-height: 24px;
+			}
+			#search_list li span{
+				display: inline-block;
+				width: 18px;
+				height: 16px;
+				text-align: center;
+				line-height: 16px;
+				background-color: #f7f7f7;
+				margin-left: 5px;
+				margin-right: 10px;
+			}
+			#search_list li:first-of-type span{
+				background-color: #ff5500;
+				color: #FFFFFF;
+			}
+			#search_list li:nth-of-type(2) span{
+				background-color: #ff5500;
+				color: #FFFFFF;
+			}
+			#search_list li:nth-of-type(3) span{
+				background-color: #ff5500;
+				color: #FFFFFF;
+			}
+			#search_list li a{
+				display: inline-block;
+				width: 490px;
+				height: 24px;
+				line-height: 24px;
+				text-align: left;
+				color: #000000;
+				font-size: 14px;
+			}
+			.text{
+				width: 1100px;
+				height: 3000px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.fixed_box{
+				position: fixed;
+				top: 0;
+			}
+			.search_warp{
+				width: 100%;
+				height: 84px;
+				z-index: 11111;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var oSearchLeft=document.getElementById('search_left');
+				var oSearchLeftSelect=document.getElementById('search_left_select');
+				var oSearchLink=document.getElementById('search_link');
+				var oList=oSearchLink.getElementsByClassName('list')[0];
+				var oSearch=document.getElementById('search');
+				var oSearchList=document.getElementById('search_list');
+				var oSearchBox=document.getElementsByClassName('search_box')[0];
+				oSearchLeft.onclick=function(){
+					if (oSearchLeftSelect.style.display=="block") {
+						oSearchLeftSelect.style.display="none";
+					}else{
+						oSearchLeftSelect.style.display="block";
+					}
+					
+				}
+				
+				oSearchLink.onclick=function(){
+					if (oList.style.display=="block") {
+						oList.style.display="none";
+					}else{
+						oList.style.display="block";
+					}
+				}
+				oSearch.onfocus=function(){
+					oSearchList.style.display="block";
+					oList.style.display="none";
+				}
+				
+				oSearch.onblur=function(){
+					oSearchList.style.display="none";
+				}
+				window.onscroll=function(){
+				
+				var oTop=oSearchBox.offsetTop;
+//				var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+				if (oTop==0) {
+					oSearchBox.classList.add("fixed_box");
+					oSearchBox.style.backgroundColor="#FFFFFF";
+				}else{
+					oSearchBox.classList.remove("fixed_box");
+				}
+			}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="header_box">
+			<div class="header">
+				<a href=""></a>
+			</div>
+			
+		</div>
+		<div class="search_warp">
+		<div class="search_box">
+		   <div class="search_content">
+				
+			
+			<div class="search_left" id="search_left">
+				<ul id="search_left_select">
+					<li class="daemon"></li>
+					<li class="daemon"></li>
+				</ul>
+			</div>
+			<div class="search_center">
+				<ul>
+					<li id="search_link">网页
+						<ul class="list">
+					        <li>网页</li>
+					        <li>视频</li>
+					        <li>图片</li>
+					        <li>音乐</li>
+					        <li>新闻</li>
+					        <li>地图</li>
+					        <li>贴吧</li>
+					        <li>购物</li>
+					        <li>词典</li>
+						</ul>
+					</li>
+				</ul>
+				<form action="" method="post">
+					<input type="text" value="" id="search"/>
+				</form>
+				<ul id="search_list">
+					<li><span>1</span><a href="">习近平发表讲话</a></li>
+					<li><span>2</span><a href="">女孩浴池视频男友</a></li>
+					<li><span>3</span><a href="">俄制太空打印样机</a></li>
+					<li><span>4</span><a href="">大学生遭全班举报</a></li>
+					<li><span>5</span><a href="">多地禁酒令升级</a></li>
+					<li><span>6</span><a href="">特朗普提太空政策</a></li>
+					<li><span>7</span><a href="">女司机撞进早餐店</a></li>
+					<li><span>8</span><a href="">江苏最大规模作弊</a></li>
+					<li><span>9</span><a href="">曝大学教授打护士</a></li>
+					<li><span>10</span><a href="">3只大熊猫打群架</a></li>
+				</ul>
+			</div>
+			<div class="btn">
+					搜索一下
+			</div>
+		   </div>
+	    </div>
+	   </div> 
+	    <div class="text">
+	    	<ul>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		<li>电视剧</li>
+	    		
+	    	</ul>
+	    </div>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+div{
+	width: 1000px;
+}
+@media screen and (max-width: 980px) {
+	div{
+		width: 90%;
+	}
+}
+@media screen and (max-width: 500px) {
+	div{
+		width: 100%;
+	}
+}

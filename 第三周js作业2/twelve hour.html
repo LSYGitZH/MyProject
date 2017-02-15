@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				var oDiv=document.getElementById("div1");
+				setInterval(function() {
+					var myDate=new Date();
+					var hour=myDate.getHours();
+					var min=myDate.getMinutes();
+					var second=myDate.getSeconds();
+				
+					oDiv.innerHTML=(parseInt(hour-12))+":"+min+":"+second;
+				},100);
+				
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="text-align: center;"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+//			var num=prompt("请输入一个数字");
+//           
+//			document.write("这个数字是"+num.length+"位数"+"<br />");
+//			
+//			var arr=num.split("");  
+//			
+//		for(var i=arr.length-1;i>=0;i--){
+//			document.write(arr[i]);
+//		}
+
+          var num=1234;
+          var nums=[];
+          while(num>0){
+          	var gw=num%10;
+          	num=parseInt(num/10);
+          	nums.push(gw);
+          }
+          document.write(nums.length+"<br />");
+          document.write(nums);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

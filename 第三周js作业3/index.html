@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.color{width: 610px;height: 165px;background-color: #30aec9;margin: 0 auto;}
+			.header{
+				width: 604px;
+				height: 81px;
+				margin: 0 auto;
+				background-color: #f8fdff;
+				border-bottom: 1px solid #ddd;
+				overflow: hidden;
+			}
+			.header .title{
+				width: 100%;
+                height: 25px;
+                line-height: 25px;
+                font-family: "微软雅黑";
+                font-size: 18px;
+                text-indent: 6px;
+                border-left: 3px solid #59AfE4;
+                margin-top: 50px;
+                color: #616161;
+			}
+			form{
+				width: 746px;
+				height: 673px;
+				margin: 0 auto;
+				padding-top: 20px;
+				background-color: #f8fdff;
+			}
+			.zhuce{
+				overflow: hidden;
+			}
+			.text{
+				width: 189px;
+				height: 50px;
+				float: left;  
+			}
+			.text p{
+				text-align: right;
+				padding-right: 10px;
+				height: 44px;
+				line-height: 20px;
+				padding-top: 6px;
+				font-size: 15px;
+			}
+			.margin_k{
+				width: 306px;
+				height: 50px;
+				float: left;
+			}
+			.prompt_k{
+				width: 300px;
+				height: 35px;
+				border: 1px solid #569dde;	
+				border-radius: 3px;
+			}
+			.prompt_k input{
+				width: 284px;
+				padding: 8px;
+				border: none;
+				outline: none;
+			}
+			.hint{
+				float: left;
+				width: 233px;
+				height: 35px;
+				line-height: 35px;
+				color: grey;
+				font-size: 13px;
+				padding-left: 10px;
+			}
+			.margin_k .radio{
+				margin-top: 5px;
+			}
+			.margin_k .radio label{
+				color: #4199d7;
+				font-size: 13px;
+			}
+			.margin_k .radio input{
+				margin-right: 5px;
+			}
+			.margin_k .select1{
+				width: 60px;
+				height: 23px;
+				margin-top: 5px;
+				border: 1px solid #c0d0d8;
+			}
+			.margin_k .select1:nth-of-type(2){
+				width: 106px;
+			}
+			.margin_k .select2{
+				width: 96px;
+				height: 23px;
+				margin-top: 5px;
+				border: 1px solid #c0d0d8;
+			}
+			.margin_k .validate_box{
+				width: 169px;
+				height: 34px;
+				border: 1px solid #569dde;	
+				border-radius: 3px;
+				padding: 5px;
+				box-sizing: border-box;
+				margin-right: 10px;
+				float: left;
+			}
+			.margin_k .validate_box .validate{
+				width: 155px;
+                border: none;
+                line-height: 18px;
+                font-size: 14px;
+                outline: none;
+                background-color: #f8fdff;
+			}
+			.margin_k .btn{
+				float: left;
+				width: 121px;
+				height: 36px;
+			}
+			.sub_box{
+				width: 306px;
+				margin-left:187px;
+				margin-bottom: 10px;
+			}
+			#submit{
+				width: 304px;
+				height: 52px;
+				background: #69b946;
+                text-align: center;
+                cursor: pointer;
+                font: 22px/52px "微软雅黑";
+                color: #fff;
+                border-radius: 3px;
+                border: none;
+			}
+			.checkbox{
+				margin-left:187px ;
+				font-size: 12px;
+			}
+			.checkbox input{
+				margin-right: 5px;
+			}
+		</style>
+		<script type="text/javascript">
+		     function $(id){
+           	return document.getElementById(id);
+           }
+		    
+			window.onload=function(){
+				var oRadio=document.getElementsByClassName('radio');
+				
+				for (var a=0;a<oRadio.length;a++) {
+					
+					oRadio[a].index=a;
+					oRadio[a].onclick=function(){
+						
+					for (var a=0;a<oRadio.length;a++) {
+						oRadio[a].checked=false;
+					}
+					this.checked=true;
+				}
+				}
+				
+				var oSelect1=$('select1');
+				var oSelect2=$('select2');
+				var city=[
+				        ["西安","铜川","宝鸡","咸阳"],
+				        ["广州","韶关","深圳","珠海"],
+				        ["南宁","柳州","桂林","梧州"],
+				        ["海口","三亚","三沙","五指山"]
+				];
+				oSelect1.onchange=function(){
+					oSelect2.options.length=1;
+					var arr=city[oSelect1.value];
+					for (var i=0;i<arr.length;i++) {
+						oSelect2.add(new Option(arr[i]));
+					}
+				}
+			var oHint=$('hint');	
+		    var oName=$('name');
+           	var oPassword=$('password');
+           	var oRepassword=$('repassword');
+           	var oPhone=$('phone');
+           	var oSubmit=$('submit');
+           	var oMessage=$('message');
+           	var RegName=/^\w{6,12}$/;
+           	var RegPass=/^\w{6,12}$/;
+           	var RegEmail=/^\w{6,}@[0-9a-z]{2,7}\.[a-z]{3-5}$/;
+           	var RegPhoneNum=/^1\d{10}$/;
+            var isSuccess=true;
+           	oName.onfocus=function(){
+           		oHint.innerHTML="请输入昵称";
+           		oHint.style.color="grey";
+           	}
+           	oName.onblur=function(){
+           		
+           		if (oName.value=="" ) {
+           			oHint.innerHTML="*昵称不可为空";
+           			oHint.style.color="red";
+           		}else if (oName.value!="") {
+           			oHint.innerHTML="";
+           		}
+           		
+           	}
+           	oSubmit.onclick=function(){	
+           		var strError="";
+           		if (!RegName.test(oName.value)) {
+           			strError+="用户名输入错误\n";
+           			alert(strError);
+           			isSuccess=false;
+           		}
+           		if (!RegPass.test(oPassword.value)) {
+           			strError+="密码输入错误\n";
+           			alert(strError);
+           			isSuccess=false;
+           		}
+           		if (!RegPass.test(oRepassword.value)) {
+           			strError+="请确认密码\n";
+           			alert(strError);
+           			isSuccess=false;
+           		}
+           		if (oPassword.value!=oRepassword.value) {
+           			alert("请确认密码是否相同");
+           			isSuccess=false;
+           		}
+           		if (!RegPhoneNum.test(oPhone.value)) {
+           			strError+="手机号码输入错误\n";
+           			alert(strError);
+           			isSuccess=false;
+           		}
+//         		oMessage.innerHTML=strError;
+                if (isSuccess) {
+                	alert("注册成功");
+                }else{
+                	alert("注册失败");
+                }
+           	}
+				
+			}
+		</script>
+	</head>
+	<body bgcolor="#f8fdff">
+		<div class="color">
+			
+		</div>
+		<div class="header">
+			<div class="title">注册账号</div>
+		</div>
+		<form action="" method="post">
+			<div class="zhuce">
+				<div class="text">
+				      <p>昵称</p>
+			    </div>
+			    <div class="margin_k">
+				    <div class="prompt_k">
+				        <input type="text" id="name"/>
+			        </div>
+			    </div>
+			    <div class="hint" id="hint">
+				         请输入昵称
+			    </div>
+			</div>
+			<div class="zhuce">
+				<div class="text">
+				      <p>密码</p>
+			    </div>
+			    <div class="margin_k">
+				    <div class="prompt_k">
+				       <input type="password" id="password"/><br />
+			
+			        </div>
+			    </div>
+			    <div class="hint">
+				         请输入密码
+			    </div>
+			</div>
+			
+			<div class="zhuce">
+				<div class="text">
+				      <p>确认密码</p>
+			    </div>
+			    <div class="margin_k">
+				    <div class="prompt_k">
+				       <input type="password" id="repassword"/><br />
+			        </div>
+			    </div>
+			    <div class="hint">
+				        
+			    </div>
+			</div>
+			<div class="zhuce">
+				<div class="text">
+				      <p>昵称</p>
+			    </div>
+			    <div class="margin_k">
+				    <div class="radio">
+				        <label><input type="radio" class="radio"/>男</label>
+				        <label><input type="radio" class="radio"/>女</label>
+			        </div>
+			    </div>
+			</div>
+			
+			<div class="zhuce">
+				<div class="text">
+				      <p>生日</p>
+			    </div>
+			    <div class="margin_k">
+				    <select name=""  class="select1">
+				    	<option value="">公历</option>
+				    </select>
+				    <select name=""  class="select1">
+				    	<option value="">年</option>
+				    </select>
+				    <select name=""  class="select1">
+				    	<option value="">月</option>
+				    </select>
+				    <select name=""  class="select1">
+				    	<option value="">日</option>
+				    </select>
+			    </div>
+			    
+			</div>
+			
+			<div class="zhuce">
+				<div class="text">
+				      <p>所在地</p>
+			    </div>
+			    <div class="margin_k">
+				    <select name="" class="select2">
+				    	<option value="">中国</option>
+				    </select>
+				    <select name="" class="select2" id="select1">
+				    	<option value="0">陕西</option>
+				    	<option value="1">广东</option>
+				    	<option value="2">广西</option>
+				    	<option value="3">海南</option>
+				    </select>
+				    <select name="" class="select2" id="select2">
+				    	<option value="">选择城区</option>
+				    </select>  
+			    </div>
+			</div>
+			
+			<div class="zhuce">
+			    <div class="text">
+				      <p>手机号码</p>
+			    </div>
+			    <div class="margin_k">
+				    <div class="prompt_k">
+				        <input type="text" id="phone"/>
+			        </div>
+			    </div>
+			</div>
+			
+			
+			<div class="zhuce">
+			     <div class="text"></div>
+			     <div class="margin_k">
+			     	<div class="validate_box">
+				       <input type="text" class="validate"/> 
+			        </div>
+				      <input type="button" class="btn" value="获取短信验证码" />
+		         </div>
+		         <div class="sub_box">
+		         	<input type="button" name="submit" id="submit" value="立即注册" />
+		         </div>
+		         <label class="checkbox"><input type="checkbox" value="" />同时开通QQ空间</label><br />
+		         <label class="checkbox"><input type="checkbox" value="" />我已阅读并同意相关服务条款和隐私政策</label>
+			</div>
+		</form>
+	</body>
+</html>

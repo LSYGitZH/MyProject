@@ -1,0 +1,571 @@
+
+
+
+/*头部开始*/
+.header_box{
+	width: 100%;
+    background: url(../img/aboutxiaoniao/beader_bg.jpg) -300px 0px no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.header{
+	width: 1100px;
+	height: 50px;
+	margin: auto;
+}
+.header_logo{
+	display: block;
+	width: 132px;
+	height: 50px;
+	background: url(../img/aboutxiaoniao/logo.png)no-repeat;
+	float: left;
+}
+#header_list{
+	float: left;
+	margin-left: 55px;
+}
+
+#header_list li{
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: #afabb5;
+	margin-right: 30px;
+	line-height: 40px;
+	cursor: pointer;	
+}
+#header_list li:first-of-type{
+	background-position-x: 14px;
+}
+#header_list li:nth-of-type(2){
+	background-position-x: 39px;
+}
+#header_list li:nth-of-type(3){
+	background-position-x: 33px;
+}
+#header_list li:nth-of-type(4){
+	background-position-x: 28px;
+}
+#header_list li:nth-of-type(5){
+	background-position-x: 31px;
+}
+#header_list li:last-of-type{
+	background-position-x: 31px;
+}
+#header_list li:hover{
+	background-position-y: 34px;
+	background-image: url(../img/nav_now_bg.png);
+	background-repeat: no-repeat;
+}
+#header_list .now{
+	/*background-position-x: 14px;*/
+	background-position-y: 34px;
+	background-image: url(../img/nav_now_bg.png);
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+/*头部结束*/
+
+/*开始动画  start*/
+.banner_content1{
+	background-color: #289bd7;
+	zoom: 1;
+	position: relative;
+	z-index: 3000;
+	overflow: hidden;
+}
+.banner_content1:before{
+	content: "";
+	display: table;
+}
+.banner_content1:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.banner_content1 .banner_animate_box{
+	margin-top: 140px;
+}
+.banner_content1 .banner_one_img{
+	background: url(../img/aboutxiaoniao/xiaoniao_welcome_icon.gif) -45px -58px no-repeat;
+}
+.banner_content1 .banner_one_head_c,.banner_content1 .banner_one_head_e,.banner_content1 .slogan_box,.banner_content1 .market,.banner_content1 .state{
+	display: none;
+}
+/*开始动画   end*/
+
+/*第一页1轮播开始*/
+
+#banner_box{
+	/*width: 100%;*/
+	/*margin-top: 50px;*/
+	position: relative;
+	overflow: hidden;
+}
+#banner_show_box{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+
+
+.banner_one_img{
+	width: 311px;
+	height: 290px;
+	background: url(../img/aboutxiaoniao/xiaoniao_welcome_icon3.gif) -45px -58px no-repeat;
+	margin: auto;
+	margin-top: 40px;
+}
+.banner_one_head_c{
+	font-size: 41px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.banner_one_head_e{
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: center;
+	letter-spacing: 3px;
+}
+.slogan_box{
+	width: 482px;
+	margin: auto;
+}
+.banner_content:first-of-type .yinhao1_zuo{
+	width: 20px;
+	height: 18px;
+	background: url(../img/aboutxiaoniao/yinhao1_zuo.png)no-repeat;
+}
+/*口号*/
+.slogan{
+	font-size: 45px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.banner_content:first-of-type .yinhao1_you{
+	width: 20px;
+	height: 18px;
+	background: url(../img/aboutxiaoniao/yinhao1_you.png)no-repeat;
+	float: right;
+}
+.market{
+	font-size: 19px;
+	color: #FFFFFF;
+	text-align: center;
+	clear: both;
+	padding-top: 22px;
+}
+.state{
+	font-size: 19px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.banner_one_bottom_link{
+	width: 58px;
+	height: 58px;
+	background: url(../img/aboutxiaoniao/donext.png) 0px -58px no-repeat;
+	margin: auto;
+	margin-top: 15px;
+}
+.banner_one_bottom_link:hover{
+	background: url(../img/aboutxiaoniao/donext.png) 0px 0px no-repeat;
+}
+/*第一页轮播1结束*/
+/*第一页轮播2开始*/
+.banner_content:nth-of-type(2){
+	position: relative;
+	background-color: #FFFFFF;
+	position: relative;
+}
+.banner_two_box{
+	width: 866px;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	/*margin-left: -433px;*/
+}
+.banner_two_show_box{
+	width: 2598px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.banner_two_content{
+	width: 866px;
+	height: 100%;
+	float: left;
+}
+
+.banner_two_head{
+	font-size: 43px;
+	color: #2a1365;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 10px;
+}
+.banner_two_summary1{
+	width: 702px;
+	margin: auto;
+	margin-top: 10px;
+	position: relative;
+}
+.banner_two_summary1 .summary{
+	width: 630px;
+	margin: auto;
+	text-align: center;
+	line-height: 30px;
+}
+.banner_two_summary1 .yinhao2_zuo{
+	width: 20px;
+	height: 18px;
+	background: url(../img/aboutxiaoniao/yinhao2_zuo.png)no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.banner_two_summary1 .yinhao2_you{
+	width: 20px;
+	height: 18px;
+	background: url(../img/aboutxiaoniao/yinhao2_you.png)no-repeat;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.phone_app_img{
+	margin-top: 30px;
+}
+.phone_app_img img{
+	width: 194px;
+	height: 360px;
+	margin-right: 30px;
+	float: left;
+}
+.phone_app_img img:last-of-type{
+	margin-right: 0;
+}
+.banner_two_prev{
+	width: 58px;
+	height: 58px;
+	background: url(../img/aboutxiaoniao/goleft.png) 0px 0px no-repeat;
+	position: absolute;
+	left: 66px;
+	top: 50%;
+	margin-top: -29px;
+	opacity: 0.3;
+}
+.banner_two_prev:hover{
+	background: url(../img/aboutxiaoniao/goleft.png) -58px 0px no-repeat;
+}
+.banner_two_next{
+	width: 58px;
+	height: 58px;
+	background: url(../img/aboutxiaoniao/goright.png) -58px 0px no-repeat;
+	position: absolute;
+	right: 66px;
+	top: 50%;
+	margin-top: -29px;
+}
+.banner_two_next:hover{
+	background: url(../img/aboutxiaoniao/goright.png) 0px 0px no-repeat;
+}
+
+.banner_two_content:nth-of-type(3) .banner_two_head{
+	width: 502px;
+	height: 38px;
+	margin: auto;
+	margin-top: 26px;
+	background: url(../img/aboutxiaoniao/bird_title.png)no-repeat;
+}
+.banner_two_summary2{
+	width: 650px;
+	margin: auto;
+	clear: both;
+	padding-top: 50px;
+}
+.banner_two_summary2 .summary2_img{
+	float: left;
+}
+.banner_two_summary2 dl{
+	float: left;
+	margin-left: 55px;
+	margin-top: 25px;
+	color: #78777c;
+}
+.banner_two_summary2 dl dt{
+	font-size: 22px;
+}
+.banner_two_summary2 dl dd{
+	font-size: 17px;
+	line-height: 24px;
+}
+
+.banner_two_content:nth-of-type(4) .banner_two_head{
+	width: 502px;
+	height: 38px;
+	margin: auto;
+	margin-top: 26px;
+	background: url(../img/aboutxiaoniao/bird_title.png)no-repeat;
+}
+.banner_two_slogan{
+	width: 388px;
+	margin: auto;
+	margin-top: 55px;
+}
+.banner_two_slogan .yinhao3_zuo{
+	width: 18px;
+	height: 15px;
+	background: url(../img/aboutxiaoniao/yinhao3_zuo.png)no-repeat;
+}
+.banner_two_slogan .slogan2{
+	font-size: 36px;
+	color: #3f0a00;
+	margin-left: 30px;
+}
+.banner_two_slogan .yinhao3_you{
+	width: 18px;
+	height: 15px;
+	background: url(../img/aboutxiaoniao/yinhao3_you.png)no-repeat;
+	float: right;
+}
+.banner_two_content:nth-of-type(4) p{
+	width: 730px;
+	margin: auto;
+	clear: both;
+	font-size: 17px;
+	color: #78777c;
+	line-height: 32px;
+	text-indent: 34px;
+	margin-top: 55px;
+}
+/*第一页轮播2结束*/
+
+/*第二页轮播开始*/
+.banner_three_head{
+	font-size: 43px;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	line-height: 70px;
+}
+.banner_three_content{
+	width: 970px;
+	height: 377px;
+	margin: auto;
+	margin-top: 99px;
+	position: relative;
+	overflow: hidden;
+}
+.top_left{
+	width: 20px;
+	height: 20px;
+	background: url(../img/aboutxiaoniao/jiazhi_border_11.png)no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.top_lefts{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/aboutxiaoniao/jiazhi_border_12.png)no-repeat;
+	animation: blink 3s infinite;
+	-moz-animation: blink 3s infinite;
+    -webkit-animation: blink 3s infinite;
+    -ms-animation: blink 3s infinite;
+}
+.top_right{
+	width: 20px;
+	height: 20px;
+	background: url(../img/aboutxiaoniao/jiazhi_border_21.png)no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.top_rights{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(../img/aboutxiaoniao/jiazhi_border_22.png)no-repeat;
+	animation: blink 3s infinite;
+	-moz-animation: blink 3s infinite;
+    -webkit-animation: blink 3s infinite;
+    -ms-animation: blink 3s infinite;
+}
+.bottom_left{
+	width: 20px;
+	height: 20px;
+	background: url(../img/aboutxiaoniao/jiazhi_border_31.png)no-repeat;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.bottom_lefts{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(../img/aboutxiaoniao/jiazhi_border_32.png)no-repeat;
+	animation: blink 3s infinite;
+	-moz-animation: blink 3s infinite;
+    -webkit-animation: blink 3s infinite;
+    -ms-animation: blink 3s infinite;
+}
+.bottom_right{
+	width: 20px;
+	height: 20px;
+	background: url(../img/aboutxiaoniao/jiazhi_border_41.png)no-repeat;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.bottom_rights{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: url(../img/aboutxiaoniao/jiazhi_border_42.png)no-repeat;
+	animation: blink 3s infinite;
+	-moz-animation: blink 3s infinite;
+    -webkit-animation: blink 3s infinite;
+    -ms-animation: blink 3s infinite;
+}
+@keyframes blink{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+@-moz-keyframes blink{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+@-o-keyframes blink{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+@-ms-keyframes blink{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+@-webkit-keyframes blink{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+.banner_three_text_box{
+	width: 930px;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+.banner_three_text_box .worth_box{
+	width: 930px;
+	height: 74px;
+	margin-bottom: 46px;
+}
+.banner_three_text_box .worth_box:last-of-type{
+	margin-bottom: 0;
+}
+.banner_three_text_box .worth_box .worth{
+	width: 445px;
+	height: 74px;
+	float: left;
+}
+.banner_three_text_box .worth_box .worth .left_number{
+	width: 72px;
+	height: 72px;
+	border: 1px solid #736880;
+	text-align: center;
+	line-height: 72px;
+	font-size: 16px;
+	color: #FFFFFF;
+	border-radius: 50%;
+	float: left;
+}
+.banner_three_text_box .worth_box .worth .right_text{
+	width: 275px;
+	float: left;
+	font-size: 18px;
+	color: #FFFFFF;
+	margin-top: 15px;
+	margin-left: 25px;
+}
+/*第二页轮播结束*/
+
+/*第三页轮播开始*/
+.banner_content:nth-of-type(4){
+	position: relative;
+}
+.banner_four_head{
+	font-size: 60px;
+	color: #301658;
+	text-align: center;
+	font-weight: bold;
+	line-height: 88px;
+}
+.banner_four_text_box{
+	width: 910px;
+	margin-top: 30px;
+	position: absolute;
+	left: 50%;
+	margin-left: -455px;
+	display: none;
+}
+.banner_four_text_box:nth-of-type(2){
+	display: block;
+}
+.banner_four_text_box:nth-of-type(3){
+	margin-top: 0px;
+}
+.banner_four_text_box p{
+	height: 38px;
+	line-height: 38px;
+	font-size: 16px;
+	background: url(../img/aboutxiaoniao/xuxian_bg.png)repeat-x bottom;
+}
+.select_box{
+	width: 180px;
+	height: 9px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 48px;
+	margin: auto;
+}
+.select_box .select{
+	width: 78px;
+	height: 9px;
+	border-radius: 4px;
+	background-color: #adadad;
+	float: left;
+	margin-right: 24px;
+	cursor: pointer;
+}
+.select_box .select:last-of-type{
+	margin-right: 0;
+}
+.select_box .select2{
+	background-color: #006ed7;
+}
+/*第三页轮播结束*/
+
+/*第四页轮播开始*/
+
+.banner_content:nth-of-type(5){
+	/*width: 100%;*/
+	background: url(../img/aboutxiaoniao/app&contacts.jpg)no-repeat;
+	background-size: 100% 100%;
+}
+/*第四页轮播结束*/

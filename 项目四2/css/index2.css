@@ -1,0 +1,12 @@
+.box{
+	width: 568px;
+	height: 148px;
+	margin: 100px auto;
+}
+.box_box{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000000;
+	margin: 20px;
+}

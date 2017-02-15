@@ -1,0 +1,87 @@
+ <script>
+        var json={
+            "country":"china",
+            "place":[
+                {"name":"beijing","imageSrc":"beijing.jpg"},
+                {"name":"helan","imageSrc":"helan.jpg"},
+                {"name":"sicuan","imageSrc":"sicuan.png"},
+                {"name":"hebei","imageSrc":"hebei.gif"},
+                {"name":"chengdu","imageSrc":"chengdu.jpg"},
+                {"name":"xiamen","imageSrc":"beijing.jpg"},
+                {"name":"jilin","imageSrc":"jilin.png"},
+                {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+                {"name":"qinhai","imageSrc":"qinhai.jpg"},
+                {"name":"gansu","imageSrc":"gansu.png"},
+                {"name":"xian","imageSrc":"xian.jpg"},
+                {"name":"emei","imageSrc":"emei.png"},
+                {"name":"fujian","imageSrc":"fujian.gif"},
+                {"name":"lijiang","imageSrc":"lijiang.jpg"},
+                {"name":"dali","imageSrc":"dali.tif"},
+                {"name":"xiamen","imageSrc":"beijing.jpg"},
+                {"name":"jilin","imageSrc":"jilin.png"},
+                {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+                {"name":"qinhai","imageSrc":"qinhai.jpg"},
+                {"name":"gansu","imageSrc":"gansu.png"},
+                {"name":"xian","imageSrc":"xian.jpg"},
+                {"name":"emei","imageSrc":"emei.png"},
+                {"name":"fujian","imageSrc":"fujian.gif"},
+                {"name":"lijiang","imageSrc":"lijiang.jpg"},
+                {"name":"dali","imageSrc":"dali.tif"},
+                {"name":"helan","imageSrc":"helan.jpg"},
+                {"name":"sicuan","imageSrc":"sicuan.png"},
+                {"name":"hebei","imageSrc":"hebei.gif"},
+                {"name":"chengdu","imageSrc":"chengdu.jpg"},
+                {"name":"xiamen","imageSrc":"beijing.jpg"},
+                {"name":"jilin","imageSrc":"jilin.png"},
+                {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+                {"name":"qinhai","imageSrc":"qinhai.jpg"},
+                {"name":"gansu","imageSrc":"gansu.png"},
+                {"name":"xian","imageSrc":"xian.jpg"},
+                {"name":"emei","imageSrc":"emei.png"},
+                {"name":"fujian","imageSrc":"fujian.gif"},
+                {"name":"lijiang","imageSrc":"lijiang.jpg"},
+                {"name":"dali","imageSrc":"dali.tif"},
+                {"name":"xiamen","imageSrc":"beijing.jpg"},
+                {"name":"jilin","imageSrc":"jilin.png"},
+                {"name":"taiwan","imageSrc":"taiwan.JPEG"},
+                {"name":"qinhai","imageSrc":"qinhai.jpg"},
+                {"name":"gansu","imageSrc":"gansu.png"},
+                {"name":"xian","imageSrc":"xian.jpg"},
+                {"name":"emei","imageSrc":"emei.png"},
+                {"name":"fujian","imageSrc":"fujian.gif"},
+                {"name":"lijiang","imageSrc":"lijiang.jpg"},
+                {"name":"dali","imageSrc":"dali.tif"}
+            ]
+        }
+        var arr=[];
+        for(var i=0;i<json["place"].length;i++){
+            var m=json["place"][i]["imageSrc"].indexOf('.');//获取每次循环.对的位置
+            var n=json["place"][i]["imageSrc"].length;//获取每次循环，imagesrc的长度
+            var t=json["place"][i]["imageSrc"].slice(m,n);//所截取的位置.到最后
+            arr.push(t);//在arr的数组第一添加元素T
+        }
+        alert(arr);
+
+        var newJson={};
+        for(var i=0;i<arr.length;i++){
+            var c=arr[i];
+            //判断是否存在
+            if(newJson[c]){
+                //存在就++
+                newJson[c]++;
+            }else{//没有就等于1
+                newJson[c]=1;
+            }
+        }
+        for (var x in newJson){
+            document.write(x+":"+newJson[x]+"<br>")
+        }
+        /*var sjon = {};
+        for (var i=0; i<json.length;i++)
+
+          var dian= json.indexOf(".")+1;
+        for (var x in sjon){
+            document.write(x+":"+sjon[x]+"<br>")
+
+        }*/
+    </script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var max;
+			var min;
+			var num;
+			var sum=0;
+			var time=0;
+			do{
+				
+				num=parseInt(prompt("请输入一个数字"));
+				if (num!=0) {
+				
+				if (max==undefined) {
+					max=num;
+				}else{
+					if(num>max){
+						max=num;
+					}
+				}
+				if (min==undefined) {
+					min=num;
+				}else{
+					if(num<min){
+						min=num;
+					}
+				}
+				sum+=num;
+				time++;
+				}
+				
+			}while(num!=0);
+			
+			document.write("平均分为："+(sum/time)+"<br />");
+			document.write("总分为："+sum+"<br />");
+			document.write("最大分数为："+max+"<br />");
+			document.write("最小分数为："+min);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

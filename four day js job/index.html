@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				width: 200px;
+				height: 400px;
+				float: left;
+				position: relative;
+			}
+			.box{
+				width: 700px;
+				height: 400px;
+				margin: 30px auto;
+			}
+			li{
+				width: 200px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background-color: crimson;
+				margin-bottom: 2px;
+				font-size: 15px;
+				font-weight: bold;
+				font-family: "微软雅黑";
+				cursor: pointer;
+			}
+			.box_right{
+				width: 500px;
+				height: 400px;
+				background-color: azure;
+				float: left;
+			}
+			.show{
+				width: 500px;
+				height: 400px;
+				position: absolute;
+				top: 0;
+				left: 200px;
+				border: 1px solid black;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oList=document.getElementById('list');
+				var oMenu=oList.getElementsByClassName('menu');
+				var oShow=oList.getElementsByClassName('show');
+				
+					for (var i=0;i<oMenu.length;i++) {
+					oMenu[i].index=i;
+					oMenu[i].onmouseover=function(){
+						for (var i=0;i<oMenu.length;i++) {
+							oMenu[i].style.backgroundColor="#DC143C";
+						}
+						this.style.backgroundColor="azure";
+						
+						oShow[this.index].style.display="block";
+					}
+					
+					oMenu[i].onmouseout=function(){
+						oShow[this.index].style.display="none";
+						oMenu[this.index].style.backgroundColor="#DC143C";
+					}
+					
+					}
+
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+				<ul id="list">
+					<li class="menu"><p>美食</p><div class="show">第一页</div></li>
+					<li class="menu"><p>电影</p><div class="show">第二页</div></li>
+					<li class="menu"><p>休闲娱乐</p><div class="show">第三页</div></li>
+					<li class="menu"><p>一元抢宝</p><div class="show">第四页</div></li>
+					<li class="menu"><p>生活服务</p><div class="show">第五页</div></li>
+				</ul>
+				<div class="box_right">
+					
+				</div>
+			</div>
+			
+	</body>
+</html>

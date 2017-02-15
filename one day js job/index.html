@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{list-style: none;float: left;text-align: center;}
+			a{text-decoration: none;color: black;}
+			li{font-size: 13px;}
+			p{font-size: 13px;line-height: 32px;}
+			.text{width:86px;float: left;text-align: center;}
+			.header{height: 32px; border: 1px solid #ebebeb;}
+			
+			.p1{
+				height: 32px;
+				line-height: 32px;
+				font-size: 13px;
+			}
+			.p2{
+				width: 86px;
+				height: 31px;
+				line-height: 31px;
+				background-color: #398bfb;
+				border: 1px solid #398BFB;
+				font-size: 13px;
+				color: #ffffff;
+			}
+			.ul1{
+				width: 86px;
+				border: 1px solid #ebebeb;
+				border-top: none;
+				position: relative;
+				line-height: 25px;
+				text-align: center;
+				background-color:white ;
+				box-shadow: 0 0 1px 1px #EBEBEB;
+				display: none;
+			}
+			 .ul1:before{
+				content: "";
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				left: 38px;
+				top: -6px;
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				border-right:1px solid #ebebeb;
+				border-top: 1px solid #ebebeb;
+				background-color:white ;
+			}
+			
+			.ul2{
+				width: 86px;
+				height: 570px;
+				border-left:1px solid #EBEBEB ;
+				border-right:1px solid #EBEBEB ;
+				background-color: #f9f9f9;
+				display: none;
+			}
+			.ul2 li{
+				width: 72px;
+				height: 80px;
+				margin: 0 auto;
+				
+			}
+			.ul2 li span{
+				width: 72px;
+				height: 40px;
+				display: inline-block;
+				margin-top: 5px;
+			}
+			.ul2 li:nth-child(odd){
+				border-bottom: 1px solid #EBEBEB;
+				border-top: 1px solid #EBEBEB;
+			}
+			.ul2 li:first-child{
+				margin-top: 10px;
+			}
+			.ul2 li:last-child{
+				border-bottom: none;
+			}
+			.ul2 li:last-child{
+				line-height: 50px;
+			}
+			
+			.box{
+				width: 281px;
+				height: 186px;
+				background-color: white;
+				margin-top: 1px;
+				border: 1px solid #000000;
+				display: none;
+			}
+			.yuan{
+				width: 60px;
+				height: 60px;
+				border-radius: 45px;
+				overflow: hidden;
+				margin-top: 5px;
+				margin-left: 20px;
+				float: left;
+			}
+			.yuan img{
+				width: 100%;
+				height: 100%;
+			}
+			.wenzi{
+				float: left;
+				margin: 5px 0 0 10px;
+			}
+			.list{
+				width: 280px;
+				height: 114px;
+				clear: both;
+				
+			}
+			.list ul{
+				width: 130px;
+				float: left;
+				margin-top: 10px;
+			}
+			.list ul li{
+				text-align: left;
+				margin-left: 10px;
+			}
+			
+			.box2{
+				font-size: 13px;
+				width: 140px;
+				height: 170px;
+				border: 1px solid #EBEBEB;
+				display: none;
+			}
+			.box2 .top dl{
+				float: left;
+				width: 70px;
+				margin-top: 10px;
+			}
+			.box2 .top dl dt{
+			    text-align: left;
+			    margin-left: 10px;
+			    line-height: 25px;
+			}
+			.box2 .top dl:last-child{
+				text-align: left;
+				margin-top: 35px;
+			}
+			.box2 .bottom {
+				clear: both;
+				padding-top: 20px;
+			}
+			.box2 .bottom dl{
+				text-align: left;
+				
+			}
+			.box2 .bottom dl dt{
+				margin-left: 10px;
+			}
+			.box2 .bottom dl dd{
+				float: left;
+				width: 50px;
+				margin-left: 10px
+			}
+			.text2{
+				width: 84px;
+			    height: 250px;
+			    border: 1px solid #dedede;
+			    border-top: none;
+			    display: none;
+			}
+			.text2 ul{
+				width: 84px;
+			    height: 240px;
+			    text-align: center;
+			}
+			.text2 ul li{
+				line-height: 26px;
+				
+			}
+			.text2 ul li a{
+				color: blue;
+			}
+		</style>
+		<script type="text/javascript">
+			function mouseover(){
+				var a=document.getElementById('list1');
+				a.style.display="block";
+				a.style.border="1px solid #ebebeb";
+			}
+			function mouseout(){
+				var a=document.getElementById('list1');
+				a.style.display="none";
+			}
+			function mouseover2(){
+				var c=document.getElementById('set2');
+				c.style.borderLeft="1px solid #dedede";
+				c.style.borderRight="1px solid #dedede";
+				c.style.borderTop="none";
+				c.style.borderBottom="none";
+				c.style.backgroundColor="#F9F9F9";
+				c.style.color="black";
+				
+				var b=document.getElementById('list2');
+				b.style.display="block";
+			}
+			function mouseout2(){
+				var c=document.getElementById('set2');
+			    c.style.border="1px solid #398BFB";
+				c.style.backgroundColor="#398BFB";
+				c.style.color="white";
+				
+				var b=document.getElementById('list2');
+				b.style.display="none";
+			}
+			
+			
+			function mouseover3(){
+				var d=document.getElementById('box');
+				d.style.display="block";
+			}
+			function mouseout3(){
+				var d=document.getElementById('box');
+				d.style.display="none";
+			}
+			
+			function mouseover4(){
+				var s=document.getElementById('set4');
+				s.style.backgroundColor="white";
+				s.style.border="1px solid #ebebeb";
+				s.style.borderBottom="none";
+				var e=document.getElementById('box2');
+				e.style.display="block";
+				e.style.borderTop="none";
+			}
+			function mouseout4(){
+				var e=document.getElementById('box2');
+				e.style.display="none";
+				var s=document.getElementById('set4');
+				s.style.border="none";
+			}
+			
+			function mouseover5(){
+				var five=document.getElementById('set5');
+				five.style.borderLeft="1px solid #ebebeb";
+				five.style.borderRight="1px solid #ebebeb";
+				five.style.height="33px";
+				five.style.backgroundColor="white";
+				five.style.color="blue";
+				var box3=document.getElementById('box3');
+				box3.style.display="block";
+			}
+			function mouseout5(){
+				var five=document.getElementById('set5');
+				five.style.border="none";
+				five.style.color="black";
+				five.style.height="32px";
+				var box3=document.getElementById('box3');
+				box3.style.display="none";
+			}
+			
+			window.onload=function(){
+				var oset=document.getElementById('set');
+				oset.onmouseover=function(){
+					mouseover();
+				}
+				oset.onmouseout=function(){
+					mouseout();
+				}
+				var oset2=document.getElementById('set2');
+				
+				oset2.onmouseover=function(){
+					mouseover2();
+				}
+				oset2.onmouseout=function(){
+					mouseout2();
+				}
+				
+				var oset3=document.getElementById('set3');
+				
+				oset3.onmouseover=function(){
+					mouseover3();
+				}
+				oset3.onmouseout=function(){
+					mouseout3();
+				}
+				
+				var oset4=document.getElementById('set4');
+				
+				oset4.onmouseover=function(){
+					mouseover4();
+				}
+				oset4.onmouseout=function(){
+					mouseout4();
+				}
+				
+				
+				var oset5=document.getElementById('set5');
+				
+				oset5.onmouseover=function(){
+					mouseover5();
+				}
+				oset5.onmouseout=function(){
+					mouseout5();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="text">
+				<p class="p1" id="set">设置</p>
+			   <ul class="ul1" id="list1">
+				    <li><a href="">搜索设置</a></li>
+				    <li><a href="">高级搜索</a></li>
+				    <li><a href="">关闭预测</a></li>
+				    <li><a href="">搜索历史</a></li>
+			    </ul>
+			</div>
+			<div class="text" >
+				<p class="p2" id="set2">更多产品</p>
+			     <ul class="ul2" id="list2">
+				    <li><a href=""><span><img src="img/music.png"/></span>音乐</a></li>
+				    <li><a href=""><span><img src="img/image.png"/></span>图片</a></li>
+				    <li><a href=""><span><img src="img/zhidao.png"/></span>知道</a></li>
+				    <li><a href=""><span><img src="img/wenku.png"/></span>文库</a></li>
+				    <li><a href=""><span><img src="img/bang.png"/></span>风云榜</a></li>
+				    <li><a href=""><span><img src="img/tuiguang.png"/></span>百度推广</a></li>
+				    <li><a href="">全部产品>></a></li>
+			    </ul>
+			</div>
+			
+			<div class="text">
+				<p id="set3">我的京东</p>
+				<div class="box" id="box">
+					<div class="yuan">
+			             <img src="img/no-img_mid_.jpg"/>
+				    </div>
+				    <div class="wenzi">
+				     	<p>你好！请登录</p>
+					    <p>优惠券&nbsp;&nbsp;|&nbsp;&nbsp;消息</p>
+				    </div>
+				    <div class="list">
+				    	<ul>
+				    	    <li><a href="">待处理订单</a></li>
+				        	<li><a href="">待处理订单</a></li>
+				    	    <li><a href="">待处理订单</a></li>
+				    	    <li><a href="">待处理订单</a></li>
+				        </ul>
+				        <ul>
+				    	    <li><a href="">待处理订单</a></li>
+				        	<li><a href="">待处理订单</a></li>
+				    	    <li><a href="">待处理订单</a></li>
+				    	    <li><a href="">待处理订单</a></li>
+				        </ul>
+				    </div>
+				    
+				</div>
+				
+				
+			</div>
+			<div class="text">
+				<p id="set4">客户服务</p>
+				<div class="box2" id="box2">
+					<div class="top">
+						<dl>
+						    <dt>客户</dt>
+						    <dd>帮助中心</dd>
+						    <dd>帮助中心</dd>
+						    <dd>帮助中心</dd>
+						    <dd>帮助中心</dd>
+					    </dl>
+					    <dl>
+					    	<dd>售后服务</dd>
+					    	<dd>售后服务</dd>
+					    	<dd>售后服务</dd>
+					    </dl>
+					</div>
+					<div class="bottom">
+						<dl>
+						    <dt>商户</dt>
+						    <dd>京东</dd>
+						    <dd>京东</dd>
+					    </dl>
+					</div>
+					
+				</div>
+			</div>
+			<div class="text">
+				<p id="set5">我的糯米</p>
+				<div class="text2" id="box3">
+					<ul>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+						<li><a href="">我的糯米</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			 
+			  
+		
+	</body>
+</html>

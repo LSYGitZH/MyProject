@@ -1,0 +1,134 @@
+
+.case_box{
+	width: 100%;
+}
+.case_content{
+	width: 1258px;
+	margin: auto;
+}
+.case_content h1{
+	font-size: 50px;
+	color: #F39800;
+	font-weight: lighter;
+	text-align: center;
+	margin-top: 40px;
+}
+.case_content p{
+	font-size: 18px;
+	color: #666666;
+	text-align: center;
+	margin-top: 31px; 
+}
+.case_content .text_down_xian{
+	width: 420px;
+	height: 1px;
+	background-color: #666666;
+	margin: auto;
+	margin-top: 21px;
+}
+.case_content .all_products_box{
+	width: 1258px;
+	height: 846px;
+	margin: 50px 0 40px;
+	position: relative;
+}
+.case_content .all_products_box .products_box{
+	width: 1258px;
+	height: 846px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+.case_content .all_products_box .products_box:first-of-type{
+	opacity: 1;
+}
+.case_content .products_box .product_select{
+	width: 100%;
+	height: 282px;
+}
+.case_content .products_box .product_select .product{
+	width: 25%;
+	height: 282px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+}
+.case_content .products_box .product_select .product .before_anima{
+	width: 100%;
+	height: 100%;
+	background-color: #cf7108;
+	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	left: -100%;
+}
+.case_content .products_box .product_select .product a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+.case_content .products_box .product_select .product a .top_text{
+	margin: 18px 0 0 18px;
+}
+.case_content .products_box .product_select .product a .top_text span{
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.case_content .products_box .product_select .product a .top_text .bottom_xian{
+	width: 32px;
+	height: 3px;
+	margin-top: 8px;
+	background-color: #FFFFFF;
+}
+.case_content .products_box .product_select .product a dl{
+	width: 100%;
+	margin-top: 36px;
+}
+.case_content .products_box .product_select .product a dl dt{
+	font-size: 25px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.case_content .products_box .product_select .product a dl dd{
+	margin-top: 20px;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.case_content .products_box .product_select .product a .bottom_arrow{
+	font-size: 24px;
+	color: #FFFFFF;
+	text-align: right;
+	position: absolute;
+	right: 18px;
+	bottom: 18px;
+}
+.NP_page,.all_page{
+	display: inline-block;
+	padding: 0px 24px;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 54px;
+	background-color: #f39800;
+}
+.NP_page{
+	cursor: pointer;
+}
+.NP_page:hover{
+	background-color: #000000;
+}
+.all_page{
+	margin-left: 10px;
+}
+.page_box{
+	width: 100%;
+	text-align: center;
+	margin: 36px 0;
+}

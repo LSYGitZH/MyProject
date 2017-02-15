@@ -1,0 +1,499 @@
+
+.header,.main_top,.main_center,.main_bottom_products,.main_bottom_markets,.main_bottom_menu,.footer{margin: 0 auto;}
+/*网页头部开始  header_box*/
+.header_box{
+	width: 100%;
+	box-shadow: 0 2px 2px 0 #d6d6d6 ;
+	position: fixed;
+	z-index: 90;
+	background-color: white;
+}
+.header{
+	width: 1190px;
+	height: 103px;
+}
+.header_logo{
+	width: 200px;
+    height: 42px;
+    background: url(../img/spirite.png)0 -8px no-repeat;
+    margin-top: 33px;
+    float: left;
+}
+.header_menu{
+	margin-left: 138px;
+	float: left;
+}
+.header_menu li{
+	margin-top: 32px;
+	float: left;
+}
+.header_menu li a{
+	display: inline-block;
+	font-size: 16px;
+	padding: 0 28px;
+	line-height: 71px;
+	color: black;
+}
+.header_menu li:last-child a{
+	padding-right: 0;
+}
+.header_right{
+	float: right;
+	width: 225px;
+}
+.header_right .header_log-in_r{
+	width: 217px;
+	margin-top: 14px;
+}
+.header_right .header_log-in_r li{
+	height: 13px;
+	line-height: 8px;
+	float: left;
+	padding: 0 10px;
+	
+}
+.header_right .header_log-in_r li:nth-child(2){
+	border-left: 1px solid #e3dde3;
+}
+.header_right .header_log-in_r li a{
+	font-size: 12px;
+	color: #9f9f9f;	
+}
+.header_right .header_log-in_r li:last-child a .daemon{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../img/spirite.png) -216px -4px no-repeat;
+	margin-right: 3px;
+	margin-top: -6px;
+	vertical-align: middle;
+}
+.header_right .header_log-in_r li:first-child{
+	padding-left: 8px;
+}
+.header_right .header_log-in_r li:last-child{
+	padding-right: 0;
+}
+.header_right .header_search{
+	width: 170px;
+	height: 30px;
+	padding: 26px 0 0 55px;
+	box-sizing: border-box;
+	clear: both;
+}
+.header_right .header_search form{
+	width: 168px;
+	height: 28px;
+	border: 1px solid #dddddd;
+}
+.header_right .header_search form input{
+	width: 137px;
+	height: 28px;
+	line-height: 28px;
+	border: none;
+	margin-left: 3px;float: left;
+} 
+.header_right .header_search form span{
+	width: 26px;
+	height: 28px;
+	background: url(../img/spirite.png) -235px 2px no-repeat;
+	float: left;
+	margin-left: 2px;
+}
+/*网页头部结束   header_box*/
+
+
+/*网页标语开始   banner_box*/
+.banner_box{
+	width: 100%;
+	padding-top: 103px;
+}
+.banner{
+	width: 100%;
+	height: 640px;
+	/*overflow: hidden;*/
+	position: relative;
+	background: url(../img/banner_3.jpg)no-repeat center center;
+}
+.banner .img{
+	/*transform: translate(-15%,0);
+	-webkit-transform:translate(-15%,0);
+	-ms-transform:translate(-15%,0) ;
+	-moz-transform:translate(-11%,0);*/
+	/*
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;*/
+}
+.banner .left{
+	width: 21px;
+	height: 38px;
+	position: absolute;
+	left: 70px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url(../img/left.png)-4px -6px no-repeat;
+}
+.banner .right{
+	width: 21px;
+	height: 38px;
+	position: absolute;
+	top: 0;
+	right: 70px;
+	bottom: 0;
+	margin: auto;
+	background: url(../img/right.png)-6px -6px no-repeat;
+}
+.banner .carousel{
+	width: 306px;
+	height: 4px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 15px;
+	margin: auto;
+}
+.banner .carousel .carousel_num{
+	width: 50px;
+	height: 4px;
+	margin-right: 14px;
+	float: left;
+	background-color:white ;
+}
+.banner .carousel .carousel_num:hover{
+	background-color: #ff6a00;
+}
+.banner .carousel .carousel_num:last-child{
+	margin-right: 0;
+}
+.banner .carousel .carousel_num:nth-child(3){
+	background-color: #ff6a00;
+}
+/*网页标语结束   banner_box*/
+
+
+/*网页主体开始   main_box*/
+.main_box{
+	width: 100%;	
+}
+.main{
+	height: 3197px;
+	background-color: #e5e5e5;
+}
+.main_top_box{
+	background-color: white;
+}
+.main_top{
+	width: 1190px;
+	height: 456px;
+}
+.main_header p{
+	font-size: 30px;
+	text-align: center;
+	line-height: 125px;
+}
+.main_top_pros{
+	width: 1190px;
+	height: 270px;
+}
+.main_top_pros .pro{
+	width: 390px;
+	height: 270px;
+	float: left;
+	margin-right: 10px;
+}
+.main_top_pros .pro:last-child{
+	margin-right: 0;
+}
+.main_top_pros .pro img{
+	width: 100%;
+	height: 100%;
+}
+.main_center{
+	width: 1190px;
+	height: 1816px;
+}
+.main_center_top{
+	width: 1190px;
+	height: 786px;
+}
+.main_header span{
+	font-size: 14px;
+	float: right;
+	margin-top: 71px;
+	line-height: 51px;
+	color: black;
+}
+.main_center_top .left{
+	width: 305px;
+	height: 785px;
+	float: left;
+}
+.main_center_top .left img{
+	width: 100%;
+	height: 100%;
+}
+.main_center_top .right{
+	width: 880px;
+	height: 786px;
+	float: left;
+	margin-left: 4px;
+}
+.main_center_top .right .products{
+	width: 880px;
+	height: 390px;
+	margin-bottom: 5px;
+}
+.main_center_top .right .products:last-child{
+	margin-bottom: 0;
+}
+.main_center_top .right .products .pro{
+	width: 290px;
+	height: 390px;
+	float: left;
+	margin-right: 5px;
+}
+.main_center_top .right .products .pro:last-child{
+	margin-right: 0;
+}
+.main_center_top .right .products .pro img{
+	width: 100%;
+	height: 100%;
+}
+.main_center_bottom{
+	width: 1190px;
+	height: 703px;
+}
+.main_center_bottom .products{
+	width: 1190px;
+	height: 343px;
+	margin-bottom: 17px;
+}
+.main_center_bottom .products:last-child{
+	margin-bottom: 0;
+}
+.main_center_bottom .products .pro{
+	width: 386px;
+	height: 343px;
+	margin-right: 16px;
+	float: left;
+}
+.main_center_bottom .products .pro:last-child{
+	margin-right: 0;
+}
+.main_bottom_box{
+	background-color: white;
+}
+.main_bottom{
+	height: 925px;
+}
+.main_bottom_products{
+	width: 1190px;
+	height: 377px;
+}
+.main_bottom_products .pro{
+	width: 386px;
+	height: 377px;
+	float: left;
+	margin-right: 16px;
+}
+.main_bottom_products .pro:last-child{
+	margin-right: 0;
+}
+.main_bottom_markets_box{
+	border-bottom:1px solid #eaeaea ;
+}
+.main_bottom_markets{
+	width: 1190px;
+	height: 164px;
+	overflow: hidden;
+}
+.main_bottom_markets .market{
+	width: 297.5px;
+	height: 44px;
+	margin-top: 78px;
+	float: left;
+}
+.main_bottom_markets .market .daemon{
+	width: 44px;
+	height: 44px;
+	margin-left: 1px;
+	float: left;
+}
+.main_bottom_markets .market:first-child .daemon{
+	background: url(../img/spirite.png) -1px -61px no-repeat;
+}
+.main_bottom_markets .market:nth-child(2) .daemon{
+	background: url(../img/spirite.png) -47px -61px no-repeat;
+}
+.main_bottom_markets .market:nth-child(3) .daemon{
+	background: url(../img/spirite.png) -93px -61px no-repeat;
+}
+.main_bottom_markets .market:last-child .daemon{
+	background: url(../img/spirite.png) -139px -61px no-repeat;
+}
+.main_bottom_markets .market p{
+	font-size: 16px;
+	color: #777777;
+	float: left;
+	margin-left: 11px;
+	line-height: 20px;
+}
+
+.main_bottom_menu{
+	width: 1190px;
+	height: 258px;
+}
+.main_bottom_menu dl{
+	width: 217px;
+	margin-top: 32px;
+	float: left;
+}
+.main_bottom_menu dt{
+	font-size: 16px;
+	color: #777777;
+	line-height: 31px;
+}
+.main_bottom_menu dd{
+	line-height: 33px;
+}
+.main_bottom_menu dd a{
+	font-size: 12px;
+	color: #777777;
+}
+
+.main_bottom_menu dl:nth-child(5) dd a span{
+	
+	display:inline-block;
+	vertical-align: middle;
+}
+.main_bottom_menu dl:nth-child(5) .my:nth-child(2) a span{
+	width: 25px;
+	height: 20px;
+	background: url(../img/spirite.png) -379px -70px no-repeat;
+}
+.main_bottom_menu dl:nth-child(5) .my:nth-child(3) a span{
+	width: 25px;
+	height: 24px;
+	background: url(../img/spirite.png) -406px -68px no-repeat;
+}
+.main_bottom_menu dl:nth-child(5) .my:last-child a span{
+	width: 20px;
+	height: 22px;
+	background: url(../img/spirite.png) -430px -69px no-repeat;
+	margin-right: 5px;
+}
+.main_bottom_menu dl:nth-child(5) .my:last-child a{
+	
+}
+.main_bottom_menu .main_bottom_QR-Code{
+	width: 104px;
+	height: 124px;
+	float: left;
+	margin-top: 30px;
+}
+.main_bottom_menu .QR-Code{
+	width: 98px;
+	height: 98px;
+	border: 3px solid #cccccc;
+	background: url(../img/spirite.png) -278px 0px no-repeat;
+	
+}
+.main_bottom_menu .main_bottom_QR-Code p{
+	font-size: 12px;
+	color: #999999;
+	text-align: center;
+	line-height: 29px;
+}
+/*网页主体结束   main_box*/
+
+
+/*网页尾部开始   footer_box*/
+.footer_box{
+	width: 100%;
+	background-color: #333333;
+}
+.footer{
+	width: 1206px;
+	height: 157px;
+}
+.footer_text{
+	width: 639px;
+	height: 131px;
+	padding-top: 26px;
+	float: left;
+}
+.footer_text .top{
+	font-size: 12px;
+	color: #999999;
+	line-height: 12px;
+	display: inline-block;
+	padding: 0 10px 0 11px;
+}
+.footer_text .top:nth-child(1){
+    padding-left: 0;	
+}
+.footer_text .top:nth-child(2){
+	border-left:1px solid #999999;
+}
+.footer_text .top:nth-child(2) .sanjiao{
+	width: 9px;
+	height: 6px;
+	display: inline-block;
+	background: url(../img/spirite.png) -484px -579px no-repeat;
+	margin-left: 5px;
+	vertical-align: middle;
+	background-color: #333333;
+}
+.footer_text p{
+    font-size: 12px;
+	color: #999999;
+	line-height: 43px;
+	margin-top: 14px;
+}
+.footer .img{
+	float: left;
+	width: 33px;
+	height: 47px;
+	margin-top: 58px;
+}
+.footer .img img{
+	width: 100%;
+	height: 100%;
+}
+.footer .img2{
+	float: left;
+	width: 130px;
+	height: 48px;
+	margin-top: 58px;
+}
+.footer .img2 img{
+	width: 100%;
+	height: 100%;
+}
+.footer .language{
+	width: 102px;
+	height: 24px;
+	line-height: 24px;
+    padding-left: 6px;
+    box-sizing: border-box;
+	border-radius: 3px;
+	background-color: #474747;
+	float: right;
+	font-size: 12px;
+	color: #999999;
+	margin-top: 51px;
+	margin-right: 10px;
+}
+.footer .language span{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background: url(../img/spirite.png) -464px -67px no-repeat;
+	margin-left: 4px;
+}
+/*网页尾部结束   footer_box*/

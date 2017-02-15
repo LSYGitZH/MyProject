@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body{ background:black;}
+#c1{ background:white;}
+</style>
+<script>
+
+window.onload = function(){
+	var oC = document.getElementById('c1');
+	var oGC = oC.getContext('2d');
+	
+//	oGC.moveTo(350,200);
+	
+	//弧度 = 角度*Math.PI/180
+
+
+//	oGC.arc(200,200,150,0,360*Math.PI/180);
+//	oGC.fillStyle="black"
+//	oGC.fill();
+//	oGC.arc(200,200,150,0,360*Math.PI/180);
+//	oGC.lineWidth = 30;
+//	oGC.strokeStyle="red"
+//	oGC.stroke();
+
+//	var deg = 0;
+//	setInterval(function(){
+//		// 清空
+//
+//		oGC.clearRect(0,0,oGC.canvas.width,oGC.canvas.height)
+//		deg++;
+//		oGC.beginPath()
+//		for (var i = 0; i<60;i++){
+//			oGC.moveTo(200,200);
+//			oGC.arc(200,200,150,(6*i+deg)*Math.PI/180,(6*(i+1)+deg)*Math.PI/180);
+//			oGC.strokeStyle = "red"
+//			oGC.stroke();
+//
+//		}
+//	},20)
+
+	oGC.lineJoin = "round"
+	oGC.beginPath();
+	oGC.moveTo(70,400);
+	oGC.strokeStyle = "black";
+	oGC.lineWidth=10
+	oGC.lineTo(200,200);
+	oGC.lineTo(270,400);
+
+	oGC.stroke();
+
+	oGC.lineWidth=1;
+
+	oGC.beginPath();
+	for (var i = 0; i<60;i++){
+		oGC.moveTo(200,200);
+		oGC.arc(200,200,150,(6*i)*Math.PI/180,(6*(i+1))*Math.PI/180);
+		oGC.strokeStyle = "red"
+		oGC.stroke();
+
+	}
+	oGC.beginPath()
+	oGC.arc(200,200,140,0,2*Math.PI);
+	oGC.fillStyle = "white"
+	oGC.fill();
+	oGC.stroke();
+
+
+	oGC.beginPath();
+	oGC.moveTo(130,400);
+	oGC.strokeStyle = "black";
+	oGC.lineWidth=10
+	oGC.lineTo(200,200);
+	oGC.lineTo(330,400);
+
+	oGC.stroke();
+
+};
+
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="400" height="400"></canvas>
+</body>
+</html>

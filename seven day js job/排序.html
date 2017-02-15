@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		//冒泡排序
+//			var arr=[3,2,1,5,4];
+//			for (var i=arr.length-1;i>0;i--) {
+//				for (var j=0;j<i;j++) {
+//					if (arr[j]>arr[j+1]) {
+//						var temp=arr[j];
+//						arr[j]=arr[j+1];
+//						arr[j+1]=temp;
+//					}
+//				}
+//			}
+//			document.write(arr);
+//			
+
+
+			//插入排序
+//			var arr2=[12,2,343,435,32,32,2,2,1];
+//			for (var i=1;i<arr2.length;i++) {
+//				for (var j=i;j>0;j--) {
+//					if (arr2[j]<arr2[j-1]) {
+//						var temp=arr2[j];
+//						arr2[j]=arr2[j-1];
+//						arr2[j-1]=temp;
+//					}else{
+//						break;
+//					}
+//				}
+//			}
+//			document.write(arr2);
+			
+//			系统排序
+//          var arr3=[2,1,2,23,4,5,4,32];
+//          arr3.sort(function(num1,num2){
+//          	return num1-num2;
+//          });
+//          document.write(arr3);
+
+//
+       var arr1=[];
+       var arr2=[];
+       var arr3=[];
+       for (var i=0;i<10;i++) {
+       	var ran=parseInt(Math.random()*10);
+       	arr1[i]=ran;
+       	arr2[i]=ran;
+       	arr3[i]=ran;
+       }
+       for (var i=arr1.length-1;i>0;i--) {
+       	for (var j=0;j<i;j++) {
+       		if (arr1[j]>arr1[j+1]) {
+       			var temp=arr1[j];
+       			arr1[j]=arr1[j+1];
+       			arr1[j+1]=temp;
+       		}
+       	}
+       }
+       
+       for (var i=1;i<arr2.length;i++) {
+       	for (var j=i;j>0;j--) {
+       		if (arr2[j]<arr2[j-1]) {
+       			var temp=arr2[j];
+       			arr2[j]=arr2[j-1];
+       			arr2[j-1]=temp;
+       		}else{
+       			break;
+       		}
+       	}
+       } 
+       
+       document.write(arr1);
+       document.write(arr2);
+       
+
+
+//             var num;
+//             var arrNum=[];
+//          
+//           do{
+//               num=parseInt(prompt("请输入数字"));
+//               if (num!=0) {
+//               	arrNum.push(num);
+//               	
+//               	for (var i=arrNum.length-1;i>0;i--) {
+//               		for(var j=0;j<i;j++){
+//               			if (arrNum[j]>arrNum[j+1]) {
+//               				var temp=arrNum[j];
+//               				arrNum[j]=arrNum[j+1];
+//               				arrNum[j+1]=temp;
+//               			}
+//               		}
+//               	}
+//               }
+//               
+//           }while(num!=0);
+//     
+//          document.write(arrNum);
+       
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

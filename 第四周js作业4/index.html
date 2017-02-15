@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{height: 3000px;}
+			h1{
+				font-weight: lighter;
+				font-family: "微软雅黑";
+				text-align: center;
+				line-height: 66px;
+			}
+			div{
+				width: 100px;
+				height: 200px;
+				background-color: cornflowerblue;
+				overflow: hidden;
+				position: absolute;	
+				top: 150px;
+			}
+			div:first-of-type{
+				left: 0;
+			}
+			div:last-of-type{
+				right: 0;
+			}
+			p{
+				color: #ffffff;
+				text-align: center;
+				letter-spacing: 4px;
+				margin-top: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var oLeft=document.getElementById('left');
+				var oRight=document.getElementById('right');
+				//滚轴滚动时，执行的事件
+				window.onscroll=function(){
+					
+					//创建滚轴事件函数
+				    function mouseWheel(ev){
+				    	var oEvent=window.event || ev;//事件对象
+				    	if (oEvent.detail) {//判断滚轴事件兼容ff时
+				    		if (oEvent.detail>0) {//向下滚动
+				    			scrollDown();
+				    		}else{
+				    			scrollUp();
+				    		}
+				    	}else if (oEvent.wheelData) {//滚轴事件兼容chrome  IE时
+				    		if (oEvent.wheelData>0) {//向上滚动
+				    			scrollUp();
+				    		}else{
+				    			scrollDown();
+				    		}
+				    	}
+				    	
+				    	function scrollUp(){//滚轴向上滚动时
+				    		setTimeout(function() {
+				    			var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+				    		oLeft.style.top=150+scrollTop+"px";
+				    		oRight.style.top=150+scrollTop+"px";
+				    		},1);
+				    		
+                            
+				    	}
+				    	function scrollDown(){//滚轴向下滚动时
+				    		setTimeout(function(){
+				    		var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+				    		oLeft.style.top=150+scrollTop+"px";
+				    		oRight.style.top=150+scrollTop+"px";
+				    		},1);//0.001秒
+				    		
+                           
+				    	}
+				    }
+				    //定义一个函数解决事件绑定的兼容问题
+				    function addEvent(ele,type,listener) {
+				    	if (ele.addEventListener) {
+				    		ele.addEventListener(type,listener);//IE9以上  chrome  ff 支持
+				    	}else{
+				    		ele.attachEvent("on"+type,listener);//IE8以下支持
+				    	}
+				    }
+				    //事件绑定
+			        //ie chrome
+				    addEvent(window,"mousewheel",mouseWheel);
+				    //ff
+				    addEvent(window,"DOMMouseScroll",mouseWheel);
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<h1>左右广告</h1>
+		<div id="left"><p>左边<br />广告</p></div>
+		<div id="right"><p>右边<br />广告</p></div>
+	</body>
+</html>

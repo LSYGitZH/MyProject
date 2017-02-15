@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl=document.getElementById('ul');
+				var oBtn=document.getElementById('btn1');
+			
+			var i=1;
+			var index=0;
+			var timer=setInterval(function(){
+				var oLi=document.createElement('li');
+				oLi.innerHTML=i;
+				oUl.replaceChild(oLi,oUl.children[index]);
+				index++;
+				index=++index%oUl.children.length;
+				i++;
+			},50);
+			      
+			oBtn.onclick=function(){
+				clearInterval(timer);
+			}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="btn1" value="btn1" />
+		<ul id="ul">
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+			<li>0</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		    ul{list-style: none;}
+		    a{text-decoration: none;}
+		    .section .p1,.slide .p2{
+		    	position: relative;
+		    	left: -100%;
+		    }
+			#menu{
+				position: fixed;
+				left: 10px;
+				top: 10px;
+			}
+			#menu li{
+				float: left;
+				border: 1px solid #000000;
+				margin-right: 10px;
+			}
+			#menu li a{
+				display: block;
+				padding: 15px;
+				color: #333333;
+			}
+			#menu .active{
+				background-color: #000000;
+			}
+			#menu .active a{
+				color: #FFFFFF;
+			}
+			#all_box{
+				width: 900px;
+				height: 500px;
+				margin: auto;
+			}
+			.box{
+				width: 300px;
+				height: 500px;
+				float: left;
+				position: relative;
+			}
+			.box1{
+				left: -100%;
+			}
+			.box1{
+				right: -100%;
+			}
+			.box_content{
+				width: 280px;
+				height: 210px;
+				margin: 20px 10px;
+				background-color: #333333;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="fullpage/css/jquery.fullPage.css"/>
+		<script type="text/javascript" src="fullpage/js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="fullpage/js/jquery.fullPage.min.js" ></script>
+		<script type="text/javascript" src="fullpage/js/jquery-ui-1.10.3.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#fullpage").fullpage({
+					slidesColor:["red","orange","yellow","green","aqua"],
+					anchors:["page1","page2","page3","page4","page5"],
+					menu:"#menu",
+//					navigation:true,
+                    afterRender:function(anchorLink,index,slideIndex,direction){
+                    	$(".section").eq(index).find(".p1").animate({"left":0},500);
+                    },
+					afterLoad:function(anchorLink,index){
+						$(".section").eq(index-1).find(".p1").animate({"left":0},500);
+						$(".box1").animate({"left":0},500);
+						$(".box2").animate({"right":0},500);
+					},
+					onLeave:function(index,nextIndex,direction){
+						$(".section").eq(index-1).find(".p1").animate({"left":"-100%"},500);
+						$(".box1").animate({"left":"-100%"},500);
+						$(".box2").animate({"right":"-100%"},500);
+					},
+					afterSlideLoad:function(anchorLink,index,slideIndex,direction){
+						$(".s").eq(slideIndex).find(".p2").delay(100).animate({"left":0},500);
+					},
+					onSlideLeave:function(anchorLink,index,slideIndex,direction){
+						$(".s").eq(slideIndex).find(".p2").delay(100).animate({"left":"-100%"},500);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="fullpage">
+			<section class="section">第一屏<p class="p1">第一屏动画</p></section>
+			<div class="section">
+				<div class="slide s">第二屏1<p class="p1 p2">第二屏动画1</p></div>
+				<div class="slide s">第二屏2<p class="p1 p2">第二屏动画2</p></div>
+				<div class="slide s">第二屏3<p class="p1 p2">第二屏动画3</p></div>
+				<div class="slide s">第二屏4<p class="p1 p2">第二屏动画4</p></div>
+			</div>
+			<div class="section">第三屏<p class="p1">第一屏动画</p></div>
+			<div class="section">第四屏<p class="p1">第一屏动画</p></div>
+			<div class="section">第五屏
+			   <div id="all_box">
+				 <div class="box box1">
+					<div class="box_content"></div>
+					<div class="box_content"></div>
+				 </div>
+				 <div class="box">
+					<div class="box_content"></div>
+					<div class="box_content"></div>
+				 </div>
+				 <div class="box box2">
+					<div class="box_content"></div>
+					<div class="box_content"></div>
+				 </div>
+			   </div>
+			</div>
+		</div>
+		<ul id="menu"> 
+			<li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+			<li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+			<li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+			<li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+			<li data-menuanchor="page5"><a href="#page5">第五屏</a></li>
+		</ul>
+	</body>
+</html>

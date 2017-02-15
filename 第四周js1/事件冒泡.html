@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 150px;
+				height: 200px;
+				background-color: #ccc;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oInput=document.getElementsByTagName('input')[0];
+				var oDiv1=document.getElementsByClassName('div1')[0];
+				oInput.onclick=function(ev){
+					if (oDiv1.style.display=="block") {
+						oDiv1.style.display="none";
+					}else{
+						oDiv1.style.display="block";
+					}
+					var oEvent=window.event || ev;
+					oEvent.cancelBubble=true;
+				};
+				document.onclick=function(){
+					oDiv1.style.display="none";
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="按钮" />
+		<div class="div1">
+			
+		</div>
+	</body>
+</html>

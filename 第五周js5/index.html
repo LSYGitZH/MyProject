@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;}
+			.box{width: 800px;height: 100px;position: relative;}
+			.banner{
+				width: 600px;
+				height: 100px;
+				margin: auto;
+				overflow: hidden;
+			}
+			ul{width: 1500px;height: 100px;position: relative;}
+			ul li{
+				width: 150px;
+				height: 100px;
+				float: left;
+				line-height: 100px;
+				font-size: 70px;
+				text-align: center;
+			}
+			span{
+				position: absolute;
+				width: 30px;
+				height: 80px;
+				top: 10px;
+				background-color: dimgray;
+			}
+			.prev{
+				left: 0;
+				
+			}
+			.cannot{
+				background-color: #f4f4f4;
+			}
+			ul li.active{
+				width: 146px;
+				height: 96px;
+				border: 2px solid #000000;
+			}
+			.next{
+				right: 0;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js">
+			
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				var oUl=$("ul");
+				var arrLi=$("li");
+				var oPrev=$(".prev");
+				var oNext=$(".next");
+				var page=0;
+				oNext.click(function(){
+					if (page<arrLi.size()-1) {
+						page++;
+					}
+					move();
+				});
+				
+				
+				oPrev.click(function(){
+					if (page>0) {
+						page--;
+					}
+					move();
+				});
+				
+				arrLi.click(function(){
+					page=$(this).index();
+					move();
+				})
+				function move(){
+				arrLi.removeClass("active").eq(page).addClass("active");
+					if (page==0) {
+						oUl.animate({"left":0});
+					}else if (page==arrLi.length-1 || page==arrLi.length-2) {
+						var Left=(arrLi.length-4)*-150;
+						oUl.stop(true,true).animate({"left":Left});
+					}else{
+						var Left=(page-1)*-150; 
+						oUl.stop(true,true).animate({"left":Left});
+					}
+					
+					if (page>0) {
+						oPrev.removeClass("cannot");
+					}else{
+						oPrev.addClass("cannot");
+					}
+					if (page>=arrLi.length-1) {
+						oNext.addClass("cannot");
+					}else{
+						oNext.removeClass("cannot");
+					}
+					
+				}
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="banner">
+				<ul onselectstart="return false">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+			</div>
+		<span class="prev cannot"></span>
+		<span class="next"></span>
+		</div>
+		
+	</body>
+</html>

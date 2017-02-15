@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+//			history.forward() //前进
+//			history.back()  //后退
+//			history.go()  //整数参数
+			function go(){
+				history.go(2);
+				//go(1)  forward()
+				//go(-1)  back()
+				//go(2)   前进2个页面
+				//go(-2)   后退2个页面
+				//go(0)   不动
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="前进" onclick="history.forward()" />
+		<input type="button" value="后退" onclick="history.back()" />
+		<input type="button" value="go" onclick="go()" />
+	</body>
+</html>

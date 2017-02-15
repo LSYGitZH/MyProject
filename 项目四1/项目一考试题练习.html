@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				border-style: ;
+			}
+		</style>
+		<script type="text/javascript">
+			var per=function(){
+				var name="liming";
+				var age="19";
+				var ta=null;
+				function getName(){
+					return name;
+				}
+				function setName(nam){
+					name=nam;
+				}
+				function setTa(t){
+					ta=t;
+				}
+				function say(){
+					return name+"心里的那个ta是"+ta;
+				}
+				return {
+					"getName":getName,
+					"setName":setName,
+					"setTa":setTa,
+					"say":say
+				}
+			}
+			var liming=per();
+			liming.setName("liming");
+			liming.setTa("xiaoyi");
+			alert(liming.say());
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

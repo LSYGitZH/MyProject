@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+
+<style>
+input{
+	background:#3498db;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	width:200px;
+	line-height:48px;
+	border:none 0;
+	cursor:pointer;
+	margin:20px 20px 20px 0;
+}
+#showDiv{
+	font-size:20px;
+	margin:30px 10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+iframe{
+	border:1px solid #999;
+}
+</style>
+
+<script>
+window.onload = function(){
+	
+	/*
+	Ps：在非服务器环境下访问页面时，操作iframe，某些浏览器可能会报错，iframe建议等ajax讲完再讲（讲ajax的时候，会搭建一个本地服务器）
+	*/
+	
+	var oInput = document.getElementById('triggerBtn');
+	var oIframe = document.getElementById('myIframe');
+	
+	oInput.onclick = function(){
+		//contentWindow是指oIframe里的iframe01.html页面	
+			oIframe.contentWindow.document.body.style.backgroundColor = "#abdaff"
+
+	}
+	
+	
+	
+};
+</script>
+</head>
+
+<body>
+顶级页面
+<input type="button" value="操作子页面" id="triggerBtn">
+<iframe id="myIframe" height="800" width="100%" src="iframe01.html"></iframe>
+</body>
+</html>

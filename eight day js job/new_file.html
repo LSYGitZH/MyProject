@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			function profit(I){
+				
+				if (I<=10) {
+					alert("你发放的奖金为"+(I*0.1)+"万元");
+				}else if (I<=20) {
+					alert("你发放的奖金为"+(1+(I-10)*0.075)+"万元");
+				}else if (I<=40){
+					alert("你发放的奖金为"+(1.75+(I-20)*0.05)+"万元");
+				}else if (I<=60){
+					alert("你发放的奖金为"+(2.75+(I-40)*0.03)+"万元");
+				}else if (I<=100){
+				alert("你发放的奖金为"+(3.35+(I-60)*0.015)+"万元");
+				}else if (I>100){
+					alert("你发放的奖金为"+(3.95+(I-100)*0.01)+"万元");
+				}else if (I<=0) {
+					alert("您没有利润");
+				}
+				
+			}
+			profit(345);
+
+		</script>
+		
+	
+
+	</head>
+	<body>
+	</body>
+</html>

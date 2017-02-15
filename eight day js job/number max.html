@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+//			function num(num1,num2,num3,num4){
+//				var max;
+//				if (num1>num2 && num1>num3 && num1>num4) {
+//					max=num1;
+//				}else if (num2>num1 && num2>num3 && num2>num4) {
+//					max=num2;
+//				}else if (num3>num1 && num3>num2 && num3>num4) {
+//					max=num3;
+//				}else if (num4>num1 && num4>num2 && num4>num3) {
+//					max=num4;
+//				}
+//				
+//				return max;
+//			}
+//			document.write(num(232,334,45,56));
+               var arr=[];
+               var num;
+          function n(a){
+          	do{
+          		
+          		num=parseInt(prompt("smdaks"));
+          		if (num!=0) {
+          			var max;
+          			for (var i=0;i<arguments.length;i++) {
+          				arr[i]=num;
+          				
+          				if (arr[i]>max) {
+          			      max=arr[i];
+          		        }
+          			}
+          		}
+          	}while(num!=0);
+          	
+          		return max;
+          
+          }
+          document.write(n(123,23,234,234,23,23));
+          
+          
+//        for (var i=0,j=0;i<5,j<10;i++,j++) {
+//        	var k=i+j;
+//        }
+//        
+//        document.write(k);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

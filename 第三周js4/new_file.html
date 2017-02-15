@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function object(obj){
+				var node;
+			if (obj.children) {
+				node=obj.children;
+			}else{
+				node=obj.childNodes;
+			}
+			    return node;
+			}
+			
+			window.onload=function(){
+				var oText=document.getElementById('text');
+				var oBtn=document.getElementById('btn1');
+				var oBtn2=document.getElementById('btn2');
+				var oBtn3=document.getElementById('btn3');
+				var oUl=document.getElementById('ul');
+				
+				var index=1; //要替换的节点位置
+				oBtn.onclick=function(){
+//					拿到input text的内容
+					var con=oText.value;
+//					创建一个li标签
+					var oLi=document.createElement('li');
+//					将li标签放到ul里
+//                  oUl.appendChild(oLi);
+
+//                    在ul里插入li元素,插入位置是oUl.children[1]
+                    oUl.insertBefore(oLi,oUl.children[1]);//括号里是参数
+		  
+//					将li内部的HTML设置成输入框输入内容
+					oLi.innerHTML=con;
+				}
+				
+				oBtn2.onclick=function(){
+					oUl.removeChild(oUl.children[1]);
+					
+				}
+				oBtn3.onclick=function(){
+					var oLi=document.createElement('li');
+	                oLi.innerHTML=oText.value;
+					oUl.replaceChild(oLi,oUl.children[index]);
+					index++;
+//					index=++index%oUl.children.length;
+					if (index>oUl.children.length) {
+						index=1;
+					}
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="text" value="" />
+		<input type="button" name="" id="btn1" value="btn1" />
+		<input type="button" name="" id="btn2" value="btn2" />
+		<input type="button" name="" id="btn3" value="btn3" />
+		<ul id="ul">
+		<li>sdljf</li>
+		</ul>
+	</body>
+</html>

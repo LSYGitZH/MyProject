@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;font-family: Tahoma,Arial,'Helvetica Neue',"Microsoft YaHei New","Microsoft Yahei","微软雅黑","宋体",Simsum,STXihei,"华文细黑",sans-serif;}
+			ul{list-style: none;}
+			a{text-decoration: none;}
+			.header_box{
+				width: 100%;
+			}
+			.header{
+				width: 100%;
+				background-color: #fbfbfc;
+				box-shadow: -2px 12px 12px -16px #999;
+				overflow: hidden;
+			}
+			.header_top{
+				width: 100%;
+				/*padding-top: 24px;*/
+				overflow: hidden;
+				padding-bottom: 5px;
+			}
+			.top_menu_box{
+				float: right;
+				position: relative;
+				right: 20px;
+				top: 5px;
+			}
+			.top_menu_box li{
+				float: left;
+			}
+			.top_menu_box li:nth-child(even){
+				color: #bdbdbd;
+				height: 12px;
+				font-size: 12px;
+				padding: 0 10px;
+			}
+			.top_menu_box li a{
+				color: #666;
+                font-size: 12px;
+                height: 19px;
+                line-height: 19px;
+                
+                display: block;
+                font-family: arial;   
+			}
+			.top_menu_box li:first-child{
+				width: 38px;
+				height: 20px;
+				color: #304e80;
+				text-align: center;
+				border-radius: 3px;
+			}
+			.top_menu_box li:first-child:hover{
+				background-color: #304e80;
+				
+				
+			}
+			.top_menu_box li:nth-child(2){
+				padding-left: 5px;
+			}
+			.top_menu_box li:first-child a{
+				font-weight: bold;
+			}
+			.top_menu_box li:first-child:hover a{
+				color: #fff !important;
+				
+			}
+			.header_center{
+				width: 984px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.header_center .search_logo{
+				width: 153px;
+				padding-top: 11px;
+				margin-left: 0px;
+				float: left;
+				vertical-align: top;
+			}
+			.header_center .search_logo img{
+	               width: 137px;
+	               height: 46px;
+			}
+			
+			.header_search_box{
+				float: left;
+				
+			}
+			.cur{
+				font-weight: 700;
+                margin-right: 17px;
+                color: #333;
+			}
+			#search_list{
+				margin-bottom: 7px;
+				font-size: 14px;
+				overflow: hidden;
+			}
+			#search_list li{
+				float: left;
+				line-height: 18px;
+				text-align: left;
+				margin-right: 24px;
+			}
+			.search_box{
+				width: 458px;
+				height: 34px;
+				border: 1px solid #adadad;
+				background-color: #FFFFFF;
+				float: left;
+				border-right: none;
+			}
+			#header_search{
+				width: 445px;
+				height: 20px;
+				line-height: 20px;
+				font-size: 16px;
+				margin-top: 7px;
+				margin-left: 8px;
+				border: none;
+			}
+			.button_box{
+				width: 98px;
+				height: 34px;
+				border: 1px solid #cccccc;
+				float: left;
+			}
+			#header_button{
+				width: 98px;
+				height: 34px;
+				font-size: 16px;
+				color: #333;
+				border: 0 none;
+			}
+			
+			.header_radio label{
+				padding-left: 16px;
+                font-size: 12px;
+                color: #555555;
+                margin-top: 10px;   
+                line-height: 30px;vertical-align: middle;
+			}
+			.header_radio label input{
+				margin-right: 13px; 
+				
+			}
+			.header_center_last_img{
+				width: 205px;
+				height: 20px;
+				float: right;
+				background: url(img/icon-slogan_919150e.png)no-repeat;
+				margin-top: 77px;
+			}
+			.header_bottom{
+				width: 100%;
+				height: 40px;
+				background-color: #01204f;
+			}
+			.header_bottom ul{
+				width: 984px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.header_bottom li{
+				float: left;	
+				margin-right: 2px;
+				position: relative;
+				z-index: 5;
+			}
+			.header_bottom li a{
+				color: #fff;
+			   font-size: 14px;
+			   font-family: "微软雅黑";
+			   font-weight: bold;
+			   display: inline-block;
+			   height: 40px;
+			   line-height: 40px;
+			   padding: 0 10px;
+			   
+			   
+			}
+			.now{
+				background-color: #c00;
+			}
+			.header_bottom li:first-child a .daemon{
+				display: inline-block;
+				width: 30px;
+				height: 40px;
+				background: url(img/icon-index_2c3bd00.png) 0px 9px no-repeat;
+				float: left;
+			}
+			.header_bottom ul div{
+				width: 0px;
+				height: 40px;
+				background-color: #c00;
+				float: left;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index:3;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				var oLastList=document.getElementById('header_last_list');
+				var arrLi=oLastList.getElementsByTagName('li');
+				var oDiv=oLastList.getElementsByTagName('div')[0];
+				var oNow=oLastList.getElementsByClassName('now')[0];
+				        oDiv.style.left=oNow.offsetLeft+"px";
+						oDiv.style.width=oNow.offsetWidth+"px";
+				for (var i=0;i<arrLi.length;i++) {
+					arrLi[i].onmouseover=function(){
+						oDiv.style.transition="all 0.3s";
+						oDiv.style.left=this.offsetLeft+"px";
+						oDiv.style.width=this.offsetWidth+"px";
+					}
+					arrLi[i].onmouseout=function(){
+						oDiv.style.left=oNow.offsetLeft+"px";
+						oDiv.style.width=oNow.offsetWidth+"px";
+					}
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="header_box">
+			<div class="header">
+				<div class="header_top">
+					<div class="top_menu_box">
+						<ul>
+							<li><a href="">登录</a></li>
+							<li>|</li>
+							<li><a href="">注册</a></li>
+							<li>|</li>
+							<li><a href="">百度新闻客户端</a></li>
+							<li>|</li>
+							<li><a href="">百度首页</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header_center">
+				      <div class="search_logo">
+				      	<img src="img/logo_news_276_88.png"/>
+				      </div>
+				    <div class="header_search_box">
+				      	<ul id="search_list">
+				      	<li class="cur">新闻</li>
+				      	<li>网页</li>
+				      	<li>贴吧</li>
+				      	<li>知道</li>
+				      	<li>音乐</li>
+				      	<li>图片</li>
+				      	<li>视频</li>
+				      	<li>地图</li>
+				      	<li>百科</li>
+				      	<li>文库</li>
+				      </ul>
+				      <form action="" method="post">
+				      	<div class="search_box">
+				      		<input type="text" value="" id="header_search"/>
+				      	</div>
+				           <div class="button_box">
+				           	  <input type="button" name="" id="header_button" value="百度一下" />
+				           </div>
+				           <div class="header_radio">
+				           	      <label><input type="radio" />新闻全文</label>
+				           	      <label><input type="radio"/>新闻标题</label>
+				           </div>
+				      </form>
+				    </div>
+				     <div class="header_center_last_img">
+				     	
+				     </div> 
+				</div>
+				<div class="header_bottom">
+					<ul id="header_last_list">
+						<li><a href=""><span class="daemon"></span>首页</a></li>
+						<li class="now"><a href="">百家</a></li>
+						<li><a href="">财经</a></li>
+						<li><a href="">娱乐</a></li>
+						<li><a href="">体育</a></li>
+						<li><a href="">互联网</a></li>
+						<li><a href="">时尚</a></li>
+						<li><a href="">汽车</a></li>
+						<li><a href="">国内</a></li>
+						<li><a href="">国际</a></li>
+						<li><a href="">军事</a></li>
+						<li><a href="">视频</a></li>
+						<li><a href="">传媒</a></li>
+						<li><a href="">个性推荐</a></li>
+						<li><a href="">房产</a></li>
+						<li><a href="">名站</a></li>
+						<li><a href="">更多</a><span></span></li>
+						<div></div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

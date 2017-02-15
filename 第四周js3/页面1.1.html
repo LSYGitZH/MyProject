@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var arrA=document.getElementsByTagName('a');
+				for (var i=0;i<arrA.length;i++) {
+					arrA[i].onclick=function(){
+						window.open("页面2.1.html#"+this.name,"_blank");
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<a href="JavaScript:;" name="scenery">美景</a>
+		<a href="JavaScript:;" name="food">美食</a>
+		<a href="JavaScript:;" name="maerdaifu">马尔代夫</a>
+	</body>
+</html>

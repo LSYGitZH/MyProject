@@ -1,0 +1,229 @@
+.top_banner_box{
+	width: 100%;
+}
+.top_banner{
+	width: 100%;
+	min-width: 1258px;
+	height: auto;
+	position: relative;	
+}
+.top_banner img{
+	width: 100%;
+}
+.top_banner .text_box{
+	width: 100%;
+	position: absolute;
+    left: 0;
+	top: 40px;
+} 
+.top_banner .head{
+	color: #FFFFFF;
+	font-size: 60px;
+	line-height: 65px;
+	text-align: center;
+	font-weight: lighter;
+}
+.top_banner .head .A{
+	font-size: 70px;
+}
+.top_banner .head .about_me_chinese{
+	font-size: 30px;
+}
+.top_banner .introduce{
+	color: #FFFFFF;
+	text-align: center;
+}
+.top_banner h4{
+	font-size: 70px;
+	color: #1ea1da;
+	text-align: center;
+	margin-top: 10px;
+}
+.about_box{
+	width: 100%;
+	margin: 40px 0;
+}
+.about_content{
+	width: 1258px;
+	margin: auto;
+}
+.about_top{
+	width: 100%;
+	height: 360px;
+}
+.about_top .about1,.about_top .about2,.about_top .about_text,.about_bottom .about3,.about_bottom .about_text{
+	width: 418px;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+.about_top .about1 .about_img{
+	width: 100%;
+	height: 100%;
+	background: url(../img/about_05.png) center center no-repeat;
+}
+.about_top .about2 .about_img{
+	width: 100%;
+	height: 100%;
+	background: url(../img/about_07.png) center center no-repeat;
+}
+.about_bottom .about3 .about_img{
+	width: 100%;
+	height: 100%;
+	background: url(../img/about_10.png) center center no-repeat;
+}
+.about_top .about1:hover .about_img,.about_top .about2:hover .about_img,.about_bottom .about3:hover .about_img{
+	transform: scale(1.2);
+	transition: all .6s; 	
+}
+
+.about_text{
+	background-color: #EEEEEE;
+}
+.about_top .about_text .center_text_box{
+    width: 100%;
+	height: 260px;
+	margin-top: 40px;
+	overflow-y: auto;
+}
+.about_top .about_text .center_text_box p{
+	width: 322px;
+	margin: auto;
+	font-size: 12px;
+	color: #333333;
+	line-height: 24px;
+}
+.about_top .about_text .center_text_box a{
+	font-size: 12px;
+	float: right;
+	margin: 16px 50px 0 0;
+	color: #1EA1DA;
+}
+.about_bottom{
+	width: 100%;
+	height: 360px;
+}
+.about_bottom .about_text .center_text_box{
+	margin: 0 40px;
+}
+.about_bottom .about_text .center_text_box h2{
+	margin: 80px 0 20px;
+	color: #1EA1DA;
+	font-size: 30px;
+	font-weight: lighter;
+}
+.about_bottom .about_text .center_text_box p{
+	font-size: 12px;
+	color: #333333;
+	line-height: 24px;
+}
+.about_bottom .about_text .center_text_box a{
+	font-size: 12px;
+	color: #1EA1DA;
+	float: right;
+	margin: 16px 10px 0 0;
+}
+.about_bottom .about_text .center_text_box li{
+	line-height: 24px;
+	font-size: 12px;
+	color: #333333;
+}
+.about_bottom .about_text .center_text_box li .promise{
+	color: #1EA1DA;
+}
+.about_bottom .about_text .center_text_box li .small_icon{
+	font-size: 12px;
+	color: #1EA1DA;
+}
+.strength_box{
+	width: 100%;
+}
+.strength_head{
+	width: 100%;
+	height: 135px;
+	background: url(../img/abbg_14.png)repeat-x;
+	text-align: center;
+}
+.strength_head img{
+    margin-top: 25px;
+}
+.strength_introduce{
+	font-size: 25px;
+	color: #333333;
+	text-align: center;
+	margin: 30px 0;
+}
+.strength_box ul{
+	width: 1258px;
+	margin: auto;
+	padding: 40px 0;
+	zoom: 1;
+}
+.strength_box ul:before{
+	content: "";
+	display: table;
+}
+.strength_box ul:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.strength_box ul li{
+	width: 206px;
+	height: 206px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 144px;
+	
+}
+.strength_box ul li .yuan{
+	width: 206px;
+	height: 206px;
+	background-color: #1EA1DA;
+	border-radius: 50%;
+	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+.strength_box ul li:hover .yuan{
+	transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+	transition: all 0.8s;
+}
+.strength_box ul li .yuan h3{
+	width: 148px;
+	margin: auto;
+	padding-top: 70px;
+	text-align: center;
+	font-size: 25px;
+	color: #FFFFFF;
+}
+.strength_box ul li:last-of-type{
+	margin-right: 0;
+}
+.strength_box ul li:nth-of-type(even) .yuan{
+	background-color: #F39800;
+}
+.strength_box .strength_text_box{
+	width: 90%;
+	height: 80px;
+	margin: auto;
+	padding: 40px 0;
+	overflow: hidden;
+	position: relative;
+}
+.strength_box .strength_text_box p{
+	line-height: 26px;
+	font-size: 14px;
+	color: #333333;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.strength_box .strength_text_box p:first-of-type{
+	display: block;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 264px;
+				height: 264px;
+				border: 1px solid #0000FF;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			.show{
+				width: 176px;
+				height: 176px;
+				position: relative;
+			}
+			.show img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.right{
+				width: 88px;
+				height: 264px;
+				float: right;
+			}
+			.color{
+				width: 88px;
+				height: 88px;
+				
+			}
+			.right .color:first-child{
+				background-color: aquamarine;
+				
+			}
+			.right .color:nth-child(2){
+				background-color: green;
+				
+			}
+			.right .color:nth-child(3){
+				background-color: yellow;
+				
+			}
+			/*.bottom{
+				clear: both;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}*/
+			.bottom .color{
+				float: left;
+			}
+			.bottom .color:first-child{
+				background-color: red;
+			}
+			.bottom .color:nth-child(2){
+				background-color: orange;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+//				var oset1=document.getElementById('set1');
+//				var oset2=document.getElementById('set2');
+//				var oset3=document.getElementById('set3');
+//				var oset4=document.getElementById('set4');
+//				var oset5=document.getElementById('set5');
+				var Ocolor=document.getElementsByClassName('color');
+				var Cshow=document.getElementsByTagName('img');
+               
+					for (var i=0;i<Ocolor.length;i++) {
+						Ocolor[i].images=i;
+						Ocolor[i].onclick=function(){
+							for (var i=0;i<Cshow.length;i++) {
+								Cshow[i].style.opacity="0";
+							}
+							Cshow[this.images].style.opacity="1";
+						}
+					}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="right">
+				<div class="color" id="set1"></div>
+			    <div class="color" id="set2"></div>
+			    <div class="color" id="set3"></div>
+			</div>
+			<div class="show">
+				<img src="img/15957335_2.gif"/>
+				<img src="img/t01223aaa31b685f916.gif"/>
+				<img src="img/t0155f311592b9478d2.gif"/>
+				<img src="img/t01899e1a6d883fe6a2.gif"/>
+				<img src="img/t0191de6b518c991339.gif"/>
+			</div>
+			<div class="bottom">
+				<div class="color" id="set4"></div>
+			    <div class="color" id="set5"></div>
+			</div>
+		</div>
+	</body>
+</html>

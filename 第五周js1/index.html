@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			//全局变量
+			//局部变量
+			//1.声明变量
+			//2.作用范围
+			//作用域链
+			
+			//数组遍历器
+//			var arr=[1,2,3,4,3,4,2,3,4];
+//			
+//			function iterator(){
+//				var index=0;
+//				
+//				function next(){
+//					return index++;//先整体的值等于index的值，后执行加1
+//				}
+//				return next;
+//			}
+			
+			//去掉var为全局变量
+			//闭包是在函数外面调用函数里面的变量(也就是在函数外面调用局部变量)
+//			function  Person(){
+//				var name="liming";
+//			    var getName=function(){
+//			    	return name;
+//			    };
+//			    var setName=function(name1){
+//			    	name=name1;
+//			    };
+//			    return [getName,setName];
+//			}
+//			Person();
+			
+//			function fun(n,o){
+//				console.log(o);
+//				return {
+//					fun:function(m){
+//						return fun(m,n);
+//					}
+//				};
+//			}
+//			var a=fun(0);
+//			a.fun(1);
+//			a.fun(2);
+//			a.fun(3);
+
+  window,onload=function(){
+  	var arrLi=document.getElementsByTagName('li');
+//	for (var i=0;i<arrLi.length;i++) {
+//		arrLi[i].onclick=function(){
+//			alert(i);
+//		}
+//	}
+
+  	for (var i=0;i<arrLi.length;i++) {
+  		arrLi[i].onclick=(function(i){
+  			function a(){
+  				alert(i);
+  			}
+  			
+  		})(i);
+  	}
+  }
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			h1{
+				text-align: center;
+				font-weight: 500;
+			}
+			form{
+				position: relative;
+				top: 30px;
+				left: 50%;
+				margin-left: -250px;
+			}
+			#email{
+				width: 350px;
+				height: 30px;
+				margin-left: 10px;
+			}
+			#btn{
+				width: 150px;
+				position: relative;
+				top: 20px;
+				left: 10%;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var oEmail=document.getElementById('email');
+				var oBtn=document.getElementById('btn');
+				var regEmail=/^\w+@(163|qq|sina)\.com$/;
+				
+				oBtn.onclick=function(){
+					if (!regEmail.test(oEmail.value)) {
+					alert("邮箱输入错误");
+				}else{
+					alert("邮箱输入正确");
+				}
+			
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+	      <h1>电子邮件地址验证程序</h1>
+	      <form action="" method="post">
+	      	请输入电子邮件地址：<input type="text" id="email"  /><br />
+	      <input type="button" id="btn" value="验证电子邮件地址" />
+	   
+	      </form>
+	      
+	</body>
+</html>

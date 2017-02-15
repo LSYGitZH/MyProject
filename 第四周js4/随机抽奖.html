@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div{
+				width: 200px;
+				height: 100px;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var oRandom=document.getElementById('random');
+				var oForWard=document.getElementById('forward');
+				var oBack=document.getElementById('back');
+				var oDiv=document.getElementById('div');
+				var oSelect=document.getElementsByTagName("select")[0];
+				var allRandomBall={};
+				
+				oRandom.onclick=function(){
+					var Box=[];
+				     var balls=[];
+					  for (var i=0;i<35;i++) {
+            	     Box.push(i+1);
+                      }
+					
+					for (var a=0;a<7;a++) {
+						var ranNum=Math.floor(Math.random()*Box.length);
+						var ball=Box.splice(ranNum,1);
+						balls.push(ball);
+					}
+					oDiv.innerHTML=balls;
+					
+					//更改网址
+					var ran=Math.random();
+					allRandomBall[ran]=balls;
+					location.hash=ran;
+				}
+				
+				window.onhashchange=function(){
+				var hash=location.hash.substring(1);
+				if (allRandomBall[hash]) {
+					oDiv.innerHTML=allRandomBall[hash];
+				}else{
+					oDiv.innerHTML="";
+				}
+				}
+				oBack.onclick=function(){
+					history.back();
+				}
+				oForWard.onclick=function(){
+					history.forward();
+				}
+				oSelect.onchange=function(){
+					history.go();
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" name="random" id="random" value="随机抽奖" />
+		<input type="button" name="back" id="back" value="后退" />
+		<input type="button" name="forward" id="forward" value="前进" />
+		<select name="">
+			<option value="5">5</option>
+			<option value="4">4</option>
+			<option value="3">3</option>
+			<option value="2">2</option>
+			<option value="1">1</option>
+			<option value="0">0</option>
+			<option value="-1">-1</option>
+			<option value="-2">-2</option>
+			<option value="-3">-3</option>
+			<option value="-4">-4</option>
+			<option value="-5">-5</option>
+		</select>
+		<div id="div">
+			
+		</div>
+	</body>
+</html>

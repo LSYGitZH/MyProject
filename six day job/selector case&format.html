@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		    a{text-decoration: none;}
+		    .frame{width: 400px; height:300px;border: 1px solid #000000;margin: 10px;float: left;}
+			.square{
+				width: 100px;
+				height: 100px;
+				background-color: royalblue;
+				}
+			p.square{background-color: black;}        /*标签指定类选择器      格式：标签.类名{属性:属性值;}*/
+			
+			p.text{color: red;}
+			#text{color: aqua;}
+			
+			#text2{color: blueviolet;}
+			p#text2{color: darkolivegreen;}          /*标签指定id选择器    格式:  标签#id名{属性:属性值;}*/
+		
+		    .div1,.div2,.div3,.div4{ /*分组选择器     格式:class名或标签或id名用逗号分开然后加{属性:属性值;}*/
+		    	width: 60px;
+		    	height: 60px;
+		    }
+		    .div1{background-color: red;}
+		    .div2{background-color: orange;}
+		    .div3{background-color: yellow;}
+		    .div4{background-color: green;}
+		    
+		    .hd span{                    /*后代选择器     格式:class名或标签或id名用空格分开然后加{属性:属性值;}*/
+		    	color: cadetblue;
+		    }
+		    .zjzd span{
+		    	color: blue;
+		    }
+		    .zjzd>span{                 /*直接子代选择器     格式:class名或标签或id名用>分开然后加{属性:属性值;}*/
+		    	color: red;
+		    }
+		    
+		    .brother+p{                   /*相邻兄弟选择器    格式:class名或标签或id名用+分开然后加{属性:属性值;}*/
+		    	color: deepskyblue;
+		    }
+		   
+		    a{display: inline-block;padding: 0 8px;float: left;}
+			a:link{color: black;}              /*伪类选择器       格式: a:link{} a:visited{} a:hover{} a:active{}*/
+		    a:visited{color: red;}                              /*按顺序写*/
+			a:hover{
+				background-color: black;
+				color: white;
+			}
+		    a:active{background-color: blue;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="frame">
+			<div class="square"></div>          <!--标签指定类选择器与类选择器的优先级-->
+		    <p class="square"></p>
+		</div>
+		
+		<div class="frame">
+			<div class="text" id="text">id选择器与标签指定类选择器的优先级</div>
+		    <p class="text">id选择器与标签指定类选择器的优先级</p>
+		</div>
+		
+		<div class="frame">
+			<div  id="text2">id选择器与标签指定id选择器优先级</div>
+		    <p id="text2">id选择器与标签指定id选择器优先级</p>
+		</div>
+		<div class="frame">
+			<div class="div1">分组选择器1</div>
+		    <div class="div2">分组选择器2</div>
+		    <div class="div3">分组选择器3</div>
+		    <div class="div4">分组选择器4</div>
+		</div>
+		
+		<div class="frame">
+			<div class="hd">
+				后代选择器1         
+		       <span>后代选择器2</span>
+		       <p>
+		    	   <span>后代选择器3</span>
+		       </p>
+			</div> 
+		</div>
+		
+		<div class="frame">
+			<div class="zjzd">
+				直接子代选择器1         
+		       <span>直接子代选择器2</span>
+		       <p>
+		    	   <span>直接子代选择器3</span>
+		       </p>
+			</div> 
+		</div>
+		
+	    <div class="frame">
+	    	<p>相邻兄弟选择器1</p>
+			<div class="brother">相邻兄弟选择器2</div>         
+		    <p>相邻兄弟选择器3</p>
+			<p>相邻兄弟选择器4</p>
+		</div>
+		
+			<div class="frame">
+			<a href="http://www.baidu.com">伪类选择器</a>	
+			<a href="http://www.baidu.com">你好</a>
+			<a href="http://www.baidu.com">就会叫你看</a>
+			<a href="http://www.baidu.com">打开了</a>
+			<a href="http://www.baidu.com">家里</a>
+			
+		</div>
+	</body>
+</html>

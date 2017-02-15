@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#div{
+				width: 100px;
+				height: 3000px;
+			}
+			#btn{
+				width: 66px;
+				height: 30px;
+				position: fixed;
+				right: 20px;
+				bottom: 20px;
+				border: 1px solid #cccccc;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn=document.getElementById('btn');
+				var timer=0;
+				oBtn.onclick=function(){
+					
+					if (timer==0) {
+						
+					
+					timer=setInterval(function(){
+						
+				        var scrollTop;
+                       
+              if(document.documentElement.scrollTop){
+              	
+             //兼容      火狐 	   IE   不兼容   谷歌
+             
+                   scrollTop=document.documentElement.scrollTop;
+                   }else{
+                   	
+                 //  兼容   谷歌  	
+                         scrollTop=document.body.scrollTop;
+                       }
+                      var speed=100;
+                   document.documentElement.scrollTop-=speed;
+                   document.body.scrollTop-=speed;
+                   if (scrollTop<=0) {
+                   	clearInterval(timer);
+                   	timer=0;
+                   }
+					},20);
+				}
+			}
+         		
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="div"></div>
+		<input type="button" name="" id="btn" value="返回顶部" />
+	</body>
+</html>

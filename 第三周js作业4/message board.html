@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;}
+			.left{
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.right{
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			h2{
+				text-align: center;
+				font-weight:500;
+				margin-top: 50px;
+			}
+			.show{
+				width: 500px;
+				height: 250px;
+				border: 1px solid #dedede;
+				background-color: #f4f4f4;
+				margin: auto;
+				margin-top: 30px;
+				overflow-y: scroll;
+			}
+			.message{
+				width:400px;
+				height: 30px;
+				margin-left: 90px;
+				border: 1px solid #dedede;
+				margin-top: 20px;
+				text-indent: 5px;
+			}
+			.submit{
+				width: 95px;
+				height: 32px;
+				background-color: #3499d8;
+				border: none;
+				
+			}
+			#ul1{
+				float: right;
+				text-align: right;
+				color: #3499D8;
+				font-size: 14px;
+			}
+			#ul2{
+				font-size: 14px;
+				text-align: left;
+				clear: both;
+				
+				}
+			#ul3{float: none;text-align: left;font-size: 14px;}
+			
+			#ul4{float: right;font-size: 14px;color: #3499D8;}
+		</style>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			window.onload=function(){
+				var oShow1=$('show1');
+				var oShow2=$('show2');
+				var oMessage1=$('message1');
+				var oMessage2=$('message2');
+				var oSubmit1=$('submit1');
+				var oSubmit2=$('submit2');
+				var oUl1=$('ul1');
+				var oUl2=$('ul2');
+				var oUl3=$('ul3');
+				var oUl4=$('ul4');
+				oSubmit1.onclick=function(){
+					var myMessage1=oMessage1.value;
+					var oDate=new Date();
+					var oYear=oDate.getFullYear();
+					var oMonth=oDate.getMonth()+1;
+					var oDay=oDate.getDate();
+					var oHour=oDate.getHours();
+					var oMin=oDate.getMinutes();
+					var oSecond=oDate.getSeconds();
+					var oLi1=document.createElement('li');
+					var oLi2=document.createElement('li');
+					var hello="早上";
+					oUl1.appendChild(oLi1);
+					oUl3.appendChild(oLi2);
+					 if(oHour>=6 && oHour<12){
+             	          hello="早上";
+                      }else if (oHour<14) {
+             	        hello="中午";
+                      }else if (oHour<18) {
+             	         hello="下午";
+                      }else if (oHour<24){
+             	        hello="晚上";
+                      }else{
+             	        hello="凌晨";
+                    }
+					oLi1.innerHTML=oYear+"/"+oMonth+"/"+oDay+" "+hello+oHour+":"+oMin+":"+oSecond+"我<br />"+myMessage1;
+					oLi2.innerHTML=oYear+"/"+oMonth+"/"+oDay+" "+hello+oHour+":"+oMin+":"+oSecond+"<br />"+myMessage1;
+				}
+				
+				
+				oSubmit2.onclick=function(){
+					var myMessage2=oMessage2.value;
+					var oDate=new Date();
+					var oYear=oDate.getFullYear();
+					var oMonth=oDate.getMonth()+1;
+					var oDay=oDate.getDate();
+					var oHour=oDate.getHours();
+					var oMin=oDate.getMinutes();
+					var oSecond=oDate.getSeconds();
+					var oLi1=document.createElement('li');
+					var oLi2=document.createElement('li');
+					var hello="早上";
+					oUl2.appendChild(oLi2);
+					oUl4.appendChild(oLi1);
+					 if(oHour>=6 && oHour<12){
+             	          hello="早上";
+                      }else if (oHour<14) {
+             	        hello="中午";
+                      }else if (oHour<18) {
+             	         hello="下午";
+                      }else if (oHour<24){
+             	        hello="晚上";
+                      }else{
+             	        hello="凌晨";
+                    }
+					oLi1.innerHTML=oYear+"/"+oMonth+"/"+oDay+" "+hello+oHour+":"+oMin+":"+oSecond+"我<br />"+myMessage2;
+					oLi2.innerHTML=oYear+"/"+oMonth+"/"+oDay+" "+hello+oHour+":"+oMin+":"+oSecond+"<br />"+myMessage2;
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="left">
+			<h2>用户1</h2>
+			<div class="show" id="show1">
+				<ul id="ul1">
+					
+				</ul>
+				<ul id="ul2">
+					
+				</ul>
+			</div>
+			<form action="" method="post">
+				<input type="text" id="message1" class="message" value="" />
+				<input type="button" id="submit1" class="submit" value="提交"/>
+			</form>
+		</div>
+		<div class="right">
+			<h2>用户2</h2>
+			<div class="show" id="show2">
+				<ul id="ul3">
+					
+				</ul>
+				<ul id="ul4">
+					
+				</ul>
+			</div>
+			<form action="" method="post">
+				<input type="text" id="message2" class="message" value="" />
+				<input type="button" id="submit2" class="submit" value="提交"/>
+			</form>
+		</div>
+	</body>
+</html>

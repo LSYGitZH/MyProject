@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!--依赖于jQuery文件    1.9以上-->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<style type="text/css">
+			/*div{
+			    height: 200px;
+			    border: 1px solid #2B542C;
+			    text-align: center;
+			    line-height: 200px;
+			    margin-bottom: 10px;
+			}*/
+			div{
+				/*height: 100px;*/
+				border: 1px solid #2B542C;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--container  容器-->
+		<header class="container">
+			<!--1200  lg   992  md   768  sm  768以下   xs-->
+			<!--row  一行-->
+			<header class="row">
+				<!--col-lg-1     大分辨率下占一格-->
+				<!--col-md-2     中分辨率下占两格-->
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					col-lg-1
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					col-lg-1
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					col-lg-1
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					col-lg-1
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					col-lg-1
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					col-lg-1
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					col-lg-1
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					col-lg-1
+				</div>
+			</header>
+		</header>
+		<!--小分辨率兼容大分辨率-->
+		<div class="row">
+			<div class="col-xs-6">
+				col-xs-6
+			</div>
+			<div class="col-xs-6">
+				col-xs-6
+			</div>
+		</div>
+		<!--列偏移-->
+		<div class="row">
+			<div class="col-xs-3">
+
+			</div>
+			<div class="col-xs-3">
+
+			</div>
+			<div class="col-xs-5 col-xs-offset-1">
+
+			</div>
+		</div>
+
+		<!--列嵌套-->
+		<div class="row">
+			<div class="col-xs-3">
+				div
+			</div>
+			<div class="col-xs-9">
+				<div class="row">
+					<div class="col-xs-3">
+
+					</div>
+					<div class="col-xs-3">
+
+					</div>
+					<div class="col-xs-3">
+
+					</div>
+					<div class="col-xs-3">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--标题标签-->
+		<h1>this is a h1 label</h1>
+		<h2>this is a h2 label</h2>
+		<h3>this is a h3 label</h3>
+		<h4>this is a h4 label</h4>
+		<h5>this is a h5 label</h5>
+		<h6>this is a h6 label</h6>
+		<p class="h1">this is a h1 label</p>
+		<p class="h2">this is a h2 label</p>
+		<p class="h3">this is a h3 label</p>
+		<p class="h4">this is a h4 label</p>
+		<p class="h5">this is a h5 label</p>
+		<p class="h6">this is a h6 label</p>
+
+		<!--列表-->
+		<ul>
+			<li>1111</li>
+			<li>1111</li>
+			<li>1111</li>
+		</ul>
+		<ul class="list-unstyled">
+			<li>1111</li>
+			<li>1111</li>
+			<li>1111</li>
+		</ul>
+		<ul class="list-inline">
+			<li>1111</li>
+			<li>1111</li>
+			<li>1111</li>
+		</ul>
+		<ol>
+			<li>222</li>
+			<li>2222</li>
+			<li>22222</li>
+		</ol>
+
+		<!--表格-->
+		<table class="table table-hover table-bordered">
+			<tr class="danger">
+				<th>用户名：</th>
+				<td>内容：</td>
+			</tr>
+			<tr>
+				<th>姓名：</th>
+				<td>内容：</td>
+			</tr>
+			<tr>
+				<th>地址：</th>
+				<td>内容：</td>
+			</tr>
+		</table>
+
+		<!--表单样式-->
+		<form action="#" method="post">
+			<div class="form-group">
+				<label for="textInput">用户名：</label>
+				<!--form-control   宽度100%-->
+				<input type="text" value="" class="form-control" id="textInput" />
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="" id="" value="" />checkbox</label>
+			</div>
+			<input type="submit" class="btn btn-default" name="" id="" value="submit" />
+		</form>
+
+		<hr />
+
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label>
+          <input type="checkbox"> Remember me
+        </label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Sign in</button>
+				</div>
+			</div>
+		</form>
+
+		<hr />
+
+		<div class="form-group has-success has-feedback">
+			<label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+			<input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
+			<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+			<span id="inputSuccess5Status" class="sr-only">(success)</span>
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon glyphicon glyphicon-pencil">@</span>
+			<input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
+		</div>
+		<hr />
+
+		<div class="input-group">
+			<div class="input-group-btn">
+				<button class="btn btn-default dropdown" data-toggle="dropdown">OK!<span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#">菜单</a>
+					</li>
+					<li>
+						<a href="#">菜单</a>
+					</li>
+					<li>
+						<a href="#">菜单</a>
+					</li>
+				</ul>
+			</div>
+			<input type="text" class="form-control" name="" id="" value="" />
+		</div>
+
+		<hr />
+
+		<button class="btn btn-default">按钮</button>
+		<button class="btn btn-success">按钮</button>
+		<button class="btn btn-active">按钮</button>
+		<button class="btn btn-warning">按钮</button>
+		<button class="btn btn-danger">按钮</button>
+		<button class="btn btn-info">按钮</button>
+		<button class="btn btn-primary">按钮</button>
+
+		<button class="btn btn-primary btn-lg">按钮</button>
+		<button class="btn btn-primary btn-sm">按钮</button>
+		<button class="btn btn-primary btn-block">按钮</button>
+
+		<button class="btn btn-link"></button>
+		<button class="btn btn-info active">按钮</button>
+		<button class="btn btn-info active" disabled="disabled">按钮</button>
+		
+		<hr />
+		<!--响应式图片-->
+		<div class="container">
+			<img src="img/风景_62.jpg" class="img-responsive center-block" alt=""/>
+		    <img src="img/风景_62.jpg" class="img-circle" width="100" height="100" alt=""/>
+		    <img src="img/风景_62.jpg" class="img-rounded" width="100" height="100" alt=""/>
+		    <img src="img/风景_62.jpg" class="img-thumbnail" width="150" height="150" alt=""/>
+		    <span class="caret"></span>
+		    <hr />
+		    <span class="close">&times;</span>
+		</div>
+		<div class="container">
+			<!--浮动-->
+			<div class="pull-left">左浮动</div>
+			<div class="pull-right">右浮动</div>
+			<div class="clearfix visible-xs">
+				
+			</div>
+			<div class="text-center">居中</div>
+			<!--字体图标-->
+			<span class="glyphicon glyphicon-search"></span>
+			<button class="btn btn-default glyphicon glyphicon-align-justify"></button>
+			<button class="btn btn-default">
+				<span class="glyphicon glyphicon-user"></span>
+				用户
+			</button>
+			
+			<hr />
+			
+			<div class="btn-toolbar">
+				<div class="btn-group">
+					<button class="btn btn-default glyphicon glyphicon-adjust"></button>
+					<button class="btn btn-default glyphicon glyphicon-adjust"></button>
+					<button class="btn btn-default glyphicon glyphicon-adjust"></button>
+					<button class="btn btn-default glyphicon glyphicon-adjust"></button>
+					<button class="btn btn-default glyphicon glyphicon-adjust"></button>
+				</div>
+			</div>
+			
+			<hr />
+			
+			<!--下拉菜单-->
+			<div class="dropdown">
+				<button class="btn btn-danger glyphicon glyphicon-envelope form-control" data-toggle="dropdown"><span class="caret"></span></button>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="#">选项1</a></li>
+					<li><a href="#">选项1</a></li>
+					<li><a href="#">选项1</a></li>
+					<li><a href="#">选项1</a></li>
+					<li><a href="#">选项1</a></li>
+				</ul>
+			</div>
+			
+			<div class="dropdown">
+				<button class="btn btn-danger glyphicon glyphicon-envelope dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li class="dropdown-header disabled"><a href="#">选项1</a></li>
+					<li class="active"><a href="#">选项1</a></li>
+					<li class="divider"><a href="#">选项1</a></li>
+					<li><a href="#">选项1</a></li>
+					<li class="disabled"><a href="#">选项1</a></li>
+				</ul>
+			</div>
+			
+			<hr />
+			
+			<!--按钮组-->
+			<div class="btn-group">
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default">按钮</div>
+			</div>
+			
+			<div class="btn-group btn-group-lg">
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default">按钮</div>
+			</div>
+			
+			<div class="btn-group">
+				<div class="btn btn-default btn-lg">按钮</div>
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default">按钮</div>
+			</div>
+			
+			<div class="btn-group">
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default btn-sm">按钮</div>
+				<div class="btn btn-default">按钮</div>
+			</div>
+			
+			<!--垂直按钮-->
+			<div class="btn-group btn-group-vertical">
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default">按钮</div>
+				<div class="btn btn-default">按钮</div>
+			</div>
+			
+			<hr />
+			<!--导航条-->
+			<h1>导航条</h1>
+			<ul class="nav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">音乐</a></li>
+				<li><a href="#">新品上市</a></li>
+			</ul>
+			<h1>导航条选项卡样式</h1>
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">音乐</a></li>
+				<li><a href="#">新品上市</a></li>
+			</ul>
+			<h1>导航条  胶囊样式</h1>
+			<ul class="nav nav-pills">
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">音乐</a></li>
+				<li><a href="#">新品上市</a></li>
+			</ul>
+			<h1>导航条  垂直胶囊样式</h1>
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">音乐</a></li>
+				<li><a href="#">新品上市</a></li>
+			</ul>
+			<h1>导航条  自适应文字居中样式</h1>
+			<ul class="nav nav-pills nav-justified">
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">音乐</a></li>
+				<li><a href="#">新品上市</a></li>
+			</ul>
+			<h1>二级导航条</h1>
+			<ul class="nav nav-pills nav-justified">
+				<li><a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">首页</a>
+				   <ul class="dropdown-menu">
+				   	<li><a href="#">选项1</a></li>
+				   	<li><a href="#">选项1</a></li>
+				   	<li><a href="#">选项1</a></li>
+				   </ul> 
+				</li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">音乐</a></li>
+				<li><a href="#">新品上市</a></li>
+			</ul>
+		</div>
+		
+		<!--导航条-->
+		
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<div class="navbar-header navbar-brand">
+					<a href="#">宠物用品店</a>
+				</div>
+				<ul class="navbar-nav nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+				</ul>
+				<form action="#" method="post" class="navbar-form pull-right">
+					<div class="form-group">
+						<input type="text" value="" class="form-control"/>
+					    <button class="btn btn-default">搜索</button>
+					</div>
+				</form>
+			</div>
+		</nav>
+		<!--navbar-inverse   反色导航条-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">宠物用品店</a>
+				</div>
+				<ul class="navbar-nav nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">首页</a></li>
+				</ul>
+				<form action="#" method="post" class="navbar-form pull-right">
+					<div class="form-group">
+						<input type="text" value="" class="form-control"/>
+					    <button class="btn btn-default">搜索</button>
+					</div>
+				</form>
+			</div>
+		</nav>
+		
+		<div class="container">
+			<div class="carousel slide" id="banner-carousel" data-ride="carousel">
+						<!--图片-->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="img/风景_62.jpg"/>
+								<div class="carousel-caption">
+									<h1>这是一张图片</h1>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/风景_62.jpg"/>
+								<div class="carousel-caption">
+									<h1>这是一张图片</h1>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/风景_62.jpg"/>
+								<div class="carousel-caption">
+									<h1>这是一张图片</h1>
+								</div>
+							</div>
+						</div>
+						<!--小点-->
+						<ul class="carousel-indicators">
+							<li class="active" data-target="#banner-carousel" data-slide-to = "0"></li>
+							<li data-target="#banner-carousel" data-slide-to = "1"></li>
+							<li data-target="#banner-carousel" data-slide-to = "2"></li>
+						</ul>
+						<!--左右按钮-->
+						<a href="#banner-carousel" class="left carousel-control" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						</a>
+						<a href="#banner-carousel" class="right carousel-control" data-slide = "next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						</a>
+					</div>
+		</div>
+	</body>
+
+</html>

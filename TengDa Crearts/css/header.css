@@ -1,0 +1,160 @@
+
+/*头部*/
+header{
+	width: 100%;
+	min-width: 1258px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #EEEEEE;
+}
+.header_content{
+	width: 1258px;
+	height: 107px;
+	margin: auto;
+}
+#header_logo{
+	display: block;
+	width: 218px;
+	height: 55px;
+	background: url(../img/logo.png)no-repeat;
+	background-size: 218px 55px;
+	margin-top: 24px;
+	float: left;
+}
+#header_list{
+	float: left;
+	margin-left: 55px;
+}
+#header_list li{
+	float: left;
+	border-right: 1px solid #eeeeee;
+}
+#header_list li a{
+	display: block;
+	width: 123px;
+	height: 107px;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+#header_list li:hover a{
+	background-color: rgb(30,161,218);
+}
+#header_list li:hover a span{
+	color: #FFFFFF;
+}
+#header_list li a span{
+	display: block;
+	font-size: 14px;
+	color: #666666;
+	text-align: center;
+}
+#header_list li a span:last-of-type{
+	font-size: 12px;
+	line-height: 25px;
+}
+.header_right_box{
+	float: right;
+}
+.entry_register_box{
+	float: right;
+	zoom: 1;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+/*.entry_register_box:before{
+	content: "";
+	display: table;
+}
+.entry_register_box:after{
+	content: "";
+	display: table;
+	clear: both;
+}*/
+.entry_register_box a{
+	font-size: 12px;
+	color: #000000;
+	float: left;
+}
+.entry_register_box a .icon1{
+	display: inline-block;
+	width: 20px;
+	height: 19px;
+	background: url(../img/login.png)no-repeat;
+	background-size: 20px 19px;
+	margin-right: 2px;
+	float: left;
+}
+
+.entry_register_box .slant{
+	font-size: 12px;
+	color: #b399a1;
+	font-weight: lighter;
+	float: left;
+}
+.self_order_box{
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+.self_order_box:hover span{
+	color: rgb(243,152,0);
+}
+.self_order_box .icon2{
+	float: left;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+.self_order{
+	float: left;
+	font-size: 12px;
+	color: #000000;
+}
+.header_form{
+	width: 170px;
+	border-bottom: 1px solid #000000;
+	padding:20px 0 7px;
+	clear: both;
+}
+.header_form input{
+	border: none;
+	outline: none;
+	text-indent: 5px;
+}
+
+/*固定定位的头部列表*/
+.header_fixed_list_box{
+	width: 100%;
+	min-width: 1258px;
+	height: 60px;
+	background-color: rgba(234,235,237,0.8);
+	box-shadow: 0px 1px 10px 0px #333;
+	position: fixed;
+	top: 0;
+	display: none;
+	z-index: 1000;
+}
+#header_fixed_list{
+	max-width: 1258px;
+	height: 60px;
+	margin: auto;
+}
+#header_fixed_list li{
+	border-right: 1px solid #EEEEEE;
+	float: left;
+}
+#header_fixed_list li:first-of-type{
+	border-left: 1px solid #EEEEEE;
+}
+#header_fixed_list li:hover a{
+	background-color: rgb(30,161,218);
+	color: #FFFFFF;
+}
+#header_fixed_list li a{
+	display: block;
+	width: 175px;
+	height: 60px;
+	line-height: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(0,0,0);
+}
+

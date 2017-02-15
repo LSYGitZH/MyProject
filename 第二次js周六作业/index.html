@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;}
+			.select{
+				width: 150px;
+				height: 40px;
+				border: 1px solid #dedede;
+				position: relative;
+				left: 50%;
+				top: 40px;
+				margin-left: -75px;
+				cursor: pointer;
+			}
+			.select p{
+				line-height: 40px;
+				font-size: 13px;
+				padding-left: 10px;
+				box-sizing: border-box;
+			}
+			.list{
+				width: 150px;
+				position: absolute;
+				top: 41px;
+				left: -1px;
+				border: 1px solid #DEDEDE;
+				border-top: none;
+				border-bottom: none;
+				display: none;
+			}
+			.select li{
+				width: 150px;
+				height: 40px;
+				border-bottom: 1px solid #DEDEDE;
+				text-indent: 5px;
+				line-height: 40px;
+				font-size: 14px;
+			}
+			.color{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000000;
+				clear: both;
+				margin-left: 60%;
+				position: relative;
+			}
+			.color img{
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				opacity: 0;
+				transition: all 1s;
+			}
+			.color img:first-of-type{
+				opacity: 1;
+			}
+		</style>
+		<script type="text/javascript">
+//			完成函数showImg()，要求能够动态根据下拉列表的选项变化，更新图片的显示
+			window.onload=function(){
+				var oSelect=document.getElementById('select');
+				var oList=document.getElementById('list');
+				var oColor=document.getElementsByClassName('color');
+				var arrLi=document.getElementsByTagName('li');
+				var arrImg=document.getElementsByTagName('img');
+				oSelect.onclick=function(){
+					if(oList.style.display=="block") {
+						oList.style.display="none";
+					}else{
+						oList.style.display="block";
+					}	
+				}
+				for (var i=0;i<arrLi.length;i++) {
+					arrLi[i].onmouseover=function(){
+						for (var i=0;i<arrLi.length;i++) {
+							arrLi[i].style.backgroundColor="white";
+						}
+					       this.style.backgroundColor="#dedede";
+					}
+					
+					arrLi[i].onmouseout=function(){
+						this.style.backgroundColor="white";
+					}
+					
+				}
+				
+				function showImg(){
+					for (var i=0;i<arrLi.length;i++) {
+						arrLi[i].color=i;
+						arrLi[i].onclick=function(){
+							for (var j=0;j<arrImg.length;j++) {
+								arrImg[j].style.opacity="0";
+							}
+							arrImg[this.color].style.opacity="1";
+						}
+					}
+				}
+				showImg();
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+<div class="select" id="select">
+	<p>下拉列表</p>
+	<ul class="list" id="list">
+		<li>white</li>
+		<li>silvery</li>
+		<li>metal</li>
+		<li>black</li>
+	</ul>
+</div>
+<div class="color">
+	<img src="img/s5coupe.size.h74.png"/>
+	<img src="img/s6limo.size.h74.png"/>
+	<img src="img/s7sb.size.h74.png"/>
+	<img src="img/s8.size.h74.png"/>
+</div>
+	</body>
+</html>
+

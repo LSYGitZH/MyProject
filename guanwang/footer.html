@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>	
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var musicIndex=0;
+				$("li").click(function(){
+					musicIndex++;
+					var index=$(this).index();
+					if(navigator.appName=="Microsoft Internet Explorer"){
+			$("body").append('<bgsound class="myaudio'+ musicIndex +'" src="music/sound0'+ index +'.mp3" autostart=true loop=false>');   //ie
+		}else if(navigator.userAgent.indexOf("Firefox")>0){
+			$("body").append('<object class="myaudio'+musicIndex+'" data="music/sound0'+ index +'.mp3" type="application/x-mplayer2" width="0" height="0">'+
+                    '<param name="src" value="music/sound0'+ index +'.mp3">'+
+                    '<param name="autostart" value="1">'+
+                    '<param name="playcount" value="infinite">'+
+                '</object>')                         //ff
+		}else{
+			$("body").append('<embed class="myaudio'+ musicIndex +'" src="music/sound0'+ index +'.mp3" autostart="" loop="false" hidden="true"  ></embed>');     //chrome
+		}
+		var musicRemove=$(".myaudio"+musicIndex);
+          setTimeout(function(){
+          	musicRemove.remove();
+          },3000);
+          
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<footer>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="footer_xian"></div>
+			<a href="http://www.miitbeian.gov.cn">蜀ICP备16002451号</a>
+		</footer>
+	</body>
+</html>

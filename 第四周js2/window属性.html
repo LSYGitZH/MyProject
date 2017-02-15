@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			document.write(window.innerWidth+"<br />");
+			document.write(window.innerHeight+"<br />");
+			document.write(window.outerWidth+"<br />");
+			document.write(window.outerHeight+"<br />");
+			window.onload=function(){
+				var oBtn=document.getElementsByTagName('input')[0];
+				var newWindow=window.open("https://baidu.com","_blank");
+//				oBtn.onclick=function(){
+//					
+////					windowName
+////					window.open("https://baidu.com","_blank");
+//					newWindow.close();
+//					//chrome  close  直接关闭
+//					//IE    close   弹窗确认是否关闭
+//					//ff    close   禁止关闭非脚本语言打开的窗口
+//				}
+              window.open("new_file2.html","frame1");
+                
+			}
+			
+		</script>
+	</head>
+	<body>
+		<!--<input type="button" name="" id="" value="按钮" />-->
+		<iframe src="" width="" height="" name="frame1"></iframe>
+		<iframe src="" width="" height="" name="frame2"></iframe>
+	</body>
+</html>

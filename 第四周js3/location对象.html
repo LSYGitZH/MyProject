@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+//				document.write(location+"<br />");
+//				document.write(location.pathname+"<br />");
+			
+			document.getElementById('mtBtn1').onclick=function(){
+				window.location.reload();
+			};
+			//下面三种方法都是替换成新的页面
+			document.getElementById('mtBtn2').onclick=function(){
+				window.location.assign("http://baidu.com");
+			};
+			document.getElementById('mtBtn3').onclick=function(){
+				window.location.replace("http://baidu.com");
+			};
+			document.getElementById('mtBtn4').onclick=function(){
+				window.location=("http://baidu.com");
+			};
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" id="mtBtn1" value="刷新"></input>
+		<input type="button" id="mtBtn2" value="加载新页面"></input>
+		<input type="button" id="mtBtn3" value="替换当前的文档"></input>
+		<input type="button" id="mtBtn4" value="设置location"></input>
+	</body>
+</html>

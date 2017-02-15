@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Date对象</title>
+
+
+    <script>
+
+
+        window.onload = function () {
+
+            var myDate = new Date();
+//            document.write(myDate+"<br>");
+//            var myDate = new Date(2016,12,22,16,25,24);
+//            document.write(myDate);
+            //new一个Date对象
+//	  var myDate=new Date()  //自动把当前日期和时间保存为其初始值
+
+//  1970 0 0 0   --  NOW  现在 毫秒值  时间戳
+//	document.write(myDate.getTime() + '</br>');
+//   var myDate = new Date(1470721458478);
+//            document.write(myDate+"<br>");
+//	document.write(myDate + '</br>');
+
+//  var myDate = new Date(2016, 15, 40, 20, 30, 45);
+//  document.write(myDate + '</br>');
+
+	document.write('</br>读取时间：</br>');
+//	getDate()从 Date 对象返回一个月中的某一天 (1 ~ 31)
+	document.write(myDate.getDate() + '</br>');
+//
+	//getDay()从 Date 对象返回一周中的某一天 (0 ~ 6)
+//	（0   周日    1 ）
+//	var arr = ["星期日","星期1","星期2","星期3","星期4","星期5","星期6"];
+//	document.write(arr[myDate.getDay()] + '</br>');
+//
+//	getMonth()从 Date 对象返回月份 (0 ~ 11)
+//	（0  表示  1月）
+//	document.write(myDate.getMonth() + '</br>');
+//  千年虫
+//	document.write(myDate.getYear() + '</br>');
+//
+//	//getFullYear()从 Date 对象以四位数字返回年份
+//	document.write(myDate.getFullYear() + '</br>');
+//
+//	//getHours()返回 Date 对象的小时 (0 ~ 23)
+//	document.write(myDate.getHours() + '</br>');
+//
+//	//getMinutes()返回 Date 对象的分钟 (0 ~ 59)
+//	document.write(myDate.getMinutes() + '</br>');
+
+//	//getSeconds()返回 Date 对象的秒数 (0 ~ 59)
+//	document.write(myDate.getSeconds() + '</br>');
+//
+//	//getMilliseconds()返回 Date 对象的毫秒(0 ~ 999)
+//	document.write(myDate.getMilliseconds() + '</br>');
+//
+//	getTime()返回 1970 年 1 月 1 日至今的毫秒数    时间戳
+//	document.write(myDate.getTime() + '</br>');
+//
+//	//getTimezoneOffset()返回本地时间与格林威治标准时间 (GMT) 的分钟差
+//	document.write(myDate.getTimezoneOffset() + '</br>');
+//
+//	//getUTCDate()根据世界时从 Date 对象返回月中的一天 (1 ~ 31)
+//	document.write(myDate.getUTCDate() + '</br>');
+//
+//	//getUTCDay()根据世界时从 Date 对象返回周中的一天 (0 ~ 6)
+//	document.write(myDate.getUTCDay() + '</br>');
+//
+//	//getUTCMonth()根据世界时从 Date 对象返回月份 (0 ~ 11)
+//	document.write(myDate.getUTCMonth() + '</br>');
+//
+//	//getUTCFullYear()根据世界时从 Date 对象返回四位数的年份
+//	document.write(myDate.getUTCFullYear() + '</br>');
+//
+//	//getUTCHours()根据世界时返回 Date 对象的小时 (0 ~ 23)
+//	document.write(myDate.getUTCHours() + '</br>');
+//
+//	//getUTCMinutes()根据世界时返回 Date 对象的分钟 (0 ~ 59)
+//	document.write(myDate.getUTCMinutes() + '</br>');
+//
+//	//getUTCSeconds()根据世界时返回 Date 对象的秒钟 (0 ~ 59)
+//	document.write(myDate.getUTCSeconds() + '</br>');
+//
+//	//getUTCMilliseconds()根据世界时返回 Date 对象的毫秒(0 ~ 999)
+//	document.write(myDate.getUTCMilliseconds() + '</br>');
+//
+//	//parse()返回1970年1月1日午夜到指定日期（字符串）的毫秒数
+//	document.write(Date.parse("Jul 8, 2015") + '</br>');
+//
+//
+//	//设置时间讲年月日时分秒的设置即可
+//	document.write('</br>设置时间：</br>');
+//	var myDate03=new Date();
+//	//当前时间
+//	document.write(myDate03 + '</br>');
+//
+//	//下面将时间修改为2000年1月1日 星期五 0点0分0秒
+//	//setDate()设置 Date 对象中月的某一天 (1 ~ 31)
+//	myDate03.setDate("1");
+//            document.write(myDate03 + '</br>');
+//
+	//setMonth()设置 Date 对象中月份 (0 ~ 11)
+//	myDate03.setMonth(12);
+//
+//            document.write(myDate03 + '</br>');
+
+//       myDate03.setDate(myDate03.getDate()+30);
+//            document.write(myDate03 + '</br>');
+
+
+//
+//	//setFullYear()设置 Date 对象中的年份（四位数字）
+//	myDate03.setFullYear("2016");
+//
+//	//setHours()设置 Date 对象中的小时 (0 ~ 23)
+//	myDate03.setHours("0");
+//
+//	//setMinutes()设置 Date 对象中的分钟 (0 ~ 59)
+//	myDate03.setMinutes("0");
+//
+//	//setSeconds()设置 Date 对象中的秒钟 (0 ~ 59)
+//	myDate03.setSeconds("0");
+//
+//	//设置后的时间
+//	document.write(myDate03 + '</br>');
+//
+//	//Date对象的其他方法
+//	document.write('</br>Date其他方法：</br>');
+//	//toSource()返回该对象的源代码
+//	document.write(myDate03.toSource() + '</br>');
+//
+//	//toString()把 Date 对象转换为字符串
+//	document.write(myDate.toString() + '</br>');
+//
+//	//toTimeString()把 Date 对象的时间部分转换为字符串
+//	document.write(myDate.toTimeString() + '</br>');
+//
+//	//toDateString()把 Date 对象的日期部分转换为字符串
+//	document.write(myDate.toDateString() + '</br>');
+//
+//	//toUTCString()根据世界时，把 Date 对象转换为字符串。
+//	document.write(myDate.toUTCString() + '</br>');
+//
+//	//toLocaleString()根据本地时间格式，把 Date 对象转换为字符串。
+//	document.write(myDate.toLocaleString() + '</br>');
+//
+//	//toLocaleTimeString()根据本地时间格式，把 Date 对象的时间部分转换为字符串。
+//	document.write(myDate.toLocaleTimeString() + '</br>');
+//
+//	//toLocaleDateString()根据本地时间格式，把 Date 对象的日期部分转换为字符串。
+//	document.write(myDate.toLocaleDateString() + '</br>');
+//
+//	//UTC()根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
+//	document.write(Date.UTC(2016,1,1) + '</br>');
+//
+//	//valueOf()返回 Date 对象的原始值。
+//	document.write(myDate.valueOf() + '</br>');
+
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{
+				list-style: none;
+			
+				
+				}
+				
+			form{
+				width: 615px;
+				
+				margin: 50px auto;
+			}
+			.search_right{
+				display:block;
+				width: 40px;
+				height: 39px;
+				border: 1px solid #9C9C9C;
+				border-left: none;
+				background-color: #ffffff;
+				float: left;
+			}
+			#search{
+				width: 425px;
+				height: 39px;
+				border: 1px solid #9c9c9c;
+				border-right: none;
+				font-size: 16px;
+				color: #707A86;
+				float: left;
+				text-indent: 10px;
+			}
+			#btn{
+				width: 98px;
+				height: 41px;
+				outline: none;
+				border: 1px solid #cbcbcb;
+				margin-left: 5px;
+			}
+			.number{
+				width: 15px;
+				height: 15px;
+				text-align: center;
+				line-height: 15px;
+				display: inline-block;
+				background-color: #b9b9b9;
+				font-size: 13px;
+				margin-right: 5px;
+				}
+				#list{
+				display: none;
+			    width: 506px;
+				height: 200px;
+				margin-left:0;
+				border: 1px solid #707a86;
+				}
+				#list li{
+					line-height: 30px;
+					margin-left: 10px;
+				}
+				.search_left{
+				display:block;
+				width: 39px;
+				height: 39px;
+				border: 1px solid #9C9C9C;
+			    border-right: none;
+				background-color: #ffffff;
+				float: left;
+				font-size: 15px;
+				line-height: 39px;
+				text-align: center;
+				color: crimson;
+				cursor: pointer;
+			}
+				#list_left{
+					width: 39px;
+					height: 200px;
+					border: 1px solid #707a86;
+					border-top: none;
+					display: none;
+				}
+				#list_left li{
+					margin-left: 6px;
+					font-size: 13px;
+					line-height: 30px;
+				}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oSearch=document.getElementById('search');
+				var oList=document.getElementById('list');
+				var oLink=document.getElementById('link');
+				var oList2=document.getElementById('list_left');
+				oLink.onclick=function(){
+					
+					if(oList2.style.display=="block"){
+						oList2.style.display="none";
+					}else{
+						oList2.style.display="block";
+					}
+				
+			}
+				oSearch.onfocus=function(){
+					oList.style.display="block";
+					if(this.value=="请输入关键字"){
+						this.value="";
+					}
+				}
+				oSearch.onblur=function(){
+					oList.style.display="none";
+					if(this.value==""){
+						this.value="请输入关键字";
+					}
+				}
+		
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="post">
+			<span class="search_left" id="link">列表</span>
+			<input type="text" value="请输入关键字" id="search"/>
+			<span class="search_right"></span>
+			<input type="button" name="" id="btn" value="搜一下" />
+			<ul id="list_left">
+				<li>你好</li>
+				<li>你好</li>
+				<li>百度</li>
+				<li>百度</li>
+			</ul>
+			<ul id="list">
+			<li><span class="number">1</span>xxxxx广告</li>
+			<li><span class="number">2</span>xxxxx广告</li>
+			<li><span class="number">3</span>xxxxx广告</li>
+			<li><span class="number">4</span>xxxxx广告</li>
+			<li><span class="number">5</span>xxxxx广告</li>
+			<li><span class="number">6</span>xxxxx广告</li>
+		</form>
+		
+		</ul>
+	</body>
+</html>

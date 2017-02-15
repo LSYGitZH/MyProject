@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body{ background:black;}
+#c1{ background:white;}
+</style>
+<script>
+window.onload = function(){
+	var oC = document.getElementById('c1');
+	var oGC = oC.getContext('2d');
+	
+	oGC.fillRect(0,0,100,100);
+	
+	oGC.fillStyle = 'red';
+	
+	oGC.globalCompositeOperation = 'lighter';
+/*	globalCompositeOperation 属性设置或返回如何将一个源（新的）图像绘制到目标（已有）的图像上。
+源图像 = 您打算放置到画布上的绘图。
+目标图像 = 您已经放置在画布上的绘图*/
+	
+	
+	oGC.fillRect(50,50,100,100);
+	
+};
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="400" height="400"></canvas>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			var pNum="1456646678a";
+			var firstNum=pNum.charAt(0);
+			var twoNum=pNum.charAt(1);
+			var pNumLen=pNum.split("").length;
+			
+//			if (isNaN(pNum)) {
+//				document.write(pNum+"不是手机号");
+//			}
+			if (firstNum==1 && pNumLen==11) {
+				for (var i=0;i<pNum.length;i++) {
+				if (pNum.charCodeAt(i)<48 || pNum.charCodeAt(i)>57) {
+				document.write(pNum+"不是手机号");
+			}
+			}
+				if (twoNum==3 || twoNum==4 || twoNum==5 || twoNum==7 || twoNum==8) {
+					document.write(pNum+"是手机号");
+				}else{
+				document.write(pNum+"不是手机号");
+			}
+				
+			}else{
+				document.write(pNum+"不是手机号");
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

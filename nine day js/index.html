@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			
+//			 var obj=new Object();
+			 
+//   function Person(name,sex){     //Person为构造函数  或者  类
+//       this.name=name;
+//       this.sex=sex;
+//    }
+//
+//         Person.prototype.show=function(oTwo){
+//       alert(this.name+"这个"+this.sex+"人，打了一拳"+oTwo.name+"这个"+oTwo.sex+"人");
+//    }
+//      var p1=new Person("张三","男");
+//      var p2=new Person("李四","男");
+//
+//          p1.show(p2);
+
+      var arr=[123,132,3244,43,32,22,2];
+             
+        Array.prototype.sum=function(){
+        	var s=0;
+        	for (var i=0;i<this.length;i++) {
+        		s+=this[i];
+        	}
+        	return s;
+        }
+//      var 
+        alert(arr.sum());
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

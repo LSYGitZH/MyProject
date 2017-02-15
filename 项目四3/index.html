@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			canvas{
+				background-color: #ffffff;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var canvas=document.getElementsByTagName("canvas")[0];
+				var pen=canvas.getContext("2d");
+				//储存
+//				pen.save();
+                //重置   恢复储存的状态
+//              pen.restore();
+				pen.moveTo(300,200);
+				pen.fillStyle="white";
+				pen.arc(200,200,100,0,360*Math.PI/180);
+				pen.fill();
+				
+				pen.moveTo(300,200);
+				pen.strokeStyle="black";
+				pen.lineWidth="10";
+				pen.arc(200,200,100,0,360*Math.PI/180);
+				pen.stroke();
+				
+				for (var i=0;i<60;i++) {
+					pen.moveTo(200,200);
+//				    pen.lineWidth="1";
+				    pen.arc(200,200,100,6*i*Math.PI/180,6*(i+1)*Math.PI/180);
+				    pen.stroke();
+				}
+				pen.moveTo(305,200);
+				pen.strokeStyle="#ededed";
+				pen.lineWidth="5";
+				pen.arc(200,200,100,0,360*Math.PI/180);
+				pen.stroke();
+			}
+		</script>
+	</head>
+	<body bgcolor="black">
+		<canvas width="500" height="400">
+			<span>不支持canvas</span>
+		</canvas>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			//var arr = [“abc”,85,“abc”,85,8,8,1,2,5,4,7,8];
+			
+			var arr=["abc",85,"abc",85,8,8,1,2,5,4,7,8];
+			var arrResult=[];
+			for (var i=0;i<arr.length;i++) {
+				var isCz=true;
+				for (var j=0;j<arrResult.length;j++) {
+					if (arrResult[j]==arr[i]) {
+					isCz=false;
+					break;
+				} 
+				}
+				if (isCz!=false) {
+					arrResult.push(arr[i]);
+				}
+				
+			}
+			document.write(arrResult);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

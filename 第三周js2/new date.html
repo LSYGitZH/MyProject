@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			var oDate=new Date();
+			document.write(oDate+"<br />");
+			var myDate=new Date(2016,10,22,16,07);
+			document.write(myDate+"<br />");
+			var arrDay=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+			document.write(arrDay[myDate.getDay()]+"<br />");
+		window.onload=function(){
+			var oDiv=document.getElementById("div1");
+	         setInterval(function(){
+	         var oDate=new Date();
+             var year=oDate.getFullYear();
+             var month=oDate.getMonth();
+             var day=oDate.getDate();
+             var week=oDate.getDay();
+             var hour=oDate.getHours();
+             var min=oDate.getMinutes();
+             var second=oDate.getSeconds("00");
+	         oDiv.innerHTML=year+"年"+(month+1)+"月"+day+"日"+" "+"星期"+week+" "+hour+":"+min+":"+second;},100);
+
+			}
+
+             
+             
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="text-align: center;"></div>
+	</body>
+</html>

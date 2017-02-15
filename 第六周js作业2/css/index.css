@@ -1,0 +1,522 @@
+*{margin: 0;padding: 0;font-family: "微软雅黑";}
+ul{list-style: none;}
+a{text-decoration: none;}
+img{width: 100%;height: 100%;}
+body{
+	background:-moz-linear-gradient(top,#e0e0e0,#dedede,#dcdcdc,#d6d6d6,#d8d8d8) no-repeat;
+	background:-webkit-linear-gradient(top,#e0e0e0,#dedede,#dcdcdc,#d6d6d6,#d8d8d8) no-repeat;
+	background:-o-linear-gradient(top,#e0e0e0,#dedede,#dcdcdc,#d6d6d6,#d8d8d8) no-repeat;
+	background:-ms-linear-gradient(top,#e0e0e0,#dedede,#dcdcdc,#d6d6d6,#d8d8d8) no-repeat;
+}
+/*网页头部开始  header_box*/
+.box_content{
+	width: 906px;
+	margin: auto;
+	background:-moz-linear-gradient(top,#ffffff 20%,#f4f4f4 30%,#f6f6f6) no-repeat;
+	background:-webkit-linear-gradient(top,#ffffff 20%,#f4f4f4 30%,#f6f6f6) no-repeat;
+	background:-o-linear-gradient(top,#ffffff 20%,#f4f4f4 30%,#f6f6f6) no-repeat;
+	background:-ms-linear-gradient(top,#ffffff 20%,#f4f4f4 30%,#f6f6f6) no-repeat;
+	box-shadow: 0px 0px 5px 1px #b3b3b3;
+	zoom: 1;
+}
+.box_content:before{
+	content: "";
+	display: table;
+}
+.box_content:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.header{
+	width: 881px;
+	height: 93px;
+	margin: auto;	
+}
+.header_top{
+	width: 881px;
+	height: 60px;
+}
+.header_top .logo{
+	display: block;
+	width: 255px;
+	height: 37px;
+	background: url(../img/大气中天_03.jpg)no-repeat;
+	float: left;
+	margin-top: 17px;
+	margin-left: 15px;
+}
+.header_top_right{
+	float: right;
+}
+.header_top_right_menu{
+	margin-top: 10px;
+}
+.header_top_right_menu a{
+	display: block;
+	padding: 0 10px 0 9px;
+	border-right: 1px solid #4f4f4f;
+	font-size: 11px;
+	color: #4f4f4f;
+	float: left;
+}
+.header_top_right_menu a:last-of-type{
+	border-right: none;
+}
+.header_top_right_num{
+	width: 220px;
+	height: 15px;
+	background: url(../img/大气中天_06.jpg)no-repeat;
+	float: right;
+	margin-top: 17px;
+}
+.header_bottom{
+	width: 881px;
+	height: 31px;
+}
+.header_bottom_menu{
+	width: 881px;
+	height: 31px;
+	border: 1px solid #ca2627;
+	border-radius: 5px;
+	background:-moz-linear-gradient(top,#cf6f70 50%,#bd0507 50%) no-repeat;
+	background:-webkit-linear-gradient(top,#cf6f70 50%,#bd0507 50%) no-repeat;
+	background:-o-linear-gradient(top,#cf6f70 50%,#bd0507 50%) no-repeat;
+	background:-ms-linear-gradient(top,#cf6f70 50%,#bd0507 50%) no-repeat;
+	line-height: 24px;
+	padding-left: 22px;
+	box-sizing: border-box;
+}
+.header_bottom_menu li{
+	float: left;
+	padding: 0px 14px 0 26px;
+}
+.header_bottom_menu li:hover{
+	background: -moz-radial-gradient(center,#eb7805 10%,#d74804 30%,#b90c10);
+	background:-webkit-radial-gradient(center,#eb7805 10%,#d74804 30%,#b90c10) no-repeat;
+	background:-o-radial-gradient(center,#eb7805 10%,#d74804 30%,#b90c10) no-repeat;
+	background:-ms-radial-gradient(center,#eb7805 10%,#d74804 30%,#b90c10) no-repeat;
+}
+.header_bottom_menu li a{
+	font-size: 12px;
+	color: #fffffd;
+}
+/*网页头部结束   header_box*/
+
+
+/*网页标语开始   banner_box*/
+.move{
+	margin-top:-6px ;
+}
+.banner{
+	width: 879px;
+	height: 226px;
+	margin: auto;
+	margin-top: 7px;
+	overflow: hidden;
+	position: relative;
+}
+.banner_img_box{
+	width: 879px;
+	height: 226px;
+}
+.banner_img_box .img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.banner_img_box .banner_menu{
+	width: 879px;
+	height: 61px;
+	background-color: #000000;
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 20;
+}
+.banner_img_box .banner_menu .prev{
+	border-right: 18px solid #deb462;
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	position: absolute;
+	left: 17px;
+	top: 50%;
+	margin-top: -18px;
+	cursor: pointer;
+}
+.banner_img_box .banner_menu .next{
+	border-left: 18px solid #deb462;
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	position: absolute;
+	right: 17px;
+	top: 50%;
+	margin-top: -18px;
+	cursor: pointer;
+}
+.banner_img_box .banner_menu .banner_lunbo{
+	width: 809px;
+	height: 61px;
+	position: absolute;
+	left: 35px;
+	top: 0;
+	overflow: hidden;
+}
+.banner_img_box .banner_menu .select_menu_box{
+	width: 1614px;
+	height: 61px;
+	position: absolute;
+	top: 0;
+}
+.banner_img_box .banner_menu .select_box{
+	width: 269px;
+	height: 55px;
+	float: left;
+	margin-top: 6px;
+	
+}
+.banner_img_box .banner_menu .select_box .img_box{
+	width: 105px;
+	height: 42px;
+	border: 2px solid #fef181;
+	float: left;
+	margin-left: 21px;
+}
+.banner_img_box .banner_menu .select_box .banner_name{
+	float: left;
+	font-size: 14px;
+	color: #e4bc64;
+	line-height: 48px;
+	margin-left: 11px;
+	
+}
+/*网页标语结束   banner_box*/
+
+
+/*网页主体开始   main_box*/
+
+.main_top{
+	width: 879px;
+	height: 150px;
+	margin: auto;
+	background:-moz-linear-gradient(top,#f3f3f3,#eaeaea,#e6e6e6) no-repeat;
+	background:-webkit-linear-gradient(top,#f3f3f3,#eaeaea,#e6e6e6) no-repeat;
+	background:-o-linear-gradient(top,#f3f3f3,#eaeaea,#e6e6e6) no-repeat;
+	background:-ms-linear-gradient(top,#f3f3f3,#eaeaea,#e6e6e6) no-repeat;
+	overflow: hidden;
+	padding-left: 3px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #d7d7d7;
+}
+.main_content{
+	width: 278px;
+	height: 106px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	margin-top: 21px;
+	position: relative;
+	margin-right: 16px;
+	float: left;
+	background:-moz-linear-gradient(top,#f9f9f9 40%,#e2e2e2) no-repeat;
+	background:-webkit-linear-gradient(top,#f9f9f9 40%,#e2e2e2) no-repeat;
+	background:-o-linear-gradient(top,#f9f9f9 40%,#e2e2e2) no-repeat;
+	background:-ms-linear-gradient(top,#f9f9f9 40%,#e2e2e2) no-repeat;
+}
+.main_content:last-of-type{
+	margin-right: 0;
+}
+.main_content .content dt{
+	font-size: 15px;
+	color: #767676;
+	margin-left: 17px;
+	margin-top: 6px;
+	line-height: 31px;
+}
+.main_content .content dd{
+	font-size: 11px;
+	color: #565656;
+	text-indent: 22px;
+	line-height: 16px;
+	margin-left: 14px;
+}
+.main_content .content dd:last-of-type{
+	width: 95px;
+	height: 24px;
+	background: url(../img/大气中天_26.jpg)no-repeat;
+	position: absolute;
+	right: 15px;
+	bottom: 6px;
+}
+.main_content .content dd:last-of-type:hover{
+	background: url(../img/大气中天_23.jpg)no-repeat;
+}
+.main_bottom{
+	width: 904px;
+	height: 365px;
+	background-color: #f1f1f1;
+	padding: 19px 0 0 20px;
+	box-sizing: border-box;
+}
+.main_bottom .main_bottom_left{
+	width: 381px;
+	float: left;
+}
+.head_box_box{
+	width: 381px;
+	height: 21px;
+	border-bottom: 1px solid #ffffff;
+}
+.head_box{
+	width: 381px;
+	height: 20px;
+	border-bottom: 1px solid #cacaca;
+}
+.main_bottom .main_bottom_left .new_center .head_box_box .head_box .head_english{
+	width: 87px;
+	height: 17px;
+	background: url(../img/大气中天_31.png)no-repeat;
+	float: left;
+}
+.head_box_box .head_box .head_chinese{
+	float: left;
+	font-size: 12px;
+	color: #565656;
+	margin-left: 8px;
+	margin-top: 2px;
+}
+.head_box_box .head_box span{
+	float: right;
+	font-size: 12px;
+	color: #565656;
+}
+.main_bottom .main_bottom_left .new_center ul{
+	padding-top: 3px;
+}
+.main_bottom .main_bottom_left .new_center ul li{
+	line-height: 23px;
+}
+.main_bottom .main_bottom_left .new_center ul li .png{
+	display: inline-block;
+	width: 6px;
+	height: 8px;
+	background: url(../img/大气中天_35.png)no-repeat;
+	margin-right: 8px;
+}
+.main_bottom .main_bottom_left .new_center ul li a{
+	font-size: 12px;
+	color: #565656;
+}
+.main_bottom .main_bottom_left .new_center ul li:hover a{
+	color: #c83c3d;
+}
+.main_bottom .main_bottom_left .new_center ul li .date{
+	font-size: 12px;
+	color: #565656;
+	float: right;
+}
+.main_bottom .main_bottom_left .interactive_center{
+	margin-top: 18px;
+}
+.interactive_center .head_english{
+	width: 147px;
+	height: 17px;
+	background: url(../img/大气中天_38.png)no-repeat;
+	float: left;
+}
+.interactive_center ul{
+	width: 228px;
+	padding-top: 5px;
+	float: left;
+}
+.interactive_center ul li{
+	line-height: 21px;
+	padding-left: 31px;
+	position: relative;
+}
+.interactive_center ul li:before{
+	content: "";
+	width: 6px;
+	height: 6px;
+	background-color: #a3a3a3;
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	margin-top: -3px;
+}
+.interactive_center ul li a{
+	display: inline-block;
+	font-size: 12px;
+	color: #565656;
+}
+.interactive_center .CG_box{
+	float: left;
+	margin-top: 5px;
+}
+.interactive_center .CG_box .C,.interactive_center .CG_box .G{
+	width: 153px;
+	height: 52px;
+}
+.interactive_center .CG_box .C{
+	margin-bottom: 6px;
+}
+.main_bottom_right{
+	float: left;
+	margin-left: 40px;
+}
+.about_us{
+	width: 450px;
+	height: 142px;
+	padding-bottom: 18px;
+	position: relative;
+}
+.about_us .head_box_box{
+	width: 450px;
+	height: 29px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.about_us .head_box{
+	width: 450px;
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px solid #f1f1f1;
+   background:-moz-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	background:-webkit-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	background:-o-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	background:-ms-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	overflow: hidden;
+}
+.about_us .head_box .head_english{
+	width: 66px;
+	height: 15px;
+	background: url(../img/大气中天_34.png)no-repeat;
+	float: left;
+	margin-top: 9px;
+}
+.about_us .head_box .head_chinese{
+	margin-left: 0;
+	margin-top: 3px;
+}
+.about_us .img_box{
+	width: 93px;
+	height: 78px;
+	border: 1px solid #cacaca;
+	padding: 1px;
+	float: left;
+	margin-top: 13px;
+}
+.about_us ul{
+	width: 340px;
+	float: left;
+	margin-top: 13px;
+	margin-left: 8px;
+}
+.about_us ul li:first-of-type{
+	font-size: 12px;
+	color: #565656;	
+	text-indent: 24px;
+}
+.about_us ul li:last-of-type{
+	position: absolute;
+	bottom: 17px;
+	right: 18px;
+}
+.about_us ul li:last-of-type a{
+	font-size: 12px;
+	color: #c43d3a;	
+}
+.customer_success{
+	width: 450px;
+	height: 137px;
+}
+.customer_success .head_box_box{
+	width: 450px;
+	height: 29px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.customer_success .head_box{
+	width: 450px;
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px solid #f1f1f1;
+    background:-moz-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	background:-webkit-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	background:-o-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	background:-ms-linear-gradient(top,#f1f1f1,#e2e2e2) no-repeat;
+	overflow: hidden;
+}
+.customer_success .head_box .head_english{
+	width: 125px;
+	height: 15px;
+	background: url(../img/大气中天_48.png)no-repeat;
+	float: left;
+	margin-top: 9px;
+}
+.customer_success .head_box .head_chinese{
+	margin-left: 0;
+	margin-top: 3px;
+}
+.customer_success .img_box{
+	width: 93px;
+	height: 78px;
+	border: 1px solid #cacaca;
+	padding: 1px;
+	float: left;
+	margin-top: 13px;
+}
+.customer_success dl{
+	width: 340px;
+	float: left;
+	margin-top: 13px;
+	margin-left: 8px;
+}
+.customer_success dl dt{
+	font-size: 12px;
+	color: #565656;	
+}
+.customer_success dl dd{
+	font-size: 12px;
+	color: #565656;	
+	text-indent: 24px;
+	line-height: 20px;
+}
+/*网页主体结束   main_box*/
+
+
+/*网页尾部开始   footer_box*/
+
+.footer{
+	width: 904px;
+	height: 65px;
+	border-top: 1px solid #d0d0d0;
+	background:-moz-linear-gradient(top,#e3e3e3,#f4f4f4,#fafafa) no-repeat;
+	background:-webkit-linear-gradient(top,#e3e3e3,#f4f4f4,#fafafa) no-repeat;
+	background:-o-linear-gradient(top,#e3e3e3,#f4f4f4,#fafafa) no-repeat;
+	background:-ms-linear-gradient(top,#e3e3e3,#f4f4f4,#fafafa) no-repeat;
+}
+.footer_top_text{
+	width: 750px;
+	font-size: 12px;
+	margin: auto;
+	line-height: 27px;
+}
+.footer_top_text a{
+	color: #555555;
+	float: left;
+}
+.footer_top_text p{
+	float: left;
+}
+.footer_top_text .xian{
+	float: left;
+	font-size: 12px;
+	color: #555555;
+	margin: 0 14px 0 10px;
+}
+.footer_bottom{
+	clear: both;
+	font-size: 12px;
+	color: #555555;
+	text-align: center;
+}
+/*网页尾部结束   footer_box*/

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var arrA=document.getElementsByTagName('a');
+				for (var i=0;i<arrA.length;i++) {
+					arrA[i].index=i;
+					arrA[i].onclick=function(){
+						window.open("页面2.html#"+this.index,"_blank");
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<a href="JavaScript:;">1</a>
+		<a href="JavaScript:;">2</a>
+		<a href="JavaScript:;">3</a>
+	</body>
+</html>

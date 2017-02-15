@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{
+				width: 100%;
+				height: 3000px;
+				background-image: url(img/bg.png);}
+			#rocket{
+				width: 150px;
+				height: 240px;
+				background: url(img/gotop.png)no-repeat;
+				position: fixed;
+				right: 40px;
+				bottom: 40px;
+			}
+			#rocket:hover{
+				background: url(img/gotop.gif)no-repeat;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oLink=document.getElementById('rocket');
+				var timer=0;
+				oLink.onclick=function(){
+					
+					if (this.style.background=="url(img/gotopd.gif)no-repeat") {
+						
+						this.style.background="url(img/gotop.png)no-repeat";
+				    }
+					else{
+						this.style.background="url(img/gotopd.gif)no-repeat";
+					}
+				
+					if (timer==0) {
+						timer=setInterval(function(){
+							
+							var scrollTop;
+							if (document.documentElement.scrollTop) {
+								scrollTop=document.documentElement.scrollTop;
+							}else{
+								scrollTop=document.body.scrollTop;
+
+							}
+							var speed=100;
+							document.documentElement.scrollTop-=speed;
+							document.body.scrollTop-=speed;
+							
+							if (scrollTop<=0) {
+								clearInterval(timer);
+								timer=0;
+							
+							}
+						   
+							
+						},100);
+						
+					}
+					
+					
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="rocket"></div>
+	</body>
+</html>

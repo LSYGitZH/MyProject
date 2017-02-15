@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+body{ background:black;}
+#c1{ background:white;}
+span{ color:white;}
+</style>
+<script>
+
+window.onload = function(){
+	var oC = document.getElementById('c1');
+	
+	var oGC = oC.getContext('2d');  
+//	Rect  矩形
+//	oGC.fillStyle = "red"
+	//  50 50  坐标
+	//  100 100 宽高
+//	oGC.fillRect(50,50,200,200);
+	//stroke
+//	oGC.strokeStyle = "blue"
+//	oGC.strokeRect(50,50,100,100);
+	
+//	oGC.strokeRect(50.5,50.5,100,100);
+	//strokeRect() 方法绘制矩形（不填色）。笔触的默认颜色是黑色。
+    //使用 strokeStyle 属性来设置笔触的颜色、渐变或模式。
+
+
+
+//	oGC.fillStyle = "red"
+//	oGC.fillRect(200,50,50,50);
+//	oGC.fillStyle = "green"
+//	oGC.fillRect(150,100,150,50);
+//	oGC.fillStyle = "blue"
+//	oGC.fillRect(100,150,250,50);
+
+//	oGC.fillStyle = "red";
+//	oGC.fillRect(50,50,200,200);
+//	oGC.lineWidth = 30;
+//	oGC.strokeStyle = "blue";
+//	oGC.strokeRect(50,50,200,200);
+	oGC.font = '400px 楷体';
+	oGC.strokeText("出先",0,500,400);
+
+};
+
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="1200" height="700">
+	<span>不支持canvas浏览器</span>
+</canvas> <!--默认：宽300 高150-->
+</body>
+</html>

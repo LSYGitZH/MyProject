@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			var str="asdfjxkzsksassdfdxvfsdvfxdfdxbvcvbgcv7789900";
+			var json={}
+			for (var i=0;i<str.length;i++) {
+				var c=str.charAt(i);
+				if (json[c]) {     //该字符对应的值在json中存在
+					json[c]++;
+				}else{
+					json[c]=1;
+				}
+			}
+//			document.write(JSON.stringify(json));
+for (var x in json) {
+	document.write(x+":"+json[x]+"<br />");
+}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

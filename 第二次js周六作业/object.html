@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			//利用面向对象的思想描述艾希对德玛释放了普通攻击，并造成了艾希攻击力的伤害	例如 艾希攻击里为50，则对德玛造成50点伤害
+
+
+          function Person(name,power){
+          	this.name=name;
+          	this.power=power;
+          }
+          Person.prototype.hit=function(per){
+          	document.write(this.name+"对"+per.name+"释放了普通攻击，并造成了"+this.name+this.power+"点伤害。");
+          }
+          
+		var p1=new Person("艾希","50");
+		var p2=new Person("德玛","80");
+		p1.hit(p2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

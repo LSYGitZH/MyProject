@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 100px;
+				height: 100px;
+				border: 1px solid #000000;
+				position: absolute;
+			}
+			body{
+				height: 2000px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementsByClassName('div1')[0];
+				var oBody=document.getElementsByTagName('body');
+				
+				
+				document.onkeydown=function(ev){
+//				  left 37 top 38 right 39 bottom 40
+                   var oEvent = window.event || ev;
+                    if (oEvent.keyCode) {
+                    	
+                    }
+                  
+                   switch (oEvent.keyCode){
+                   	case 37:
+                   	    oDiv.style.left=oDiv.offsetLeft-10+"px";
+                   		break;
+                   	case 38:
+                   	    oDiv.style.top=oDiv.offsetTop-10+"px";
+                   	    break;
+                   	case 39:
+                   	    oDiv.style.left=oDiv.offsetLeft+10+"px";
+                   	    break; 
+                   	case 40:
+                   	    oDiv.style.top=oDiv.offsetTop+10+"px";
+                   	    break;
+//                 	default:
+//                 		break;
+                   }
+			   }
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div class="div1">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			input[type=text]:focus{
+				outline-color: red;
+			}
+			input:focus{
+				outline-color: red;
+			}
+			input[name=user]{
+
+				/*background-color: #FF0000;*/
+			}
+			input[name=password]{
+
+				/*background-color: blue;*/
+			}
+			input[name=email]{
+				/*background-color: darkviolet;*/
+			}
+			input[name*=e]{
+				/*background-color: darkviolet;*/
+			}/*   *=是包含e的name   */
+			input[name^=e]{
+				/*background-color: darkviolet;*/
+			}/*   ^=是以e开头的name   */
+			input[name$=e]{
+				/*background-color: darkviolet;*/
+			}/*   ^=是以e结尾的name   */
+		</style>
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="text" value="" name="user"/>
+			<input type="text" value="" name="password"/>
+			<input type="text" value="" name="email"/>
+		</form>
+	</body>
+</html>

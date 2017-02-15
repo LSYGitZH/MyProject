@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/cookie.js">
+			
+		</script>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var oUserName=document.getElementById('username');
+				var oPassWord=document.getElementById('password');
+				var oRemember=document.getElementById('remember');
+				var oBtn=document.getElementById('btn');
+				//如果记住密码就显示
+				//cookie
+				var userKey =getCookieByKey("usern");
+				var passKey =getCookieByKey("passw");
+				var checked =getCookieByKey("rem");
+				oUserName.value=userKey;
+				//如果是记住密码状态  设置密码
+				if (checked=="true") {
+					oPassWord.value=passKey;
+					oRemember.checked=true;
+				}else{
+					oPassWord.value="";
+				}
+				
+				oBtn.onclick=function(){
+					var user=oUserName.value;
+					var pass=oPassWord.value;
+					   
+					if (user=="liming" && pass=="xiaoliming") {
+						window.open("new_file.html","_blank");
+						//如果记住密码按钮被选中 ，就保存
+						//。。。。。。。。。。。删除密码
+						if (oRemember.checked) {
+							setCookie("usern",user,30);
+							setCookie("passw",pass,30);
+							setCookie("rem",oRemember.checked,30);
+						}else{
+							removeCookie("passw");
+							setCookie("rem",oRemember.checked,30);
+						}
+						
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="username" value="" /><br />
+		<input type="password" name="" id="password" value="" /><input type="checkbox" id="remember" value="" /><br />
+		<input type="button" name="" id="btn" value="登录" />
+	</body>
+</html>

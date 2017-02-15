@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			var year=parseInt(prompt("请输入年份"));
+			var month=parseInt(prompt("请输入月份"));
+			var day=parseInt(prompt("请输入日"));
+			var monthArr=[31,28,31,30,31,30,31,31,30,31,30,31];
+			var sum=0;
+//			var yearDay=0;
+			for (var i=0;i<month-1;i++) {
+				if(year%4==0 && year%100!=0){
+					monthArr[1]=29;
+				}else if (year%400==0) {
+					monthArr[1]=29;
+				}
+					
+				sum+=monthArr[i];
+//				yearDay=sum-monthArr[month-1]+day;
+			}
+			sum+=day;
+			document.write("这一天是"+year+"年"+month+"月"+day+"日"+"的第"+yearDay+"天");
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

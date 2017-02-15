@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+		span{cursor: pointer;padding: 0 10px;}
+		.div1{
+				width: 500px;
+				height: 300px;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				border: 1px solid black;
+			}
+			.box{
+				width: 500px;
+				height: 300px;
+				background-color: white;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				display: none;
+			}
+			.box:first-child{
+				display: block;
+			}
+			.box2{
+				width: 150px;
+				margin: auto;
+			}
+		</style>
+		<script type="text/javascript">
+//			找到所有input按钮
+             window.onload=function(){
+             	var btn=document.getElementsByTagName('input');
+             	var obox=document.getElementsByClassName('box');
+             	//为每个按钮添加标号,为每个按钮添加索引
+             	
+
+               for (var j=0;j<btn.length;j++) {
+               	
+                 btn[j].index=j;
+                btn[j].onclick=function(){
+                	
+                	for (var i=0;i<btn.length;i++) {
+                	//将所有的按钮全部变灰	
+                	btn[i].style.backgroundColor="lightgrey";
+                		
+                		
+                	}
+                	btn[this.index].style.backgroundColor="red";
+                	
+                	
+                	for (var x=0;x<obox.length;x++) {
+                			obox[x].style.display="none";
+                		}
+                	obox[this.index].style.display="block";
+                }
+                
+               }
+               
+               
+               var Lastpage=document.getElementById('last');
+				var Nextpage=document.getElementById('next');
+				   
+				   var page=0; 
+				   
+				   Nextpage.onclick=function(){
+				  	page++;
+				 	if(page>=obox.length){
+				 		page=0;
+				 	}
+				 	for (var i=0;i<obox.length;i++) {
+				 		obox[i].style.display="none";
+				 	}
+				 	obox[page].style.display="block";
+				 	for (var j=0;j<btn.length;j++) {
+				 		btn[j].style.backgroundColor="lightgrey";
+				 	}
+				 	    btn[page].style.backgroundColor="red";
+				 }
+				 Lastpage.onclick=function(){
+				 	page--;
+				 	if(page<0){
+				 		page=obox.length-1;
+				 	}
+				 	for (var i=0;i<obox.length;i++) {
+				 		obox[i].style.display="none";
+				 	}
+				 	obox[page].style.display="block";
+				 	for (var j=0;j<btn.length;j++) {
+				 		btn[j].style.backgroundColor="lightgrey";
+				 	}
+				 	    btn[page].style.backgroundColor="red";
+				 }
+				
+               
+             }
+		</script>
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="button" value="按钮1"/>
+			<input type="button" value="按钮2"/>
+			<input type="button" value="按钮3"/>
+		</form>
+		<div class="div1">
+			<div class="box">
+			第一个页面
+		</div>
+		<div class="box">
+			第二个页面
+		</div>
+		<div class="box">
+			第三个页面
+		</div>
+		</div>
+		<div class="box2">
+			<span id="last">上一页</span>
+		    <span id="next">下一页</span>
+		</div>
+	</body>
+</html>

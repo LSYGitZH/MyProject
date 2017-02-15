@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#parent{
+				width: 800px;
+				height: 20px;
+				background-color: #cccccc;
+				border-radius: 10px;
+				margin: 50px auto;
+				position: relative;
+			}
+			#box{
+				width: 150px;
+				height: 20px;
+				background-color: red;
+				border-radius: 10px;
+				position: absolute;
+				left: 0;
+				top: 0;	
+			}
+			#show{
+				width: 400px;
+				height: 400px;
+				background-color: #FF0000;
+				opacity: 0;
+				filter: alpha(opacity=0);/*透明度兼容IE*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="box"></div>
+		</div>
+		<div id="show"></div>
+		
+		<script type="text/javascript">
+		
+			window.onload=function(){
+				var oParent=document.getElementById("parent");
+				var oBox=document.getElementById("box");
+				var oShow=document.getElementById("show");
+				oBox.onmousedown=function(ev){
+					//创建事件对象
+					var oEvent=window.event || ev;
+					//求出oBox向左边的移动距离  ev.clientX是鼠标的坐标    oBox.offsetLeft是oBox距离左边的定位距离
+//					var divSX=oEvent.clientX-oParent.offsetLeft-oParent.style.marginLeft;
+//					var oWidth=oParent.currentStyle["width"] || getComputedStyle(oParent)["width"];
+                    var divSX=oEvent.clientX-oBox.offsetLeft;
+					document.onmousemove=function(ev){
+						var oEvent=window.event || ev;
+//						oBox.style.left=oEvent.clientX-divSX+"px";
+						
+//						var oLeft=oParent.offsetWidth-oBox.offsetWidth;
+//						if (oBox.style.left<="0px") {
+//							oBox.style.left="0px";
+//						}else if (oBox.style.left>=oLeft+"px") {
+//							oBox.style.left=oLeft+"px";
+//						}
+
+
+                        //这里求的是一个具体的数值，而不是像素值，只有在涉及到物体移动时才会用到像素值
+                       var oLeft=oEvent.clientX-divSX;
+                        if (oLeft<=0) {
+                        	oLeft=0;
+                        }else if (oLeft>=oParent.offsetWidth-oBox.offsetWidth) {
+                        	oLeft=oParent.offsetWidth-oBox.offsetWidth;
+                        }
+                        oBox.style.left=oLeft+"px";
+                       var oOpacity=oBox.offsetLeft/(oParent.offsetWidth-oBox.offsetLeft);
+                        oShow.style.opacity=oOpacity;
+					}
+					document.onmouseup=function(){
+						document.onmousedown=undefined;
+						document.onmousemove=undefined;
+//						oBox.style.left=document.onmousemove;
+					}
+					
+					return false;
+				}
+			}
+	
+		</script>
+	</body>
+</html>

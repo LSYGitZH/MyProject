@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 300px;
+				height: 100px;
+				border: 1px solid #000000;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=function(){
+				var oDiv=document.getElementsByClassName('div1')[0];
+				var oInput=document.getElementById('text');
+				var oBtn=document.getElementById('btn');
+				oBtn.onclick=function(){
+					oDiv.innerHTML+=oInput.value+"<br />";
+				}
+				oInput.onkeydown=function(ev){
+					var oEvent=window.event || ev;
+					
+					if (oEvent.keyCode==13) {
+						oDiv.innerHTML+=oInput.value+"<br />";
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="div1">
+			
+		</div>
+		<input type="text" name="text" id="text" value="" />
+		<input type="button" name="btn" id="btn" value="提交" />
+	</body>
+</html>

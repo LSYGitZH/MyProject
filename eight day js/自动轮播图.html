@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style type="text/css">
+			*{margin: 0;padding: 0;}
+			span{cursor: pointer;padding: 0 10px;}
+			.show{
+				width: 500px;
+				height: 200px;
+				margin: 40px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.div1{
+				width: 500px;
+				height: 200px;
+				position: absolute;
+			    left: 0;
+			    top: 0;
+			    opacity: 0;
+			}
+			.div1:first-child{
+				opacity: 1;
+			}
+			.box{
+				width: 150px;
+				margin: auto;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oShow=document.getElementById('show');
+				var Lastpage=document.getElementById('last');
+				var Nextpage=document.getElementById('next');
+				var odiv=document.getElementsByClassName('div1');
+				   
+				   var page=0; 
+		
+				   var Next=function(){
+				  	page++;
+				 	if(page>=odiv.length){
+				 		page=0;
+				 	}
+				 	for (var i=0;i<odiv.length;i++) {
+				 		odiv[i].style.opacity="0";
+				 	}
+				 	odiv[page].style.opacity="1";
+				 	
+				 }
+				   Nextpage.onclick=Next;
+				 var timer = setInterval(Next,1000);
+				  oShow.onmouseover=function(){
+				  	
+				  	clearInterval(timer);
+				  	timer=0;
+				  }
+				   oShow.onmouseout=function(){
+				       if(timer == 0){
+                        timer = setInterval(Next,1000);
+                      }
+				  }
+				 Lastpage.onclick=function(){
+				 	page--;
+				 	if(page<0){
+				 		page=odiv.length-1;
+				 	}
+				 	for (var i=0;i<odiv.length;i++) {
+				 		odiv[i].style.opacity="0";
+				 	}
+				 	odiv[page].style.opacity="1";
+				 }
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="show" id="show">
+			<div class="div1" style="background-color: red;">
+				第一页
+			</div>
+			<div class="div1" style="background-color: orange;">
+				第二页
+			</div>
+			<div class="div1" style="background-color: yellow;">
+				第三页
+			</div>
+		</div>
+		<div class="box">
+			<span id="last">上一页</span>
+		    <span id="next">下一页</span>
+		</div>
+		
+	</body>
+</html>

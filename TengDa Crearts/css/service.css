@@ -1,0 +1,457 @@
+.service_box{
+	width: 100%;
+	min-width: 1258px;
+	height: auto;
+	position: relative;
+}
+.service_box img{
+	width: 100%;
+}
+.service_box .service_banner{
+	width: 774px;
+	position: absolute;
+	left: 50%;
+	top: 85px;
+	margin-left: -387px;
+}
+/*.service_box .service_banner img{
+}*/
+.service_box .service_banner p{
+	font-size: 16px;
+	margin-top: 40px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.service_box .service_banner a{
+	display: block;
+	width: 165px;
+	height: 48px;
+	border: 1px solid #FFFFFF;
+	border-radius: 12px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 48px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+/*网站建设*/
+.web_service_box{
+	width: 1258px;
+	height: 480px;
+	margin: auto;
+	background: url(../img/ser1_10.png)no-repeat;
+	margin-top: 20px;
+	position: relative;
+}
+.left_animate_img{
+	width: 431px;
+	height: 378px;
+	position: absolute;
+	left: 25%;
+	top: 50%;
+	margin-left: -215.5px;
+	margin-top: -179px;
+	opacity: 0;
+}
+.web_service_box:hover .left_animate_img{
+	animation: RightAnima 1s forwards;
+	-moz-animation: RightAnima 1s forwards;
+	-ms-animation: RightAnima 1s forwards;
+	-webkit-animation: RightAnima 1s forwards;
+}
+
+.center_animate_box{
+	width: 316px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    text-align: right;
+}
+.center_animate_box .top{
+	width: 150px;
+	height: 50px;
+	background-color: #F39800;
+	font-size: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	float: right;
+	margin-right: 37px;
+	margin-top: 60px;
+	animation: topAnima 1s;
+	-moz-animation: topAnima 1s;
+	-ms-animation: topAnima 1s;
+	-webkit-animation: topAnima 1s;
+}
+
+.center_animate_box .bottom{
+	font-size: 80px;
+	font-weight: lighter;
+	color: #FFFFFF;
+	clear: both;
+	margin-right: 37px;
+	animation: LeftTextAnima 1s;
+	-moz-animation: LeftTextAnima 1s;
+	-ms-animation: LeftTextAnima 1s;
+	-webkit-animation: LeftTextAnima 1s;
+}
+@keyframes LeftTextAnima{
+	from{transform: translateX(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+@-moz-keyframes LeftTextAnima{
+	from{transform: translateX(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+@-ms-keyframes LeftTextAnima{
+	from{transform: translateX(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+@-webkit-keyframes LeftTextAnima{
+	from{transform: translateX(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+.right_animate_box{
+	position: absolute;
+	right: 30px;
+	top: 138px;
+}
+.right_animate_box .text_box{
+	border-bottom: 1px solid rgb(87,179,219);
+	width: 250px;
+	padding-bottom: 18px;
+	animation: topAnima 1s;
+	-moz-animation: topAnima 1s;
+	-ms-animation: topAnima 1s;
+	-webkit-animation: topAnima 1s;
+}
+.right_animate_box .text_box p{
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.right_animate_box .text_box p:first-of-type{
+	margin-bottom: 20px;
+}
+.web_service_box .right_animate_box ul{
+	animation: bottomAnima 1s;
+	-moz-animation: bottomAnima 1s;
+	-ms-animation: bottomAnima 1s;
+	-webkit-animation: bottomAnima 1s;
+}
+.right_animate_box ul li{
+	float: left;
+	margin: 20px 10px 0 10px;
+}
+.right_animate_box ul li span{
+	display: block;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
+}
+
+.right_animate_box ul li p{
+	font-size: 12px;
+	color: #FFFFFF;
+}
+/*APP开发*/
+.app_development_box{
+	width: 1258px;
+	height: 480px;
+	margin: auto;
+	background: url(../img/ser_17.png)no-repeat;
+	margin-top: 20px;
+	position: relative;
+}
+
+.right_animate_img{
+	width: 431px;
+	height: 378px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 107.75px;
+	margin-top: -179px;
+	opacity: 0;
+}
+.app_development_box:hover .right_animate_img{
+	animation: LeftAnima 1s forwards;
+	-moz-animation: LeftAnima 1s forwards;
+	-ms-animation: LeftAnima 1s forwards;
+	-webkit-animation: LeftAnima 1s forwards;
+}
+.app_development_box .center_animate_box{
+	width: 316px;
+    position: absolute;
+    left: 25%;
+    top: 0;
+    text-align: left;
+}
+.app_development_box .center_animate_box .top{
+	width: 150px;
+	height: 50px;
+	background-color: #F39800;
+	font-size: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	margin-left: 37px;
+	margin-top: 60px;
+}
+.app_development_box .center_animate_box .bottom{
+	font-size: 80px;
+	font-weight: lighter;
+	color: #FFFFFF;
+	clear: both;
+	margin-left: 37px;
+	animation: RightTextAnima 1s;
+	-moz-animation: RightTextAnima 1s;
+	-ms-animation: RightTextAnima 1s;
+	-webkit-animation: RightTextAnima 1s;
+}
+
+.app_development_box .left_animate_box{
+	position: absolute;
+	left: 30px;
+	top: 138px;
+}
+.app_development_box .left_animate_box .text_box{
+	border-bottom: 1px solid rgb(87,179,219);
+	width: 250px;
+	padding-bottom: 18px;
+	animation: topAnima 1s;
+	-moz-animation: topAnima 1s;
+	-ms-animation: topAnima 1s;
+	-webkit-animation: topAnima 1s;
+}
+.app_development_box .left_animate_box .text_box p{
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.app_development_box .left_animate_box .text_box p:first-of-type{
+	margin-bottom: 20px;
+}
+.app_development_box .left_animate_box ul{
+	animation: bottomAnima 1s;
+	-moz-animation: bottomAnima 1s;
+	-ms-animation: bottomAnima 1s;
+	-webkit-animation: bottomAnima 1s;
+}
+.app_development_box .left_animate_box ul li{
+	float: left;
+	margin: 20px 10px 0 10px;
+}
+.app_development_box .left_animate_box ul li span{
+	display: block;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
+}
+
+.app_development_box .left_animate_box ul li p{
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+/*视觉设计*/
+.visual_design_box{
+	width: 1258px;
+	height: 480px;
+	margin: auto;
+	background: url(../img/ser1_20.png)no-repeat;
+	margin-top: 20px;
+	position: relative;
+}
+.visual_design_box:hover .left_animate_img{
+	animation: RightAnima 1s forwards;
+	-moz-animation: RightAnima 1s forwards;
+	-ms-animation: RightAnima 1s forwards;
+	-webkit-animation: RightAnima 1s forwards;
+}
+.visual_design_box .right_animate_box ul{
+	animation: bottomAnima 1s;
+	-moz-animation: bottomAnima 1s;
+	-ms-animation: bottomAnima 1s;
+	-webkit-animation: bottomAnima 1s;
+}
+/*运维服务*/
+.operation_service_box{
+	width: 1258px;
+	height: 480px;
+	margin: auto;
+	background: url(../img/ser_18.png)no-repeat;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.right_animate_img{
+	width: 431px;
+	height: 378px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 107.75px;
+	margin-top: -179px;
+	opacity: 0;
+}
+
+.operation_service_box:hover .right_animate_img{
+	animation: LeftAnima 1s forwards;
+	-moz-animation: LeftAnima 1s forwards;
+	-ms-animation: LeftAnima 1s forwards;
+	-webkit-animation: LeftAnima 1s forwards;
+}
+.operation_service_box .center_animate_box{
+	width: 316px;
+    position: absolute;
+    left: 25%;
+    top: 0;
+    text-align: left;
+}
+.operation_service_box .center_animate_box .top{
+	width: 150px;
+	height: 50px;
+	background-color: #F39800;
+	font-size: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	margin-left: 37px;
+	margin-top: 60px;
+}
+.operation_service_box .center_animate_box .bottom{
+	font-size: 80px;
+	font-weight: lighter;
+	color: #FFFFFF;
+	clear: both;
+	margin-left: 37px;
+	animation: RightTextAnima 1s;
+	-moz-animation: RightTextAnima 1s;
+	-ms-animation: RightTextAnima 1s;
+	-webkit-animation: RightTextAnima 1s;
+}
+@keyframes RightTextAnima{
+	from{transform: translateX(100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+@-moz-keyframes RightTextAnima{
+	from{transform: translateX(100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+@-ms-keyframes RightTextAnima{
+	from{transform: translateX(100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+@-webkit-keyframes RightTextAnima{
+	from{transform: translateX(100px);opacity: 0;}
+	to{opacity: 1;transform: translateX(0);}
+}
+.operation_service_box .left_animate_box{
+	position: absolute;
+	left: 30px;
+	top: 138px;
+}
+.operation_service_box .left_animate_box .text_box{
+	border-bottom: 1px solid rgb(87,179,219);
+	width: 250px;
+	padding-bottom: 18px;
+	animation: topAnima 1s;
+	-moz-animation: topAnima 1s;
+	-ms-animation: topAnima 1s;
+	-webkit-animation: topAnima 1s;
+}
+.operation_service_box .left_animate_box .text_box p{
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.operation_service_box .left_animate_box .text_box p:first-of-type{
+	margin-bottom: 20px;
+}
+.operation_service_box .left_animate_box ul{
+	animation: bottomAnima 1s;
+	-moz-animation: bottomAnima 1s;
+	-ms-animation: bottomAnima 1s;
+	-webkit-animation: bottomAnima 1s;
+}
+.operation_service_box .left_animate_box ul li{
+	float: left;
+	margin: 20px 10px 0 10px;
+}
+.operation_service_box .left_animate_box ul li span{
+	display: block;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-align: center;
+}
+
+.operation_service_box .left_animate_box ul li p{
+	font-size: 12px;
+	color: #FFFFFF;
+}
+@keyframes RightAnima{
+	from{transform: translateX(200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@-moz-keyframes RightAnima{
+	from{transform: translateX(200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@-ms-keyframes RightAnima{
+	from{transform: translateX(200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@-webkit-keyframes RightAnima{
+	from{transform: translateX(200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@keyframes LeftAnima{
+	from{transform: translateX(-200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@-moz-keyframes LeftAnima{
+	from{transform: translateX(-200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@-ms-keyframes LeftAnima{
+	from{transform: translateX(-200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@-webkit-keyframes LeftAnima{
+	from{transform: translateX(-200px);}
+	to{opacity:1;transform: translateX(0);}
+}
+@keyframes topAnima{
+	from{transform: translateY(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}
+@-moz-keyframes topAnima{
+	from{transform: translateY(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}
+@-ms-keyframes topAnima{
+	from{transform: translateY(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}
+@-webkit-keyframes topAnima{
+	from{transform: translateY(-100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}
+@keyframes bottomAnima{
+	from{transform: translateY(100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}
+@-moz-keyframes bottomAnima{
+	from{transform: translateY(100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}
+@-ms-keyframes bottomAnima{
+	from{transform: translateY(100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}
+@-webkit-keyframes bottomAnima{
+	from{transform: translateY(100px);opacity: 0;}
+	to{opacity: 1;transform: translateY(0);}
+}

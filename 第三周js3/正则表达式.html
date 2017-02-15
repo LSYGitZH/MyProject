@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+	 //  true  表示字符串中含有a这个子串   区分大小写		
+//			var reg=/a/;
+//			var str="skjdacnzqqw21";
+//			var result=reg.test(str);
+//			document.write(result);
+	//      正则表达式匹配一个数字 g  全局匹配		
+//		var reg = /\d+/g;      //g为全局匹配修饰符
+//        var str = "ah1s612hs1sh4j21g"
+//       var arr = str.match(reg);
+//        document.write(arr);
+
+//       var result =  str.replace(reg,"A");
+//        document.write(result);
+//        var result = str.search(reg)
+//        document.write(result)
+//        var arr = str.split(reg)
+//        document.write(arr)
+
+
+//          i为不区分大小写修饰符             ingenious case
+//             var str="js JS jS this is js";
+//             var str="asfddf";
+//             var reg=/js/gi;
+//             document.write(reg.test(str));
+//             var result=str.replace(reg,"money");
+//             document.write(result);
+            
+//          var str=".";
+//          var reg=/\w/;
+//          document.write(reg.test(str));
+//         var qqEmail="214354@qq.com";
+//         var reg=/^[1-9]\d{4,9}@qq\.com/;
+//        var qqNum="1233255555555";
+//        var reg=/^[1-9]\d{4,9}$/;
+//        document.write(reg.test(qqNum));
+
+//        var phoneNum="23434535664";
+//        var reg=/^1\d{10}$/;
+//         document.write(reg.test(phoneNum));
+           
+//        var num="234345356645555554";
+//        var reg=/^[1-9]\d{16}[\dx]$/;
+//         document.write(reg.test(num));
+
+//         var email="798fuygjk@163.com";
+//         var reg=/^\w+@(qq|163|sina)\.com$/;
+//         document.write(reg.test(email));
+//         
+//         
+//         var k="      dfhfv        ";
+//         var reg=/^\s*|\s*$/;
+//         
+//         
+//         str.trim();
+
+
+//         function $(id){
+//         	return document.getElementById(id);
+//         }
+//         window.onload=function(){
+//         	var oName=$('name');
+//         	var oPassword=$('password');
+//         	var oRepassword=$('repassword');
+//         	var oEmail=$('email');
+//         	var oPhone=$('phone');
+//         	var oSubmit=$('submit');
+//         	var oMessage=$('message');
+//         	var RegName=/^\w{6,12}$/;
+//         	var RegPass=/^\w{6,12}$/;
+//         	var RegEmail=/^\w{6,}@[0-9a-z]{2,7}\.[a-z]{3-5}$/;
+//         	var RegPhoneNum=/^1\d{10}$/;
+//         	var strError="";
+//         	
+//         	oSubmit.onclick=function(){
+//         		if (!RegName.test(oName.value)) {
+//         			strError+="用户名输入错误<br />";
+//         		}
+//         		if (!RegPass.test(oPassword.value)) {
+//         			strError+="密码输入错误<br />";
+//         		}
+//         		if (!RegPass.test(oRepassword.value)) {
+//         			strError+="请确认密码<br />";
+//         		}
+//         		if (!RegEmail.test(oEmail.value)) {
+//         			strError+="邮箱输入错误<br />";
+//         		}
+//         		if (!RegPhoneNum.test(oPhone.value)) {
+//         			strError+="手机号码输入错误<br />";
+//         		}
+//         		oMessage.innerHTML=strError;
+//         	}
+//         }
+           
+		</script>
+	</head>
+	<body>
+		
+		<form action="" method="post">
+			用户名：<input type="text" id="name"/><br />
+			密码：<input type="text" id="password"/><br />
+			确认密码：<input type="text" id="repassword"/><br />
+			邮箱：<input type="text" id="email"/><br />
+			手机号：<input type="text" id="phone"/><br />
+			<input type="button" value="注册" id="submit"/>
+		</form>
+		<div id="message">
+			
+		</div>
+	</body>
+</html>
